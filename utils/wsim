@@ -1,0 +1,4 @@
+wsim-wsn430 --mode=time --serial1_io=/dev/stdout $1
+
+#wsim-wsn430 --mode=time --serial1_io=/dev/stdout NOM_PROG.elf 
+

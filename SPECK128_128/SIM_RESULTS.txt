@@ -1,0 +1,121 @@
+MSPDebug version 0.22 - debugging tool for MSP430 MCUs
+Copyright (C) 2009-2013 Daniel Beer <dlbeer@gmail.com>
+This is free software; see the source for copying conditions.  There is NO
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+
+Simulation started, 0x10000 bytes of RAM
+Chip ID data: ff ff ff
+
+Available commands:
+    =           erase       isearch     power       save_raw    simio       
+    alias       exit        load        prog        set         step        
+    break       fill        load_raw    read        setbreak    sym         
+    cgraph      gdb         md          regs        setwatch    verify      
+    delbreak    help        mw          reset       setwatch_r  verify_raw  
+    dis         hexout      opt         run         setwatch_w  
+
+Available options:
+    color                       gdb_loop                    
+    enable_bsl_access           gdbc_xfer_size              
+    enable_locked_flash_access  iradix                      
+    fet_block_size              quiet                       
+    gdb_default_port            
+
+Type "help <topic>" for more information.
+Use the "opt" command ("help opt") to set options.
+Press Ctrl+D to quit.
+
+(mspdebug) erase
+Erasing...
+(mspdebug) prog main.elf
+Erasing...
+Programming...
+Writing 1972 bytes at 4000 [section: .text]...
+Writing   32 bytes at ffe0 [section: .vectors]...
+Done, 2004 bytes total
+(mspdebug) setbreak 0x4100 0
+Set breakpoint 0
+(mspdebug) setbreak 0x412e 1
+Set breakpoint 0
+(mspdebug) setbreak 0x415a 2
+Set breakpoint 0
+(mspdebug) simio add tracer leTracer
+Added new device "leTracer" of type "tracer".
+(mspdebug) run
+Running. Press Ctrl+C to interrupt...
+    ( PC: 04100)  ( R4: 03902)  ( R8: 00000)  (R12: 03900)  
+    ( SP: 036e0)  ( R5: 05aff)  ( R9: 00000)  (R13: 00000)  
+    ( SR: 00002)  ( R6: 00000)  (R10: 00000)  (R14: 00000)  
+    ( R3: 00000)  ( R7: 00000)  (R11: 00000)  (R15: 03800)  
+main+0xc2:
+    04100: b0 12 2a 47               CALL    #start_encrypt
+    04104: 0e 44                     MOV     R4,     R14
+    04106: 3e 50 fe fe               ADD     #0xfefe, R14
+    0410a: 0f 44                     MOV     R4,     R15
+    0410c: 3f 50 fe fd               ADD     #0xfdfe, R15
+(mspdebug) simio info leTracer
+Instruction count: 1137
+MCLK:              2845
+SMCLK              2845
+ACLK:              11
+No IRQ is pending
+
+IO event history (oldest first):
+           0: read.b => 0x0120
+(mspdebug) run
+Stepping over breakpoint #0 at 0x4100
+Running. Press Ctrl+C to interrupt...
+    ( PC: 0412e)  ( R4: 03902)  ( R8: 00000)  (R12: 00d18)  
+    ( SP: 036e0)  ( R5: 05aff)  ( R9: 00000)  (R13: 05c57)  
+    ( SR: 00000)  ( R6: 00000)  (R10: 00000)  (R14: 0fedf)  
+    ( R3: 00000)  ( R7: 00000)  (R11: 00000)  (R15: 07860)  
+main+0xf0:
+    0412e: b0 12 34 47               CALL    #start_decrypt
+    04132: 0e 44                     MOV     R4,     R14
+    04134: 3e 50 fe fe               ADD     #0xfefe, R14
+    04138: 0f 44                     MOV     R4,     R15
+    0413a: 3f 50 fe fd               ADD     #0xfdfe, R15
+(mspdebug) simio info leTracer
+Instruction count: 9596
+MCLK:              22026
+SMCLK              22026
+ACLK:              86
+No IRQ is pending
+
+IO event history (oldest first):
+           0: read.b => 0x0120
+(mspdebug) run
+Stepping over breakpoint #1 at 0x412e
+Running. Press Ctrl+C to interrupt...
+    ( PC: 0415a)  ( R4: 03902)  ( R8: 00000)  (R12: 020d7)  
+    ( SP: 036e0)  ( R5: 05aff)  ( R9: 00000)  (R13: 0a5fc)  
+    ( SR: 00000)  ( R6: 00000)  (R10: 00000)  (R14: 0d720)  
+    ( R3: 00000)  ( R7: 00000)  (R11: 00000)  (R15: 036e0)  
+main+0x11c:
+    0415a: b0 12 3e 47               CALL    #end_expe
+    0415e: 0f 43                     CLR     R15
+    04160: 31 50 20 02               ADD     #0x0220, SP
+    04164: 32 d0 f0 00               BIS     #0x00f0, SR
+    04168: fd 3f                     JMP     0x4164
+(mspdebug) simio info leTracer
+Instruction count: 16562
+MCLK:              37016
+SMCLK              37016
+ACLK:              144
+No IRQ is pending
+
+IO event history (oldest first):
+           0: read.b => 0x0120
+(mspdebug) simio del leTracer
+Destroyed device "leTracer".
+(mspdebug) delbreak 0
+Clearing breakpoint 0
+(mspdebug) delbreak 1
+Clearing breakpoint 1
+(mspdebug) delbreak 2
+Clearing breakpoint 2
+(mspdebug) 
+(mspdebug) save_raw 0x4100 1 finished.txt
+Done, 1 bytes total
+(mspdebug) 
+(mspdebug) exit

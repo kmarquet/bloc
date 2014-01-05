@@ -1,0 +1,1084 @@
+
+speck64_96.elf:     file format elf32-msp430
+
+SYMBOL TABLE:
+00004000 l    d  .text	00000000 .text
+00001100 l    d  .noinit	00000000 .noinit
+0000ffe0 l    d  .vectors	00000000 .vectors
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    df *ABS*	00000000 speck64_96.c
+00004120 l       .text	00000000 __br_unexpected_
+00000000 l    df *ABS*	00000000 tools.c
+00000000 l    df *ABS*	00000000 memset.c
+0000458e g     F .text	0000001a putchar
+00000057 g       *ABS*	00000000 __BCSCTL1
+0000005a g       *ABS*	00000000 __CACTL2
+00000174 g       *ABS*	00000000 __TACCR1
+00000084 g       *ABS*	00000000 __ADC12MCTL4
+00000000 g       *ABS*	00000000 __data_size
+0000015a g       *ABS*	00000000 __ADC12MEM13
+00000052 g       *ABS*	00000000 __I2CNDAT
+00004120  w      .text	00000000 __isr_14
+00000128 g       *ABS*	00000000 __FCTL1
+00000024 g       *ABS*	00000000 __P1IES
+0000007b g       *ABS*	00000000 __U1MCTL
+000001f6 g       *ABS*	00000000 __DMA2SZ
+00004120  w      .text	00000000 __isr_4
+00000002 g       *ABS*	00000000 __IFG1
+00000076 g       *ABS*	00000000 __I2CDRW
+000043bc g     F .text	00000104 Decrypt
+0000007e g       *ABS*	00000000 __U1RXBUF
+00000138 g       *ABS*	00000000 __OP2
+00000076 g       *ABS*	00000000 __U0RXBUF
+000001a4 g       *ABS*	00000000 __ADC12IFG
+0000012e g       *ABS*	00000000 __TAIV
+000001e6 g       *ABS*	00000000 __DMA0SZ
+00000000 g       .vectors	00000000 _efartext
+0000007c g       *ABS*	00000000 __U1BR0
+00000130 g       *ABS*	00000000 __MPY
+00000001 g       *ABS*	00000000 __IE2
+0000013a g       *ABS*	00000000 __RESLO
+00000136 g       *ABS*	00000000 __MACS
+00000087 g       *ABS*	00000000 __ADC12MCTL7
+0000002b g       *ABS*	00000000 __P2IFG
+0000001a g       *ABS*	00000000 __P3DIR
+00004632 g       *ABS*	00000000 _etext
+00000190 g       *ABS*	00000000 __TBR
+0000001d g       *ABS*	00000000 __P4OUT
+000001f4 g       *ABS*	00000000 __DMA2DA
+00000000 g       *ABS*	00000000 __bss_size
+00000081 g       *ABS*	00000000 __ADC12MCTL1
+000044fe g     F .text	0000005e uart1_init
+00000152 g       *ABS*	00000000 __ADC12MEM9
+00004000  w      .text	00000000 __watchdog_support
+0000411a  w      .text	00000000 __stop_progExec__
+00000050 g       *ABS*	00000000 __I2CIE
+0000002d g       *ABS*	00000000 __P2IE
+000001e4 g       *ABS*	00000000 __DMA0DA
+00000192 g       *ABS*	00000000 __TBCCR0
+00004120  w      .text	00000000 __isr_11
+00000186 g       *ABS*	00000000 __TBCCTL2
+000045bc g     F .text	0000000a end_expe
+00000025 g       *ABS*	00000000 __P1IE
+000001a0 g       *ABS*	00000000 __ADC12CTL0
+00000072 g       *ABS*	00000000 __I2CDCTL
+00000073 g       *ABS*	00000000 __U0MCTL
+0000007a g       *ABS*	00000000 __U1RCTL
+00000082 g       *ABS*	00000000 __ADC12MCTL2
+0000019c g       *ABS*	00000000 __TBCCR5
+00000035 g       *ABS*	00000000 __P6OUT
+00000034 g       *ABS*	00000000 __P6IN
+000001c8 g       *ABS*	00000000 __DAC12_0DAT
+00000182 g       *ABS*	00000000 __TBCCTL0
+00004124 g     F .text	00000152 KeyExpansion
+0000019e g       *ABS*	00000000 __TBCCR6
+00004120  w      .text	00000000 __isr_5
+00004632 g       *ABS*	00000000 __data_load_start
+00004120 g       .text	00000000 __dtors_end
+000001ea g       *ABS*	00000000 __DMA1SA
+00000088 g       *ABS*	00000000 __ADC12MCTL8
+00000166 g       *ABS*	00000000 __TACCTL2
+000001f0 g       *ABS*	00000000 __DMA2CTL
+00004120  w      .text	00000000 __isr_2
+00000156 g       *ABS*	00000000 __ADC12MEM11
+00000160 g       *ABS*	00000000 __TACTL
+00000158 g       *ABS*	00000000 __ADC12MEM12
+00000071 g       *ABS*	00000000 __I2CTCTL
+0000012c g       *ABS*	00000000 __FCTL3
+00004120  w      .text	00000000 __isr_10
+00000148 g       *ABS*	00000000 __ADC12MEM4
+0000011a g       *ABS*	00000000 __I2CSA
+0000002e g       *ABS*	00000000 __P2SEL
+00000180 g       *ABS*	00000000 __TBCTL
+0000008d g       *ABS*	00000000 __ADC12MCTL13
+0000014c g       *ABS*	00000000 __ADC12MEM6
+00000023 g       *ABS*	00000000 __P1IFG
+0000013c g       *ABS*	00000000 __RESHI
+00000072 g       *ABS*	00000000 __U0RCTL
+00000172 g       *ABS*	00000000 __TACCR0
+00000071 g       *ABS*	00000000 __U0TCTL
+00000056 g       *ABS*	00000000 __DCOCTL
+00000085 g       *ABS*	00000000 __ADC12MCTL5
+00000003 g       *ABS*	00000000 __IFG2
+00000005 g       *ABS*	00000000 __ME2
+00001100 g     O .noinit	00000002 __wdt_clear_value
+00000079 g       *ABS*	00000000 __U1TCTL
+0000001b g       *ABS*	00000000 __P3SEL
+000001e0 g       *ABS*	00000000 __DMA0CTL
+00004120  w      .text	00000000 __isr_7
+0000ffe0 g     O .vectors	00000020 __ivtbl_16
+00000028 g       *ABS*	00000000 __P2IN
+0000014e g       *ABS*	00000000 __ADC12MEM7
+00000184 g       *ABS*	00000000 __TBCCTL1
+0000005b g       *ABS*	00000000 __CAPD
+00000075 g       *ABS*	00000000 __I2CSCLL
+00004120  w      .text	00000000 __isr_0
+00000029 g       *ABS*	00000000 __P2OUT
+0000012a g       *ABS*	00000000 __FCTL2
+00004028  w      .text	00000000 __do_clear_bss
+0000008f g       *ABS*	00000000 __ADC12MCTL15
+00000021 g       *ABS*	00000000 __P1OUT
+0000002c g       *ABS*	00000000 __P2IES
+0000015c g       *ABS*	00000000 __ADC12MEM14
+00000026 g       *ABS*	00000000 __P1SEL
+00000198 g       *ABS*	00000000 __TBCCR3
+00000080 g       *ABS*	00000000 __ADC12MCTL0
+00000140 g       *ABS*	00000000 __ADC12MEM0
+00000074 g       *ABS*	00000000 __U0BR0
+00000051 g       *ABS*	00000000 __I2CIFG
+00004630  w      .text	00000000 _unexpected_
+00004120  w      .text	00000000 __isr_8
+0000014a g       *ABS*	00000000 __ADC12MEM5
+00000070 g       *ABS*	00000000 __U0CTL
+0000018a g       *ABS*	00000000 __TBCCTL4
+00000073 g       *ABS*	00000000 __I2CPSC
+0000008e g       *ABS*	00000000 __ADC12MCTL14
+00004120  w      .text	00000000 __isr_3
+000001a6 g       *ABS*	00000000 __ADC12IE
+0000455c g     F .text	00000032 uart1_putchar
+00000144 g       *ABS*	00000000 __ADC12MEM2
+000001ee g       *ABS*	00000000 __DMA1SZ
+00000033 g       *ABS*	00000000 __P5SEL
+00000030 g       *ABS*	00000000 __P5IN
+00004000  w      .text	00000000 _reset_vector__
+00004120 g       .text	00000000 __ctors_start
+00004120  w      .text	00000000 __isr_12
+00000036 g       *ABS*	00000000 __P6DIR
+00000018 g       *ABS*	00000000 __P3IN
+00004010  w      .text	00000000 __do_copy_data
+00000150 g       *ABS*	00000000 __ADC12MEM8
+00000142 g       *ABS*	00000000 __ADC12MEM1
+00001100 g       .text	00000000 __bss_start
+0000007d g       *ABS*	00000000 __U1BR1
+000045c6 g     F .text	0000006a memset
+0000403e g     F .text	000000dc main
+00000176 g       *ABS*	00000000 __TACCR2
+0000019a g       *ABS*	00000000 __TBCCR4
+00004120  w      .text	00000000 __isr_13
+00000078 g       *ABS*	00000000 __U1CTL
+000001e2 g       *ABS*	00000000 __DMA0SA
+00000170 g       *ABS*	00000000 __TAR
+00000124 g       *ABS*	00000000 __DMACTL1
+0000001e g       *ABS*	00000000 __P4DIR
+00000162 g       *ABS*	00000000 __TACCTL0
+00010000 g       .vectors	00000000 _vectors_end
+00000154 g       *ABS*	00000000 __ADC12MEM10
+000001f2 g       *ABS*	00000000 __DMA2SA
+0000002a g       *ABS*	00000000 __P2DIR
+00000089 g       *ABS*	00000000 __ADC12MCTL9
+0000008a g       *ABS*	00000000 __ADC12MCTL10
+000044c0 g     F .text	0000003e delay
+00000032 g       *ABS*	00000000 __P5DIR
+000001c2 g       *ABS*	00000000 __DAC12_1CTL
+000001a2 g       *ABS*	00000000 __ADC12CTL1
+000001a8 g       *ABS*	00000000 __ADC12IV
+000001e8 g       *ABS*	00000000 __DMA1CTL
+00000075 g       *ABS*	00000000 __U0BR1
+00004120  w      .text	00000000 __isr_9
+0000018c g       *ABS*	00000000 __TBCCTL5
+0000400c  w      .text	00000000 __init_stack
+00000086 g       *ABS*	00000000 __ADC12MCTL6
+00000188 g       *ABS*	00000000 __TBCCTL3
+00000019 g       *ABS*	00000000 __P3OUT
+000001ca g       *ABS*	00000000 __DAC12_1DAT
+00004120 g       .text	00000000 __dtors_start
+00004120  w      .text	00000000 __isr_6
+00004120 g       .text	00000000 __ctors_end
+00000132 g       *ABS*	00000000 __MPYS
+0000011c g       *ABS*	00000000 __I2CIV
+00000004 g       *ABS*	00000000 __ME1
+00003900 g       *ABS*	00000000 __stack
+00000037 g       *ABS*	00000000 __P6SEL
+00004120  w      .text	00000000 __isr_1
+0000008c g       *ABS*	00000000 __ADC12MCTL12
+00001100 g       .text	00000000 _edata
+00000077 g       *ABS*	00000000 __U0TXBUF
+00001102 g       *ABS*	00000000 _end
+00000194 g       *ABS*	00000000 __TBCCR1
+0000011e g       *ABS*	00000000 __TBIV
+000001c0 g       *ABS*	00000000 __DAC12_0CTL
+000045a8 g     F .text	0000000a start_encrypt
+0000015e g       *ABS*	00000000 __ADC12MEM15
+00000134 g       *ABS*	00000000 __MAC
+00000058 g       *ABS*	00000000 __BCSCTL2
+0000411a  w      .text	00000000 _endless_loop__
+00000122 g       *ABS*	00000000 __DMACTL0
+0000001f g       *ABS*	00000000 __P4SEL
+00000196 g       *ABS*	00000000 __TBCCR2
+00000022 g       *ABS*	00000000 __P1DIR
+00000146 g       *ABS*	00000000 __ADC12MEM3
+00000076 g       *ABS*	00000000 __I2CDRB
+00000118 g       *ABS*	00000000 __I2COA
+00000164 g       *ABS*	00000000 __TACCTL1
+0000007f g       *ABS*	00000000 __U1TXBUF
+00000055 g       *ABS*	00000000 __SVSCTL
+00004010  w      .text	00000000 __low_level_init
+000045b2 g     F .text	0000000a start_decrypt
+00001100 g       .text	00000000 __data_start
+0000018e g       *ABS*	00000000 __TBCCTL6
+00000074 g       *ABS*	00000000 __I2CSCLH
+000001ec g       *ABS*	00000000 __DMA1DA
+00000120 g       *ABS*	00000000 __WDTCTL
+00000083 g       *ABS*	00000000 __ADC12MCTL3
+00000000 g       *ABS*	00000000 __IE1
+00000059 g       *ABS*	00000000 __CACTL1
+00000020 g       *ABS*	00000000 __P1IN
+0000001c g       *ABS*	00000000 __P4IN
+00004276 g     F .text	00000146 Encrypt
+0000008b g       *ABS*	00000000 __ADC12MCTL11
+0000013e g       *ABS*	00000000 __SUMEXT
+00000031 g       *ABS*	00000000 __P5OUT
+
+
+
+Disassembly of section .text:
+
+00004000 <__watchdog_support>:
+    4000:	55 42 20 01 	mov.b	&0x0120,r5	
+    4004:	35 d0 08 5a 	bis	#23048,	r5	;#0x5a08
+    4008:	82 45 00 11 	mov	r5,	&0x1100	
+
+0000400c <__init_stack>:
+    400c:	31 40 00 39 	mov	#14592,	r1	;#0x3900
+
+00004010 <__do_copy_data>:
+    4010:	3f 40 00 00 	mov	#0,	r15	;#0x0000
+    4014:	0f 93       	tst	r15		
+    4016:	08 24       	jz	$+18     	;abs 0x4028
+    4018:	92 42 00 11 	mov	&0x1100,&0x0120	
+    401c:	20 01 
+    401e:	2f 83       	decd	r15		
+    4020:	9f 4f 32 46 	mov	17970(r15),4352(r15);0x4632(r15), 0x1100(r15)
+    4024:	00 11 
+    4026:	f8 23       	jnz	$-14     	;abs 0x4018
+
+00004028 <__do_clear_bss>:
+    4028:	3f 40 00 00 	mov	#0,	r15	;#0x0000
+    402c:	0f 93       	tst	r15		
+    402e:	07 24       	jz	$+16     	;abs 0x403e
+    4030:	92 42 00 11 	mov	&0x1100,&0x0120	
+    4034:	20 01 
+    4036:	1f 83       	dec	r15		
+    4038:	cf 43 00 11 	mov.b	#0,	4352(r15);r3 As==00, 0x1100(r15)
+    403c:	f9 23       	jnz	$-12     	;abs 0x4030
+
+0000403e <main>:
+        crypt[0] = ROTATE_LEFT_32( (crypt[0] ^ key[25-i]) - crypt[1], 8 );
+    }
+}
+
+int main ()
+{
+    403e:	04 41       	mov	r1,	r4	
+    4040:	24 53       	incd	r4		
+    4042:	31 50 24 ff 	add	#-220,	r1	;#0xff24
+    u32 text[2];
+    text[0] = 0x74614620;
+    4046:	b4 40 20 46 	mov	#17952,	-222(r4);#0x4620, 0xff22(r4)
+    404a:	22 ff 
+    404c:	b4 40 61 74 	mov	#29793,	-220(r4);#0x7461, 0xff24(r4)
+    4050:	24 ff 
+    text[1] = 0x736e6165;
+    4052:	b4 40 65 61 	mov	#24933,	-218(r4);#0x6165, 0xff26(r4)
+    4056:	26 ff 
+    4058:	b4 40 6e 73 	mov	#29550,	-216(r4);#0x736e, 0xff28(r4)
+    405c:	28 ff 
+    u32 crypt[2] = {0};
+    405e:	84 43 2a ff 	mov	#0,	-214(r4);r3 As==00, 0xff2a(r4)
+    4062:	84 43 2c ff 	mov	#0,	-212(r4);r3 As==00, 0xff2c(r4)
+    4066:	84 43 2e ff 	mov	#0,	-210(r4);r3 As==00, 0xff2e(r4)
+    406a:	84 43 30 ff 	mov	#0,	-208(r4);r3 As==00, 0xff30(r4)
+    u32 l[26] = {0};
+    406e:	0f 44       	mov	r4,	r15	
+    4070:	3f 50 32 ff 	add	#-206,	r15	;#0xff32
+    4074:	3e 40 68 00 	mov	#104,	r14	;#0x0068
+    4078:	0d 4e       	mov	r14,	r13	
+    407a:	0e 43       	clr	r14		
+    407c:	b0 12 c6 45 	call	#0x45c6	
+    u32 k[25] = {0};
+    4080:	0f 44       	mov	r4,	r15	
+    4082:	3f 50 9a ff 	add	#-102,	r15	;#0xff9a
+    4086:	3e 40 64 00 	mov	#100,	r14	;#0x0064
+    408a:	0d 4e       	mov	r14,	r13	
+    408c:	0e 43       	clr	r14		
+    408e:	b0 12 c6 45 	call	#0x45c6	
+    l[1] = 0x13121110;
+    4092:	b4 40 10 11 	mov	#4368,	-202(r4);#0x1110, 0xff36(r4)
+    4096:	36 ff 
+    4098:	b4 40 12 13 	mov	#4882,	-200(r4);#0x1312, 0xff38(r4)
+    409c:	38 ff 
+    l[0] = 0x0b0a0908;
+    409e:	b4 40 08 09 	mov	#2312,	-206(r4);#0x0908, 0xff32(r4)
+    40a2:	32 ff 
+    40a4:	b4 40 0a 0b 	mov	#2826,	-204(r4);#0x0b0a, 0xff34(r4)
+    40a8:	34 ff 
+    k[0] = 0x03020100;
+    40aa:	b4 40 00 01 	mov	#256,	-102(r4);#0x0100, 0xff9a(r4)
+    40ae:	9a ff 
+    40b0:	b4 40 02 03 	mov	#770,	-100(r4);#0x0302, 0xff9c(r4)
+    40b4:	9c ff 
+	
+	
+	START_ENCRYPT();
+    40b6:	b0 12 a8 45 	call	#0x45a8	
+    KeyExpansion ( l, k );
+    40ba:	0e 44       	mov	r4,	r14	
+    40bc:	3e 50 9a ff 	add	#-102,	r14	;#0xff9a
+    40c0:	0f 44       	mov	r4,	r15	
+    40c2:	3f 50 32 ff 	add	#-206,	r15	;#0xff32
+    40c6:	b0 12 24 41 	call	#0x4124	
+    Encrypt ( text, crypt, k );
+    40ca:	0e 44       	mov	r4,	r14	
+    40cc:	3e 50 9a ff 	add	#-102,	r14	;#0xff9a
+    40d0:	0f 44       	mov	r4,	r15	
+    40d2:	3f 50 2a ff 	add	#-214,	r15	;#0xff2a
+    40d6:	0d 4e       	mov	r14,	r13	
+    40d8:	0e 4f       	mov	r15,	r14	
+    40da:	0f 44       	mov	r4,	r15	
+    40dc:	3f 50 22 ff 	add	#-222,	r15	;#0xff22
+    40e0:	b0 12 76 42 	call	#0x4276	
+    //printf("%x %x\n%x %x\n\n\n", text[0], text[1], crypt[0], crypt[1]);
+	START_DECRYPT();
+    40e4:	b0 12 b2 45 	call	#0x45b2	
+	KeyExpansion ( l, k );
+    40e8:	0e 44       	mov	r4,	r14	
+    40ea:	3e 50 9a ff 	add	#-102,	r14	;#0xff9a
+    40ee:	0f 44       	mov	r4,	r15	
+    40f0:	3f 50 32 ff 	add	#-206,	r15	;#0xff32
+    40f4:	b0 12 24 41 	call	#0x4124	
+    Decrypt ( crypt, text, k );
+    40f8:	0e 44       	mov	r4,	r14	
+    40fa:	3e 50 9a ff 	add	#-102,	r14	;#0xff9a
+    40fe:	0f 44       	mov	r4,	r15	
+    4100:	3f 50 2a ff 	add	#-214,	r15	;#0xff2a
+    4104:	0d 4e       	mov	r14,	r13	
+    4106:	0e 44       	mov	r4,	r14	
+    4108:	3e 50 22 ff 	add	#-222,	r14	;#0xff22
+    410c:	b0 12 bc 43 	call	#0x43bc	
+    //printf("%x %x\n%x %x\n\n\n", text[0], text[1], crypt[0], crypt[1]);
+	END_EXPE();
+    4110:	b0 12 bc 45 	call	#0x45bc	
+
+    return 0;
+    4114:	0f 43       	clr	r15		
+}
+    4116:	31 50 dc 00 	add	#220,	r1	;#0x00dc
+
+0000411a <__stop_progExec__>:
+    411a:	32 d0 f0 00 	bis	#240,	r2	;#0x00f0
+    411e:	fd 3f       	jmp	$-4      	;abs 0x411a
+
+00004120 <__ctors_end>:
+    4120:	30 40 30 46 	br	#0x4630	
+
+00004124 <KeyExpansion>:
+typedef uint8_t u8;
+typedef uint16_t u16;
+typedef uint32_t u32;
+
+void KeyExpansion ( u32 l[], u32 k[] )
+{
+    4124:	0b 12       	push	r11		
+    4126:	0a 12       	push	r10		
+    4128:	09 12       	push	r9		
+    412a:	08 12       	push	r8		
+    412c:	07 12       	push	r7		
+    412e:	06 12       	push	r6		
+    4130:	05 12       	push	r5		
+    4132:	04 12       	push	r4		
+    4134:	04 41       	mov	r1,	r4	
+    4136:	34 50 10 00 	add	#16,	r4	;#0x0010
+    413a:	31 50 f6 ff 	add	#-10,	r1	;#0xfff6
+    413e:	84 4f e8 ff 	mov	r15,	-24(r4)	;0xffe8(r4)
+    4142:	84 4e ea ff 	mov	r14,	-22(r4)	;0xffea(r4)
+    u8 i;
+    for ( i=0 ; i<25 ; i++ )
+    4146:	c4 43 e6 ff 	mov.b	#0,	-26(r4)	;r3 As==00, 0xffe6(r4)
+    414a:	86 3c       	jmp	$+270    	;abs 0x4258
+    {
+        l[i+2] = ( k[i] + ROTATE_RIGHT_32(l[i], 8) ) ^ i;
+    414c:	5f 44 e6 ff 	mov.b	-26(r4),r15	;0xffe6(r4)
+    4150:	2f 53       	incd	r15		
+    4152:	0f 5f       	rla	r15		
+    4154:	0f 5f       	rla	r15		
+    4156:	15 44 e8 ff 	mov	-24(r4),r5	;0xffe8(r4)
+    415a:	05 5f       	add	r15,	r5	
+    415c:	5f 44 e6 ff 	mov.b	-26(r4),r15	;0xffe6(r4)
+    4160:	0f 5f       	rla	r15		
+    4162:	0f 5f       	rla	r15		
+    4164:	1f 54 ea ff 	add	-22(r4),r15	;0xffea(r4)
+    4168:	2a 4f       	mov	@r15,	r10	
+    416a:	1b 4f 02 00 	mov	2(r15),	r11	;0x0002(r15)
+    416e:	5f 44 e6 ff 	mov.b	-26(r4),r15	;0xffe6(r4)
+    4172:	0f 5f       	rla	r15		
+    4174:	0f 5f       	rla	r15		
+    4176:	1f 54 e8 ff 	add	-24(r4),r15	;0xffe8(r4)
+    417a:	2e 4f       	mov	@r15,	r14	
+    417c:	1f 4f 02 00 	mov	2(r15),	r15	;0x0002(r15)
+    4180:	0c 4e       	mov	r14,	r12	
+    4182:	4c 4c       	mov.b	r12,	r12	
+    4184:	8c 10       	swpb	r12		
+    4186:	0d 4f       	mov	r15,	r13	
+    4188:	8d 10       	swpb	r13		
+    418a:	4d 4d       	mov.b	r13,	r13	
+    418c:	09 4c       	mov	r12,	r9	
+    418e:	09 dd       	bis	r13,	r9	
+    4190:	84 49 ee ff 	mov	r9,	-18(r4)	;0xffee(r4)
+    4194:	0d 4f       	mov	r15,	r13	
+    4196:	4d 4d       	mov.b	r13,	r13	
+    4198:	8d 10       	swpb	r13		
+    419a:	0f 4e       	mov	r14,	r15	
+    419c:	8f 10       	swpb	r15		
+    419e:	4f 4f       	mov.b	r15,	r15	
+    41a0:	0e 4d       	mov	r13,	r14	
+    41a2:	0e df       	bis	r15,	r14	
+    41a4:	84 4e ec ff 	mov	r14,	-20(r4)	;0xffec(r4)
+    41a8:	1e 44 ec ff 	mov	-20(r4),r14	;0xffec(r4)
+    41ac:	1f 44 ee ff 	mov	-18(r4),r15	;0xffee(r4)
+    41b0:	0e 5a       	add	r10,	r14	
+    41b2:	0f 6b       	addc	r11,	r15	
+    41b4:	58 44 e6 ff 	mov.b	-26(r4),r8	;0xffe6(r4)
+    41b8:	09 43       	clr	r9		
+    41ba:	0e e8       	xor	r8,	r14	
+    41bc:	0f e9       	xor	r9,	r15	
+    41be:	85 4e 00 00 	mov	r14,	0(r5)	;0x0000(r5)
+    41c2:	85 4f 02 00 	mov	r15,	2(r5)	;0x0002(r5)
+        k[i+1] = ROTATE_LEFT_32(k[i], 3) ^ l[i+2];
+    41c6:	5f 44 e6 ff 	mov.b	-26(r4),r15	;0xffe6(r4)
+    41ca:	1f 53       	inc	r15		
+    41cc:	0f 5f       	rla	r15		
+    41ce:	0f 5f       	rla	r15		
+    41d0:	1b 44 ea ff 	mov	-22(r4),r11	;0xffea(r4)
+    41d4:	0b 5f       	add	r15,	r11	
+    41d6:	5f 44 e6 ff 	mov.b	-26(r4),r15	;0xffe6(r4)
+    41da:	0f 5f       	rla	r15		
+    41dc:	0f 5f       	rla	r15		
+    41de:	1f 54 ea ff 	add	-22(r4),r15	;0xffea(r4)
+    41e2:	2c 4f       	mov	@r15,	r12	
+    41e4:	1d 4f 02 00 	mov	2(r15),	r13	;0x0002(r15)
+    41e8:	0f 4c       	mov	r12,	r15	
+    41ea:	8f 10       	swpb	r15		
+    41ec:	4f 4f       	mov.b	r15,	r15	
+    41ee:	12 c3       	clrc			
+    41f0:	0f 10       	rrc	r15		
+    41f2:	12 c3       	clrc			
+    41f4:	0f 10       	rrc	r15		
+    41f6:	12 c3       	clrc			
+    41f8:	0f 10       	rrc	r15		
+    41fa:	12 c3       	clrc			
+    41fc:	0f 10       	rrc	r15		
+    41fe:	12 c3       	clrc			
+    4200:	0f 10       	rrc	r15		
+    4202:	0e 4d       	mov	r13,	r14	
+    4204:	0e 5e       	rla	r14		
+    4206:	0e 5e       	rla	r14		
+    4208:	0e 5e       	rla	r14		
+    420a:	07 4f       	mov	r15,	r7	
+    420c:	07 de       	bis	r14,	r7	
+    420e:	0f 4d       	mov	r13,	r15	
+    4210:	8f 10       	swpb	r15		
+    4212:	4f 4f       	mov.b	r15,	r15	
+    4214:	12 c3       	clrc			
+    4216:	0f 10       	rrc	r15		
+    4218:	12 c3       	clrc			
+    421a:	0f 10       	rrc	r15		
+    421c:	12 c3       	clrc			
+    421e:	0f 10       	rrc	r15		
+    4220:	12 c3       	clrc			
+    4222:	0f 10       	rrc	r15		
+    4224:	12 c3       	clrc			
+    4226:	0f 10       	rrc	r15		
+    4228:	0e 4c       	mov	r12,	r14	
+    422a:	0e 5e       	rla	r14		
+    422c:	0e 5e       	rla	r14		
+    422e:	0e 5e       	rla	r14		
+    4230:	06 4f       	mov	r15,	r6	
+    4232:	06 de       	bis	r14,	r6	
+    4234:	5f 44 e6 ff 	mov.b	-26(r4),r15	;0xffe6(r4)
+    4238:	2f 53       	incd	r15		
+    423a:	0f 5f       	rla	r15		
+    423c:	0f 5f       	rla	r15		
+    423e:	1f 54 e8 ff 	add	-24(r4),r15	;0xffe8(r4)
+    4242:	2e 4f       	mov	@r15,	r14	
+    4244:	1f 4f 02 00 	mov	2(r15),	r15	;0x0002(r15)
+    4248:	0e e6       	xor	r6,	r14	
+    424a:	0f e7       	xor	r7,	r15	
+    424c:	8b 4e 00 00 	mov	r14,	0(r11)	;0x0000(r11)
+    4250:	8b 4f 02 00 	mov	r15,	2(r11)	;0x0002(r11)
+typedef uint32_t u32;
+
+void KeyExpansion ( u32 l[], u32 k[] )
+{
+    u8 i;
+    for ( i=0 ; i<25 ; i++ )
+    4254:	d4 53 e6 ff 	inc.b	-26(r4)	;0xffe6(r4)
+    4258:	f4 90 19 00 	cmp.b	#25,	-26(r4)	;#0x0019, 0xffe6(r4)
+    425c:	e6 ff 
+    425e:	76 2b       	jnc	$-274    	;abs 0x414c
+    {
+        l[i+2] = ( k[i] + ROTATE_RIGHT_32(l[i], 8) ) ^ i;
+        k[i+1] = ROTATE_LEFT_32(k[i], 3) ^ l[i+2];
+    }
+}
+    4260:	31 50 0a 00 	add	#10,	r1	;#0x000a
+    4264:	34 41       	pop	r4		
+    4266:	35 41       	pop	r5		
+    4268:	36 41       	pop	r6		
+    426a:	37 41       	pop	r7		
+    426c:	38 41       	pop	r8		
+    426e:	39 41       	pop	r9		
+    4270:	3a 41       	pop	r10		
+    4272:	3b 41       	pop	r11		
+    4274:	30 41       	ret			
+
+00004276 <Encrypt>:
+
+void Encrypt ( u32 text[], u32 crypt[], u32 key[] )
+{
+    4276:	0b 12       	push	r11		
+    4278:	0a 12       	push	r10		
+    427a:	09 12       	push	r9		
+    427c:	08 12       	push	r8		
+    427e:	07 12       	push	r7		
+    4280:	04 12       	push	r4		
+    4282:	04 41       	mov	r1,	r4	
+    4284:	34 50 0c 00 	add	#12,	r4	;#0x000c
+    4288:	31 82       	sub	#8,	r1	;r2 As==11
+    428a:	84 4f ee ff 	mov	r15,	-18(r4)	;0xffee(r4)
+    428e:	84 4e f0 ff 	mov	r14,	-16(r4)	;0xfff0(r4)
+    4292:	84 4d f2 ff 	mov	r13,	-14(r4)	;0xfff2(r4)
+    u8 i;
+    crypt[0] = text[0];
+    4296:	1f 44 ee ff 	mov	-18(r4),r15	;0xffee(r4)
+    429a:	2e 4f       	mov	@r15,	r14	
+    429c:	1f 4f 02 00 	mov	2(r15),	r15	;0x0002(r15)
+    42a0:	1d 44 f0 ff 	mov	-16(r4),r13	;0xfff0(r4)
+    42a4:	8d 4e 00 00 	mov	r14,	0(r13)	;0x0000(r13)
+    42a8:	8d 4f 02 00 	mov	r15,	2(r13)	;0x0002(r13)
+    crypt[1] = text[1];
+    42ac:	1d 44 f0 ff 	mov	-16(r4),r13	;0xfff0(r4)
+    42b0:	2d 52       	add	#4,	r13	;r2 As==10
+    42b2:	1f 44 ee ff 	mov	-18(r4),r15	;0xffee(r4)
+    42b6:	1e 4f 04 00 	mov	4(r15),	r14	;0x0004(r15)
+    42ba:	1f 4f 06 00 	mov	6(r15),	r15	;0x0006(r15)
+    42be:	8d 4e 00 00 	mov	r14,	0(r13)	;0x0000(r13)
+    42c2:	8d 4f 02 00 	mov	r15,	2(r13)	;0x0002(r13)
+
+    for ( i=0 ; i<26 ; i++ )
+    42c6:	c4 43 ec ff 	mov.b	#0,	-20(r4)	;r3 As==00, 0xffec(r4)
+    42ca:	6c 3c       	jmp	$+218    	;abs 0x43a4
+    {
+        crypt[0] = ( ROTATE_RIGHT_32(crypt[0], 8) + crypt[1] ) ^ key[i];
+    42cc:	1f 44 f0 ff 	mov	-16(r4),r15	;0xfff0(r4)
+    42d0:	2c 4f       	mov	@r15,	r12	
+    42d2:	1d 4f 02 00 	mov	2(r15),	r13	;0x0002(r15)
+    42d6:	0e 4c       	mov	r12,	r14	
+    42d8:	4e 4e       	mov.b	r14,	r14	
+    42da:	8e 10       	swpb	r14		
+    42dc:	0f 4d       	mov	r13,	r15	
+    42de:	8f 10       	swpb	r15		
+    42e0:	4f 4f       	mov.b	r15,	r15	
+    42e2:	0a 4e       	mov	r14,	r10	
+    42e4:	0a df       	bis	r15,	r10	
+    42e6:	0e 4d       	mov	r13,	r14	
+    42e8:	4e 4e       	mov.b	r14,	r14	
+    42ea:	8e 10       	swpb	r14		
+    42ec:	0f 4c       	mov	r12,	r15	
+    42ee:	8f 10       	swpb	r15		
+    42f0:	4f 4f       	mov.b	r15,	r15	
+    42f2:	09 4e       	mov	r14,	r9	
+    42f4:	09 df       	bis	r15,	r9	
+    42f6:	1f 44 f0 ff 	mov	-16(r4),r15	;0xfff0(r4)
+    42fa:	2f 52       	add	#4,	r15	;r2 As==10
+    42fc:	2e 4f       	mov	@r15,	r14	
+    42fe:	1f 4f 02 00 	mov	2(r15),	r15	;0x0002(r15)
+    4302:	0c 49       	mov	r9,	r12	
+    4304:	0d 4a       	mov	r10,	r13	
+    4306:	0c 5e       	add	r14,	r12	
+    4308:	0d 6f       	addc	r15,	r13	
+    430a:	5f 44 ec ff 	mov.b	-20(r4),r15	;0xffec(r4)
+    430e:	0f 5f       	rla	r15		
+    4310:	0f 5f       	rla	r15		
+    4312:	1f 54 f2 ff 	add	-14(r4),r15	;0xfff2(r4)
+    4316:	2e 4f       	mov	@r15,	r14	
+    4318:	1f 4f 02 00 	mov	2(r15),	r15	;0x0002(r15)
+    431c:	0e ec       	xor	r12,	r14	
+    431e:	0f ed       	xor	r13,	r15	
+    4320:	1d 44 f0 ff 	mov	-16(r4),r13	;0xfff0(r4)
+    4324:	8d 4e 00 00 	mov	r14,	0(r13)	;0x0000(r13)
+    4328:	8d 4f 02 00 	mov	r15,	2(r13)	;0x0002(r13)
+        crypt[1] = ROTATE_LEFT_32(crypt[1], 3) ^ crypt[0];
+    432c:	1b 44 f0 ff 	mov	-16(r4),r11	;0xfff0(r4)
+    4330:	2b 52       	add	#4,	r11	;r2 As==10
+    4332:	1f 44 f0 ff 	mov	-16(r4),r15	;0xfff0(r4)
+    4336:	2f 52       	add	#4,	r15	;r2 As==10
+    4338:	2c 4f       	mov	@r15,	r12	
+    433a:	1d 4f 02 00 	mov	2(r15),	r13	;0x0002(r15)
+    433e:	0f 4c       	mov	r12,	r15	
+    4340:	8f 10       	swpb	r15		
+    4342:	4f 4f       	mov.b	r15,	r15	
+    4344:	12 c3       	clrc			
+    4346:	0f 10       	rrc	r15		
+    4348:	12 c3       	clrc			
+    434a:	0f 10       	rrc	r15		
+    434c:	12 c3       	clrc			
+    434e:	0f 10       	rrc	r15		
+    4350:	12 c3       	clrc			
+    4352:	0f 10       	rrc	r15		
+    4354:	12 c3       	clrc			
+    4356:	0f 10       	rrc	r15		
+    4358:	0e 4d       	mov	r13,	r14	
+    435a:	0e 5e       	rla	r14		
+    435c:	0e 5e       	rla	r14		
+    435e:	0e 5e       	rla	r14		
+    4360:	08 4f       	mov	r15,	r8	
+    4362:	08 de       	bis	r14,	r8	
+    4364:	0f 4d       	mov	r13,	r15	
+    4366:	8f 10       	swpb	r15		
+    4368:	4f 4f       	mov.b	r15,	r15	
+    436a:	12 c3       	clrc			
+    436c:	0f 10       	rrc	r15		
+    436e:	12 c3       	clrc			
+    4370:	0f 10       	rrc	r15		
+    4372:	12 c3       	clrc			
+    4374:	0f 10       	rrc	r15		
+    4376:	12 c3       	clrc			
+    4378:	0f 10       	rrc	r15		
+    437a:	12 c3       	clrc			
+    437c:	0f 10       	rrc	r15		
+    437e:	0e 4c       	mov	r12,	r14	
+    4380:	0e 5e       	rla	r14		
+    4382:	0e 5e       	rla	r14		
+    4384:	0e 5e       	rla	r14		
+    4386:	07 4f       	mov	r15,	r7	
+    4388:	07 de       	bis	r14,	r7	
+    438a:	1f 44 f0 ff 	mov	-16(r4),r15	;0xfff0(r4)
+    438e:	2e 4f       	mov	@r15,	r14	
+    4390:	1f 4f 02 00 	mov	2(r15),	r15	;0x0002(r15)
+    4394:	0e e7       	xor	r7,	r14	
+    4396:	0f e8       	xor	r8,	r15	
+    4398:	8b 4e 00 00 	mov	r14,	0(r11)	;0x0000(r11)
+    439c:	8b 4f 02 00 	mov	r15,	2(r11)	;0x0002(r11)
+{
+    u8 i;
+    crypt[0] = text[0];
+    crypt[1] = text[1];
+
+    for ( i=0 ; i<26 ; i++ )
+    43a0:	d4 53 ec ff 	inc.b	-20(r4)	;0xffec(r4)
+    43a4:	f4 90 1a 00 	cmp.b	#26,	-20(r4)	;#0x001a, 0xffec(r4)
+    43a8:	ec ff 
+    43aa:	90 2b       	jnc	$-222    	;abs 0x42cc
+    {
+        crypt[0] = ( ROTATE_RIGHT_32(crypt[0], 8) + crypt[1] ) ^ key[i];
+        crypt[1] = ROTATE_LEFT_32(crypt[1], 3) ^ crypt[0];
+    }
+}
+    43ac:	31 52       	add	#8,	r1	;r2 As==11
+    43ae:	34 41       	pop	r4		
+    43b0:	37 41       	pop	r7		
+    43b2:	38 41       	pop	r8		
+    43b4:	39 41       	pop	r9		
+    43b6:	3a 41       	pop	r10		
+    43b8:	3b 41       	pop	r11		
+    43ba:	30 41       	ret			
+
+000043bc <Decrypt>:
+
+void Decrypt ( u16 text[], u16 crypt[], u16 key[] )
+{
+    43bc:	0b 12       	push	r11		
+    43be:	04 12       	push	r4		
+    43c0:	04 41       	mov	r1,	r4	
+    43c2:	24 52       	add	#4,	r4	;r2 As==10
+    43c4:	31 82       	sub	#8,	r1	;r2 As==11
+    43c6:	84 4f f6 ff 	mov	r15,	-10(r4)	;0xfff6(r4)
+    43ca:	84 4e f8 ff 	mov	r14,	-8(r4)	;0xfff8(r4)
+    43ce:	84 4d fa ff 	mov	r13,	-6(r4)	;0xfffa(r4)
+    u8 i;
+    crypt[0] = text[0];
+    43d2:	1f 44 f6 ff 	mov	-10(r4),r15	;0xfff6(r4)
+    43d6:	2e 4f       	mov	@r15,	r14	
+    43d8:	1f 44 f8 ff 	mov	-8(r4),	r15	;0xfff8(r4)
+    43dc:	8f 4e 00 00 	mov	r14,	0(r15)	;0x0000(r15)
+    crypt[1] = text[1];
+    43e0:	1f 44 f8 ff 	mov	-8(r4),	r15	;0xfff8(r4)
+    43e4:	2f 53       	incd	r15		
+    43e6:	1e 44 f6 ff 	mov	-10(r4),r14	;0xfff6(r4)
+    43ea:	1e 4e 02 00 	mov	2(r14),	r14	;0x0002(r14)
+    43ee:	8f 4e 00 00 	mov	r14,	0(r15)	;0x0000(r15)
+
+    for ( i=0 ; i<26 ; i++ )
+    43f2:	c4 43 f4 ff 	mov.b	#0,	-12(r4)	;r3 As==00, 0xfff4(r4)
+    43f6:	5c 3c       	jmp	$+186    	;abs 0x44b0
+    {
+        crypt[1] = ROTATE_RIGHT_32( crypt[0] ^ crypt[1], 3);
+    43f8:	1d 44 f8 ff 	mov	-8(r4),	r13	;0xfff8(r4)
+    43fc:	2d 53       	incd	r13		
+    43fe:	1f 44 f8 ff 	mov	-8(r4),	r15	;0xfff8(r4)
+    4402:	2e 4f       	mov	@r15,	r14	
+    4404:	1f 44 f8 ff 	mov	-8(r4),	r15	;0xfff8(r4)
+    4408:	2f 53       	incd	r15		
+    440a:	2f 4f       	mov	@r15,	r15	
+    440c:	0f ee       	xor	r14,	r15	
+    440e:	0e 4f       	mov	r15,	r14	
+    4410:	12 c3       	clrc			
+    4412:	0e 10       	rrc	r14		
+    4414:	12 c3       	clrc			
+    4416:	0e 10       	rrc	r14		
+    4418:	12 c3       	clrc			
+    441a:	0e 10       	rrc	r14		
+    441c:	1f 44 f8 ff 	mov	-8(r4),	r15	;0xfff8(r4)
+    4420:	2c 4f       	mov	@r15,	r12	
+    4422:	1f 44 f8 ff 	mov	-8(r4),	r15	;0xfff8(r4)
+    4426:	2f 53       	incd	r15		
+    4428:	2f 4f       	mov	@r15,	r15	
+    442a:	0f ec       	xor	r12,	r15	
+    442c:	4f 4f       	mov.b	r15,	r15	
+    442e:	8f 10       	swpb	r15		
+    4430:	0f 5f       	rla	r15		
+    4432:	0f 5f       	rla	r15		
+    4434:	0f 5f       	rla	r15		
+    4436:	0f 5f       	rla	r15		
+    4438:	0f 5f       	rla	r15		
+    443a:	0f de       	bis	r14,	r15	
+    443c:	8d 4f 00 00 	mov	r15,	0(r13)	;0x0000(r13)
+        crypt[0] = ROTATE_LEFT_32( (crypt[0] ^ key[25-i]) - crypt[1], 8 );
+    4440:	1f 44 f8 ff 	mov	-8(r4),	r15	;0xfff8(r4)
+    4444:	2e 4f       	mov	@r15,	r14	
+    4446:	5f 44 f4 ff 	mov.b	-12(r4),r15	;0xfff4(r4)
+    444a:	3d 40 19 00 	mov	#25,	r13	;#0x0019
+    444e:	0b 4d       	mov	r13,	r11	
+    4450:	0b 8f       	sub	r15,	r11	
+    4452:	0f 4b       	mov	r11,	r15	
+    4454:	0f 5f       	rla	r15		
+    4456:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    445a:	2f 4f       	mov	@r15,	r15	
+    445c:	0e ef       	xor	r15,	r14	
+    445e:	1f 44 f8 ff 	mov	-8(r4),	r15	;0xfff8(r4)
+    4462:	2f 53       	incd	r15		
+    4464:	2f 4f       	mov	@r15,	r15	
+    4466:	0c 4e       	mov	r14,	r12	
+    4468:	0c 8f       	sub	r15,	r12	
+    446a:	0f 4c       	mov	r12,	r15	
+    446c:	0e 4f       	mov	r15,	r14	
+    446e:	4e 4e       	mov.b	r14,	r14	
+    4470:	8e 10       	swpb	r14		
+    4472:	1f 44 f8 ff 	mov	-8(r4),	r15	;0xfff8(r4)
+    4476:	2d 4f       	mov	@r15,	r13	
+    4478:	5f 44 f4 ff 	mov.b	-12(r4),r15	;0xfff4(r4)
+    447c:	3c 40 19 00 	mov	#25,	r12	;#0x0019
+    4480:	0b 4c       	mov	r12,	r11	
+    4482:	0b 8f       	sub	r15,	r11	
+    4484:	0f 4b       	mov	r11,	r15	
+    4486:	0f 5f       	rla	r15		
+    4488:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    448c:	2f 4f       	mov	@r15,	r15	
+    448e:	0d ef       	xor	r15,	r13	
+    4490:	1f 44 f8 ff 	mov	-8(r4),	r15	;0xfff8(r4)
+    4494:	2f 53       	incd	r15		
+    4496:	2f 4f       	mov	@r15,	r15	
+    4498:	0c 4d       	mov	r13,	r12	
+    449a:	0c 8f       	sub	r15,	r12	
+    449c:	0f 4c       	mov	r12,	r15	
+    449e:	8f 10       	swpb	r15		
+    44a0:	4f 4f       	mov.b	r15,	r15	
+    44a2:	0e df       	bis	r15,	r14	
+    44a4:	1f 44 f8 ff 	mov	-8(r4),	r15	;0xfff8(r4)
+    44a8:	8f 4e 00 00 	mov	r14,	0(r15)	;0x0000(r15)
+{
+    u8 i;
+    crypt[0] = text[0];
+    crypt[1] = text[1];
+
+    for ( i=0 ; i<26 ; i++ )
+    44ac:	d4 53 f4 ff 	inc.b	-12(r4)	;0xfff4(r4)
+    44b0:	f4 90 1a 00 	cmp.b	#26,	-12(r4)	;#0x001a, 0xfff4(r4)
+    44b4:	f4 ff 
+    44b6:	a0 2b       	jnc	$-190    	;abs 0x43f8
+    {
+        crypt[1] = ROTATE_RIGHT_32( crypt[0] ^ crypt[1], 3);
+        crypt[0] = ROTATE_LEFT_32( (crypt[0] ^ key[25-i]) - crypt[1], 8 );
+    }
+}
+    44b8:	31 52       	add	#8,	r1	;r2 As==11
+    44ba:	34 41       	pop	r4		
+    44bc:	3b 41       	pop	r11		
+    44be:	30 41       	ret			
+
+000044c0 <delay>:
+/**************************************************/
+/********************* DELAY **********************/
+/**************************************************/
+
+void delay(unsigned int d) 
+{
+    44c0:	04 12       	push	r4		
+    44c2:	04 41       	mov	r1,	r4	
+    44c4:	24 53       	incd	r4		
+    44c6:	31 50 fa ff 	add	#-6,	r1	;#0xfffa
+    44ca:	84 4f fc ff 	mov	r15,	-4(r4)	;0xfffc(r4)
+  unsigned int i,j;
+  for(j=0; j < 0xff; j++)
+    44ce:	84 43 fa ff 	mov	#0,	-6(r4)	;r3 As==00, 0xfffa(r4)
+    44d2:	0d 3c       	jmp	$+28     	;abs 0x44ee
+    {
+      for (i = 0; i<d; i++) 
+    44d4:	84 43 f8 ff 	mov	#0,	-8(r4)	;r3 As==00, 0xfff8(r4)
+    44d8:	04 3c       	jmp	$+10     	;abs 0x44e2
+	{
+	  nop();
+    44da:	03 43       	nop			
+	  nop();
+    44dc:	03 43       	nop			
+void delay(unsigned int d) 
+{
+  unsigned int i,j;
+  for(j=0; j < 0xff; j++)
+    {
+      for (i = 0; i<d; i++) 
+    44de:	94 53 f8 ff 	inc	-8(r4)		;0xfff8(r4)
+    44e2:	94 94 fc ff 	cmp	-4(r4),	-8(r4)	;0xfffc(r4), 0xfff8(r4)
+    44e6:	f8 ff 
+    44e8:	f8 2b       	jnc	$-14     	;abs 0x44da
+/**************************************************/
+
+void delay(unsigned int d) 
+{
+  unsigned int i,j;
+  for(j=0; j < 0xff; j++)
+    44ea:	94 53 fa ff 	inc	-6(r4)		;0xfffa(r4)
+    44ee:	b4 90 ff 00 	cmp	#255,	-6(r4)	;#0x00ff, 0xfffa(r4)
+    44f2:	fa ff 
+    44f4:	ef 2b       	jnc	$-32     	;abs 0x44d4
+	{
+	  nop();
+	  nop();
+	}
+    }
+}
+    44f6:	31 50 06 00 	add	#6,	r1	;#0x0006
+    44fa:	34 41       	pop	r4		
+    44fc:	30 41       	ret			
+
+000044fe <uart1_init>:
+
+#define UART1_BIT_RX (1 << UART1_PIN_RX)
+#define UART1_BIT_TX (1 << UART1_PIN_TX)
+
+int uart1_init()
+{
+    44fe:	04 12       	push	r4		
+    4500:	04 41       	mov	r1,	r4	
+    4502:	24 53       	incd	r4		
+
+  WDTCTL = WDTPW + WDTHOLD;
+    4504:	b2 40 80 5a 	mov	#23168,	&0x0120	;#0x5a80
+    4508:	20 01 
+
+  P1IE   = 0x00;        // Interrupt enable
+    450a:	c2 43 25 00 	mov.b	#0,	&0x0025	;r3 As==00
+  P2IE   = 0x00;        // 0:disable 1:enable
+    450e:	c2 43 2d 00 	mov.b	#0,	&0x002d	;r3 As==00
+
+  //Init of MSP430 Usart1 pins
+  P3SEL |= (UART1_BIT_RX | UART1_BIT_TX);
+    4512:	5f 42 1b 00 	mov.b	&0x001b,r15	
+    4516:	7f d0 c0 ff 	bis.b	#-64,	r15	;#0xffc0
+    451a:	c2 4f 1b 00 	mov.b	r15,	&0x001b	
+
+  //Init of USART1 Module
+  U1ME  |= UTXE1|URXE1;           //Enable USART1 transmiter and receiver (UART mode)
+    451e:	5f 42 05 00 	mov.b	&0x0005,r15	
+    4522:	7f d0 30 00 	bis.b	#48,	r15	;#0x0030
+    4526:	c2 4f 05 00 	mov.b	r15,	&0x0005	
+  
+  U1CTL  = SWRST;                 //reset
+    452a:	d2 43 78 00 	mov.b	#1,	&0x0078	;r3 As==01
+  U1CTL  = CHAR;                  //init & release reset
+    452e:	f2 40 10 00 	mov.b	#16,	&0x0078	;#0x0010
+    4532:	78 00 
+  
+  U1TCTL = SSEL1 | TXEPT;        //use SMCLK 
+    4534:	f2 40 21 00 	mov.b	#33,	&0x0079	;#0x0021
+    4538:	79 00 
+  U1RCTL = 0;
+    453a:	c2 43 7a 00 	mov.b	#0,	&0x007a	;r3 As==00
+  // 38400 @ SMCLK 1MHz
+#define U1BR1_INIT        0
+#define U1BR0_INIT        0x1B
+#define U1MCTL_INIT       0x03
+  
+  U1BR1  = U1BR1_INIT;
+    453e:	c2 43 7d 00 	mov.b	#0,	&0x007d	;r3 As==00
+  U1BR0  = U1BR0_INIT;
+    4542:	f2 40 1b 00 	mov.b	#27,	&0x007c	;#0x001b
+    4546:	7c 00 
+  U1MCTL = U1MCTL_INIT;
+    4548:	f2 40 03 00 	mov.b	#3,	&0x007b	;#0x0003
+    454c:	7b 00 
+
+  delay(0x800);
+    454e:	3f 40 00 08 	mov	#2048,	r15	;#0x0800
+    4552:	b0 12 c0 44 	call	#0x44c0	
+  return 0;
+    4556:	0f 43       	clr	r15		
+}
+    4558:	34 41       	pop	r4		
+    455a:	30 41       	ret			
+
+0000455c <uart1_putchar>:
+
+int uart1_putchar(int c)
+{
+    455c:	04 12       	push	r4		
+    455e:	04 41       	mov	r1,	r4	
+    4560:	24 53       	incd	r4		
+    4562:	21 83       	decd	r1		
+    4564:	84 4f fc ff 	mov	r15,	-4(r4)	;0xfffc(r4)
+  U1TXBUF = c;
+    4568:	1f 44 fc ff 	mov	-4(r4),	r15	;0xfffc(r4)
+    456c:	4f 4f       	mov.b	r15,	r15	
+    456e:	c2 4f 7f 00 	mov.b	r15,	&0x007f	
+  while ((U1TCTL & TXEPT) != TXEPT);
+    4572:	03 43       	nop			
+    4574:	5f 42 79 00 	mov.b	&0x0079,r15	
+    4578:	4f 4f       	mov.b	r15,	r15	
+    457a:	1f f3       	and	#1,	r15	;r3 As==01
+    457c:	0f 93       	tst	r15		
+    457e:	fa 27       	jz	$-10     	;abs 0x4574
+  return (unsigned char)c;
+    4580:	1f 44 fc ff 	mov	-4(r4),	r15	;0xfffc(r4)
+    4584:	4f 4f       	mov.b	r15,	r15	
+    4586:	4f 4f       	mov.b	r15,	r15	
+}
+    4588:	21 53       	incd	r1		
+    458a:	34 41       	pop	r4		
+    458c:	30 41       	ret			
+
+0000458e <putchar>:
+/**************************************************/
+/******************** PUT CHAR *********************/
+/**************************************************/
+
+int putchar(int c)
+{
+    458e:	04 12       	push	r4		
+    4590:	04 41       	mov	r1,	r4	
+    4592:	24 53       	incd	r4		
+    4594:	21 83       	decd	r1		
+    4596:	84 4f fc ff 	mov	r15,	-4(r4)	;0xfffc(r4)
+  return uart1_putchar(c);
+    459a:	1f 44 fc ff 	mov	-4(r4),	r15	;0xfffc(r4)
+    459e:	b0 12 5c 45 	call	#0x455c	
+}
+    45a2:	21 53       	incd	r1		
+    45a4:	34 41       	pop	r4		
+    45a6:	30 41       	ret			
+
+000045a8 <start_encrypt>:
+/******************** END EXPE*********************/
+/**************************************************/
+
+void
+start_encrypt()
+{
+    45a8:	04 12       	push	r4		
+    45aa:	04 41       	mov	r1,	r4	
+    45ac:	24 53       	incd	r4		
+  ;
+}
+    45ae:	34 41       	pop	r4		
+    45b0:	30 41       	ret			
+
+000045b2 <start_decrypt>:
+void
+start_decrypt()
+{
+    45b2:	04 12       	push	r4		
+    45b4:	04 41       	mov	r1,	r4	
+    45b6:	24 53       	incd	r4		
+  ;
+}
+    45b8:	34 41       	pop	r4		
+    45ba:	30 41       	ret			
+
+000045bc <end_expe>:
+
+
+void
+end_expe()
+{
+    45bc:	04 12       	push	r4		
+    45be:	04 41       	mov	r1,	r4	
+    45c0:	24 53       	incd	r4		
+  ;
+}
+    45c2:	34 41       	pop	r4		
+    45c4:	30 41       	ret			
+
+000045c6 <memset>:
+    45c6:	0b 12       	push	r11		
+    45c8:	0a 12       	push	r10		
+    45ca:	09 12       	push	r9		
+    45cc:	08 12       	push	r8		
+    45ce:	3d 90 06 00 	cmp	#6,	r13	;#0x0006
+    45d2:	09 2c       	jc	$+20     	;abs 0x45e6
+    45d4:	0c 4f       	mov	r15,	r12	
+    45d6:	04 3c       	jmp	$+10     	;abs 0x45e0
+    45d8:	cc 4e 00 00 	mov.b	r14,	0(r12)	;0x0000(r12)
+    45dc:	1c 53       	inc	r12		
+    45de:	3d 53       	add	#-1,	r13	;r3 As==11
+    45e0:	0d 93       	tst	r13		
+    45e2:	fa 23       	jnz	$-10     	;abs 0x45d8
+    45e4:	20 3c       	jmp	$+66     	;abs 0x4626
+    45e6:	4e 4e       	mov.b	r14,	r14	
+    45e8:	4b 4e       	mov.b	r14,	r11	
+    45ea:	0b 93       	tst	r11		
+    45ec:	03 24       	jz	$+8      	;abs 0x45f4
+    45ee:	0c 4b       	mov	r11,	r12	
+    45f0:	8c 10       	swpb	r12		
+    45f2:	0b dc       	bis	r12,	r11	
+    45f4:	1f b3       	bit	#1,	r15	;r3 As==01
+    45f6:	06 24       	jz	$+14     	;abs 0x4604
+    45f8:	3d 53       	add	#-1,	r13	;r3 As==11
+    45fa:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+    45fe:	09 4f       	mov	r15,	r9	
+    4600:	19 53       	inc	r9		
+    4602:	01 3c       	jmp	$+4      	;abs 0x4606
+    4604:	09 4f       	mov	r15,	r9	
+    4606:	0c 4d       	mov	r13,	r12	
+    4608:	12 c3       	clrc			
+    460a:	0c 10       	rrc	r12		
+    460c:	0a 49       	mov	r9,	r10	
+    460e:	08 4c       	mov	r12,	r8	
+    4610:	8a 4b 00 00 	mov	r11,	0(r10)	;0x0000(r10)
+    4614:	2a 53       	incd	r10		
+    4616:	38 53       	add	#-1,	r8	;r3 As==11
+    4618:	fb 23       	jnz	$-8      	;abs 0x4610
+    461a:	0c 5c       	rla	r12		
+    461c:	0c 59       	add	r9,	r12	
+    461e:	1d f3       	and	#1,	r13	;r3 As==01
+    4620:	02 24       	jz	$+6      	;abs 0x4626
+    4622:	cc 4e 00 00 	mov.b	r14,	0(r12)	;0x0000(r12)
+    4626:	38 41       	pop	r8		
+    4628:	39 41       	pop	r9		
+    462a:	3a 41       	pop	r10		
+    462c:	3b 41       	pop	r11		
+    462e:	30 41       	ret			
+
+00004630 <_unexpected_>:
+    4630:	00 13       	reti			
+
+Disassembly of section .vectors:
+
+0000ffe0 <__ivtbl_16>:
+    ffe0:	20 41 20 41 20 41 20 41 20 41 20 41 20 41 20 41      A A A A A A A A
+    fff0:	20 41 20 41 20 41 20 41 20 41 20 41 20 41 00 40      A A A A A A A.@

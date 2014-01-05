@@ -1,0 +1,21 @@
+erase
+prog main.elf
+setbreak START_ENCRYPT_ADD 0
+setbreak START_DECRYPT_ADD 1
+setbreak END_EXPE_ADD 2
+simio add tracer leTracer
+run
+simio info leTracer
+run
+simio info leTracer
+run
+simio info leTracer
+simio del leTracer
+delbreak 0
+delbreak 1
+delbreak 2
+
+save_raw START_ENCRYPT_ADD 1 finished.txt
+
+exit
+

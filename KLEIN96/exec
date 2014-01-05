@@ -1,0 +1,21 @@
+erase
+prog main.elf
+setbreak 0x40be 0
+setbreak 0x40dc 1
+setbreak 0x40f8 2
+simio add tracer leTracer
+run
+simio info leTracer
+run
+simio info leTracer
+run
+simio info leTracer
+simio del leTracer
+delbreak 0
+delbreak 1
+delbreak 2
+
+save_raw 0x40be 1 finished.txt
+
+exit
+

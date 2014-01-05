@@ -1,0 +1,2658 @@
+
+klein.elf:     file format elf32-msp430
+
+SYMBOL TABLE:
+00004000 l    d  .text	00000000 .text
+0000555a l    d  .rodata	00000000 .rodata
+00001100 l    d  .noinit	00000000 .noinit
+0000ffe0 l    d  .vectors	00000000 .vectors
+00000000 l    d  .debug_aranges	00000000 .debug_aranges
+00000000 l    d  .debug_info	00000000 .debug_info
+00000000 l    d  .debug_abbrev	00000000 .debug_abbrev
+00000000 l    d  .debug_line	00000000 .debug_line
+00000000 l    d  .debug_frame	00000000 .debug_frame
+00000000 l    d  .debug_str	00000000 .debug_str
+00000000 l    d  .debug_loc	00000000 .debug_loc
+00000000 l    d  .debug_ranges	00000000 .debug_ranges
+00000000 l    df *ABS*	00000000 klein64.c
+0000555a l     O .rodata	00000010 sBox
+000040fc l       .text	00000000 __br_unexpected_
+00000000 l    df *ABS*	00000000 tools.c
+00005520 g     F .text	0000001a putchar
+00000057 g       *ABS*	00000000 __BCSCTL1
+0000005a g       *ABS*	00000000 __CACTL2
+00000174 g       *ABS*	00000000 __TACCR1
+00000084 g       *ABS*	00000000 __ADC12MCTL4
+00000000 g       *ABS*	00000000 __data_size
+0000015a g       *ABS*	00000000 __ADC12MEM13
+00000052 g       *ABS*	00000000 __I2CNDAT
+000040fc  w      .text	00000000 __isr_14
+00000128 g       *ABS*	00000000 __FCTL1
+00000024 g       *ABS*	00000000 __P1IES
+0000007b g       *ABS*	00000000 __U1MCTL
+000001f6 g       *ABS*	00000000 __DMA2SZ
+000040fc  w      .text	00000000 __isr_4
+00000002 g       *ABS*	00000000 __IFG1
+00000076 g       *ABS*	00000000 __I2CDRW
+000047d6 g     F .text	00000c7c Decrypt
+0000007e g       *ABS*	00000000 __U1RXBUF
+00000138 g       *ABS*	00000000 __OP2
+00000076 g       *ABS*	00000000 __U0RXBUF
+000001a4 g       *ABS*	00000000 __ADC12IFG
+0000012e g       *ABS*	00000000 __TAIV
+000001e6 g       *ABS*	00000000 __DMA0SZ
+00000000 g       .vectors	00000000 _efartext
+0000007c g       *ABS*	00000000 __U1BR0
+00000130 g       *ABS*	00000000 __MPY
+00000001 g       *ABS*	00000000 __IE2
+0000013a g       *ABS*	00000000 __RESLO
+00000136 g       *ABS*	00000000 __MACS
+00000087 g       *ABS*	00000000 __ADC12MCTL7
+0000002b g       *ABS*	00000000 __P2IFG
+0000001a g       *ABS*	00000000 __P3DIR
+0000556a g       *ABS*	00000000 _etext
+00000190 g       *ABS*	00000000 __TBR
+0000001d g       *ABS*	00000000 __P4OUT
+000001f4 g       *ABS*	00000000 __DMA2DA
+00000000 g       *ABS*	00000000 __bss_size
+00000081 g       *ABS*	00000000 __ADC12MCTL1
+00005490 g     F .text	0000005e uart1_init
+00000152 g       *ABS*	00000000 __ADC12MEM9
+00004000  w      .text	00000000 __watchdog_support
+000040f6  w      .text	00000000 __stop_progExec__
+00000050 g       *ABS*	00000000 __I2CIE
+0000002d g       *ABS*	00000000 __P2IE
+000001e4 g       *ABS*	00000000 __DMA0DA
+00000192 g       *ABS*	00000000 __TBCCR0
+000040fc  w      .text	00000000 __isr_11
+00000186 g       *ABS*	00000000 __TBCCTL2
+0000554e g     F .text	0000000a end_expe
+00000025 g       *ABS*	00000000 __P1IE
+000001a0 g       *ABS*	00000000 __ADC12CTL0
+00000072 g       *ABS*	00000000 __I2CDCTL
+00000073 g       *ABS*	00000000 __U0MCTL
+0000007a g       *ABS*	00000000 __U1RCTL
+00000082 g       *ABS*	00000000 __ADC12MCTL2
+0000019c g       *ABS*	00000000 __TBCCR5
+00000035 g       *ABS*	00000000 __P6OUT
+00000034 g       *ABS*	00000000 __P6IN
+000001c8 g       *ABS*	00000000 __DAC12_0DAT
+00000182 g       *ABS*	00000000 __TBCCTL0
+0000019e g       *ABS*	00000000 __TBCCR6
+000040fc  w      .text	00000000 __isr_5
+0000556a g       *ABS*	00000000 __data_load_start
+000040fc g       .text	00000000 __dtors_end
+000001ea g       *ABS*	00000000 __DMA1SA
+00000088 g       *ABS*	00000000 __ADC12MCTL8
+00000166 g       *ABS*	00000000 __TACCTL2
+000001f0 g       *ABS*	00000000 __DMA2CTL
+000040fc  w      .text	00000000 __isr_2
+00000156 g       *ABS*	00000000 __ADC12MEM11
+00000160 g       *ABS*	00000000 __TACTL
+00000158 g       *ABS*	00000000 __ADC12MEM12
+00000071 g       *ABS*	00000000 __I2CTCTL
+0000012c g       *ABS*	00000000 __FCTL3
+000040fc  w      .text	00000000 __isr_10
+00000148 g       *ABS*	00000000 __ADC12MEM4
+0000011a g       *ABS*	00000000 __I2CSA
+0000002e g       *ABS*	00000000 __P2SEL
+00000180 g       *ABS*	00000000 __TBCTL
+0000008d g       *ABS*	00000000 __ADC12MCTL13
+0000014c g       *ABS*	00000000 __ADC12MEM6
+00000023 g       *ABS*	00000000 __P1IFG
+0000013c g       *ABS*	00000000 __RESHI
+00000072 g       *ABS*	00000000 __U0RCTL
+00000172 g       *ABS*	00000000 __TACCR0
+00000071 g       *ABS*	00000000 __U0TCTL
+00000056 g       *ABS*	00000000 __DCOCTL
+00000085 g       *ABS*	00000000 __ADC12MCTL5
+00000003 g       *ABS*	00000000 __IFG2
+00000005 g       *ABS*	00000000 __ME2
+00001100 g     O .noinit	00000002 __wdt_clear_value
+00000079 g       *ABS*	00000000 __U1TCTL
+0000001b g       *ABS*	00000000 __P3SEL
+000001e0 g       *ABS*	00000000 __DMA0CTL
+000040fc  w      .text	00000000 __isr_7
+0000ffe0 g     O .vectors	00000020 __ivtbl_16
+00000028 g       *ABS*	00000000 __P2IN
+0000014e g       *ABS*	00000000 __ADC12MEM7
+00000184 g       *ABS*	00000000 __TBCCTL1
+0000005b g       *ABS*	00000000 __CAPD
+00000075 g       *ABS*	00000000 __I2CSCLL
+000040fc  w      .text	00000000 __isr_0
+00000029 g       *ABS*	00000000 __P2OUT
+0000012a g       *ABS*	00000000 __FCTL2
+00004028  w      .text	00000000 __do_clear_bss
+0000008f g       *ABS*	00000000 __ADC12MCTL15
+00000021 g       *ABS*	00000000 __P1OUT
+0000002c g       *ABS*	00000000 __P2IES
+0000015c g       *ABS*	00000000 __ADC12MEM14
+00000026 g       *ABS*	00000000 __P1SEL
+00000198 g       *ABS*	00000000 __TBCCR3
+00000080 g       *ABS*	00000000 __ADC12MCTL0
+00000140 g       *ABS*	00000000 __ADC12MEM0
+00000074 g       *ABS*	00000000 __U0BR0
+00000051 g       *ABS*	00000000 __I2CIFG
+00004100 g     F .text	000001a2 KeySetup
+00005558  w      .text	00000000 _unexpected_
+000040fc  w      .text	00000000 __isr_8
+0000014a g       *ABS*	00000000 __ADC12MEM5
+00000070 g       *ABS*	00000000 __U0CTL
+0000018a g       *ABS*	00000000 __TBCCTL4
+00000073 g       *ABS*	00000000 __I2CPSC
+0000008e g       *ABS*	00000000 __ADC12MCTL14
+000040fc  w      .text	00000000 __isr_3
+000001a6 g       *ABS*	00000000 __ADC12IE
+000054ee g     F .text	00000032 uart1_putchar
+00000144 g       *ABS*	00000000 __ADC12MEM2
+000001ee g       *ABS*	00000000 __DMA1SZ
+00000033 g       *ABS*	00000000 __P5SEL
+00000030 g       *ABS*	00000000 __P5IN
+00004000  w      .text	00000000 _reset_vector__
+000040fc g       .text	00000000 __ctors_start
+000040fc  w      .text	00000000 __isr_12
+00000036 g       *ABS*	00000000 __P6DIR
+00000018 g       *ABS*	00000000 __P3IN
+00004010  w      .text	00000000 __do_copy_data
+00000150 g       *ABS*	00000000 __ADC12MEM8
+00000142 g       *ABS*	00000000 __ADC12MEM1
+00001100 g       .rodata	00000000 __bss_start
+0000007d g       *ABS*	00000000 __U1BR1
+0000403e g     F .text	000000b8 main
+00000176 g       *ABS*	00000000 __TACCR2
+0000019a g       *ABS*	00000000 __TBCCR4
+000040fc  w      .text	00000000 __isr_13
+00000078 g       *ABS*	00000000 __U1CTL
+000001e2 g       *ABS*	00000000 __DMA0SA
+00000170 g       *ABS*	00000000 __TAR
+00000124 g       *ABS*	00000000 __DMACTL1
+0000001e g       *ABS*	00000000 __P4DIR
+00000162 g       *ABS*	00000000 __TACCTL0
+00010000 g       .vectors	00000000 _vectors_end
+00000154 g       *ABS*	00000000 __ADC12MEM10
+000001f2 g       *ABS*	00000000 __DMA2SA
+0000002a g       *ABS*	00000000 __P2DIR
+00000089 g       *ABS*	00000000 __ADC12MCTL9
+0000008a g       *ABS*	00000000 __ADC12MCTL10
+00005452 g     F .text	0000003e delay
+00000032 g       *ABS*	00000000 __P5DIR
+000001c2 g       *ABS*	00000000 __DAC12_1CTL
+000001a2 g       *ABS*	00000000 __ADC12CTL1
+000001a8 g       *ABS*	00000000 __ADC12IV
+000001e8 g       *ABS*	00000000 __DMA1CTL
+00000075 g       *ABS*	00000000 __U0BR1
+000040fc  w      .text	00000000 __isr_9
+000042a2 g     F .text	000001a6 InvKeySetup
+0000018c g       *ABS*	00000000 __TBCCTL5
+0000400c  w      .text	00000000 __init_stack
+00000086 g       *ABS*	00000000 __ADC12MCTL6
+00000188 g       *ABS*	00000000 __TBCCTL3
+00000019 g       *ABS*	00000000 __P3OUT
+000001ca g       *ABS*	00000000 __DAC12_1DAT
+000040fc g       .text	00000000 __dtors_start
+000040fc  w      .text	00000000 __isr_6
+000040fc g       .text	00000000 __ctors_end
+00000132 g       *ABS*	00000000 __MPYS
+0000011c g       *ABS*	00000000 __I2CIV
+00000004 g       *ABS*	00000000 __ME1
+00003900 g       *ABS*	00000000 __stack
+00000037 g       *ABS*	00000000 __P6SEL
+000040fc  w      .text	00000000 __isr_1
+0000008c g       *ABS*	00000000 __ADC12MCTL12
+00001100 g       .rodata	00000000 _edata
+00000077 g       *ABS*	00000000 __U0TXBUF
+00001102 g       *ABS*	00000000 _end
+00000194 g       *ABS*	00000000 __TBCCR1
+0000011e g       *ABS*	00000000 __TBIV
+000001c0 g       *ABS*	00000000 __DAC12_0CTL
+0000553a g     F .text	0000000a start_encrypt
+0000015e g       *ABS*	00000000 __ADC12MEM15
+00000134 g       *ABS*	00000000 __MAC
+00000058 g       *ABS*	00000000 __BCSCTL2
+000040f6  w      .text	00000000 _endless_loop__
+00000122 g       *ABS*	00000000 __DMACTL0
+0000001f g       *ABS*	00000000 __P4SEL
+00000196 g       *ABS*	00000000 __TBCCR2
+00000022 g       *ABS*	00000000 __P1DIR
+00000146 g       *ABS*	00000000 __ADC12MEM3
+00000076 g       *ABS*	00000000 __I2CDRB
+00000118 g       *ABS*	00000000 __I2COA
+00000164 g       *ABS*	00000000 __TACCTL1
+0000007f g       *ABS*	00000000 __U1TXBUF
+00000055 g       *ABS*	00000000 __SVSCTL
+00004010  w      .text	00000000 __low_level_init
+00005544 g     F .text	0000000a start_decrypt
+00001100 g       .rodata	00000000 __data_start
+0000018e g       *ABS*	00000000 __TBCCTL6
+00000074 g       *ABS*	00000000 __I2CSCLH
+000001ec g       *ABS*	00000000 __DMA1DA
+00000120 g       *ABS*	00000000 __WDTCTL
+00000083 g       *ABS*	00000000 __ADC12MCTL3
+00000000 g       *ABS*	00000000 __IE1
+00000059 g       *ABS*	00000000 __CACTL1
+00000020 g       *ABS*	00000000 __P1IN
+0000001c g       *ABS*	00000000 __P4IN
+00004448 g     F .text	0000038e Encrypt
+0000008b g       *ABS*	00000000 __ADC12MCTL11
+0000013e g       *ABS*	00000000 __SUMEXT
+00000031 g       *ABS*	00000000 __P5OUT
+
+
+
+Disassembly of section .text:
+
+00004000 <__watchdog_support>:
+    4000:	55 42 20 01 	mov.b	&0x0120,r5	
+    4004:	35 d0 08 5a 	bis	#23048,	r5	;#0x5a08
+    4008:	82 45 00 11 	mov	r5,	&0x1100	
+
+0000400c <__init_stack>:
+    400c:	31 40 00 39 	mov	#14592,	r1	;#0x3900
+
+00004010 <__do_copy_data>:
+    4010:	3f 40 00 00 	mov	#0,	r15	;#0x0000
+    4014:	0f 93       	tst	r15		
+    4016:	08 24       	jz	$+18     	;abs 0x4028
+    4018:	92 42 00 11 	mov	&0x1100,&0x0120	
+    401c:	20 01 
+    401e:	2f 83       	decd	r15		
+    4020:	9f 4f 6a 55 	mov	21866(r15),4352(r15);0x556a(r15), 0x1100(r15)
+    4024:	00 11 
+    4026:	f8 23       	jnz	$-14     	;abs 0x4018
+
+00004028 <__do_clear_bss>:
+    4028:	3f 40 00 00 	mov	#0,	r15	;#0x0000
+    402c:	0f 93       	tst	r15		
+    402e:	07 24       	jz	$+16     	;abs 0x403e
+    4030:	92 42 00 11 	mov	&0x1100,&0x0120	
+    4034:	20 01 
+    4036:	1f 83       	dec	r15		
+    4038:	cf 43 00 11 	mov.b	#0,	4352(r15);r3 As==00, 0x1100(r15)
+    403c:	f9 23       	jnz	$-12     	;abs 0x4030
+
+0000403e <main>:
+
+}
+
+
+int main ()
+{
+    403e:	04 41       	mov	r1,	r4	
+    4040:	24 53       	incd	r4		
+    4042:	31 50 e8 ff 	add	#-24,	r1	;#0xffe8
+	#ifdef PRINT
+	uart1_init();
+	u8 i;
+	#endif
+
+    u8 text[8] =
+    4046:	f4 40 12 00 	mov.b	#18,	-26(r4)	;#0x0012, 0xffe6(r4)
+    404a:	e6 ff 
+    404c:	f4 40 34 00 	mov.b	#52,	-25(r4)	;#0x0034, 0xffe7(r4)
+    4050:	e7 ff 
+    4052:	f4 40 56 00 	mov.b	#86,	-24(r4)	;#0x0056, 0xffe8(r4)
+    4056:	e8 ff 
+    4058:	f4 40 78 00 	mov.b	#120,	-23(r4)	;#0x0078, 0xffe9(r4)
+    405c:	e9 ff 
+    405e:	f4 40 90 ff 	mov.b	#-112,	-22(r4)	;#0xff90, 0xffea(r4)
+    4062:	ea ff 
+    4064:	f4 40 ab ff 	mov.b	#-85,	-21(r4)	;#0xffab, 0xffeb(r4)
+    4068:	eb ff 
+    406a:	f4 40 cd ff 	mov.b	#-51,	-20(r4)	;#0xffcd, 0xffec(r4)
+    406e:	ec ff 
+    4070:	f4 40 ef ff 	mov.b	#-17,	-19(r4)	;#0xffef, 0xffed(r4)
+    4074:	ed ff 
+    {0x12,0x34,0x56,0x78,0x90,0xab,0xcd,0xef};
+    u8 crypt[8] = {0};
+    4076:	0f 44       	mov	r4,	r15	
+    4078:	3f 50 ee ff 	add	#-18,	r15	;#0xffee
+    407c:	8f 43 00 00 	mov	#0,	0(r15)	;r3 As==00, 0x0000(r15)
+    4080:	2f 53       	incd	r15		
+    4082:	8f 43 00 00 	mov	#0,	0(r15)	;r3 As==00, 0x0000(r15)
+    4086:	2f 53       	incd	r15		
+    4088:	8f 43 00 00 	mov	#0,	0(r15)	;r3 As==00, 0x0000(r15)
+    408c:	2f 53       	incd	r15		
+    408e:	8f 43 00 00 	mov	#0,	0(r15)	;r3 As==00, 0x0000(r15)
+    4092:	2f 53       	incd	r15		
+    u8 k[8] = {0};
+    4094:	0f 44       	mov	r4,	r15	
+    4096:	3f 50 f6 ff 	add	#-10,	r15	;#0xfff6
+    409a:	8f 43 00 00 	mov	#0,	0(r15)	;r3 As==00, 0x0000(r15)
+    409e:	2f 53       	incd	r15		
+    40a0:	8f 43 00 00 	mov	#0,	0(r15)	;r3 As==00, 0x0000(r15)
+    40a4:	2f 53       	incd	r15		
+    40a6:	8f 43 00 00 	mov	#0,	0(r15)	;r3 As==00, 0x0000(r15)
+    40aa:	2f 53       	incd	r15		
+    40ac:	8f 43 00 00 	mov	#0,	0(r15)	;r3 As==00, 0x0000(r15)
+    40b0:	2f 53       	incd	r15		
+	
+	START_ENCRYPT();
+    40b2:	b0 12 3a 55 	call	#0x553a	
+    Encrypt ( text, crypt, k );
+    40b6:	0e 44       	mov	r4,	r14	
+    40b8:	3e 50 f6 ff 	add	#-10,	r14	;#0xfff6
+    40bc:	0f 44       	mov	r4,	r15	
+    40be:	3f 50 ee ff 	add	#-18,	r15	;#0xffee
+    40c2:	0d 4e       	mov	r14,	r13	
+    40c4:	0e 4f       	mov	r15,	r14	
+    40c6:	0f 44       	mov	r4,	r15	
+    40c8:	3f 50 e6 ff 	add	#-26,	r15	;#0xffe6
+    40cc:	b0 12 48 44 	call	#0x4448	
+	START_DECRYPT();
+    40d0:	b0 12 44 55 	call	#0x5544	
+    Decrypt (crypt, text, k );
+    40d4:	0e 44       	mov	r4,	r14	
+    40d6:	3e 50 f6 ff 	add	#-10,	r14	;#0xfff6
+    40da:	0f 44       	mov	r4,	r15	
+    40dc:	3f 50 ee ff 	add	#-18,	r15	;#0xffee
+    40e0:	0d 4e       	mov	r14,	r13	
+    40e2:	0e 44       	mov	r4,	r14	
+    40e4:	3e 50 e6 ff 	add	#-26,	r14	;#0xffe6
+    40e8:	b0 12 d6 47 	call	#0x47d6	
+	END_EXPE();
+    40ec:	b0 12 4e 55 	call	#0x554e	
+    {
+        printf("%x ",text[i]);
+    }
+	#endif
+
+    return 0;
+    40f0:	0f 43       	clr	r15		
+}
+    40f2:	31 50 18 00 	add	#24,	r1	;#0x0018
+
+000040f6 <__stop_progExec__>:
+    40f6:	32 d0 f0 00 	bis	#240,	r2	;#0x00f0
+    40fa:	fd 3f       	jmp	$-4      	;abs 0x40f6
+
+000040fc <__ctors_end>:
+    40fc:	30 40 58 55 	br	#0x5558	
+
+00004100 <KeySetup>:
+    x ^= 0x1B & h;
+}
+#endif
+
+ void KeySetup ( u8 k[], u8 r )
+{
+    4100:	04 12       	push	r4		
+    4102:	04 41       	mov	r1,	r4	
+    4104:	24 53       	incd	r4		
+    4106:	31 50 f2 ff 	add	#-14,	r1	;#0xfff2
+    410a:	84 4f fa ff 	mov	r15,	-6(r4)	;0xfffa(r4)
+    410e:	c4 4e fc ff 	mov.b	r14,	-4(r4)	;0xfffc(r4)
+    u8 i;
+    u8 tmp[8];
+    tmp[0] = k[0];
+    4112:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4116:	6f 4f       	mov.b	@r15,	r15	
+    4118:	c4 4f f1 ff 	mov.b	r15,	-15(r4)	;0xfff1(r4)
+    tmp[1] = k[1];
+    411c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4120:	5f 4f 01 00 	mov.b	1(r15),	r15	;0x0001(r15)
+    4124:	c4 4f f2 ff 	mov.b	r15,	-14(r4)	;0xfff2(r4)
+    tmp[2] = k[2];
+    4128:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    412c:	5f 4f 02 00 	mov.b	2(r15),	r15	;0x0002(r15)
+    4130:	c4 4f f3 ff 	mov.b	r15,	-13(r4)	;0xfff3(r4)
+    tmp[3] = k[3];
+    4134:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4138:	5f 4f 03 00 	mov.b	3(r15),	r15	;0x0003(r15)
+    413c:	c4 4f f4 ff 	mov.b	r15,	-12(r4)	;0xfff4(r4)
+    tmp[4] = k[4];
+    4140:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4144:	5f 4f 04 00 	mov.b	4(r15),	r15	;0x0004(r15)
+    4148:	c4 4f f5 ff 	mov.b	r15,	-11(r4)	;0xfff5(r4)
+    tmp[5] = k[5];
+    414c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4150:	5f 4f 05 00 	mov.b	5(r15),	r15	;0x0005(r15)
+    4154:	c4 4f f6 ff 	mov.b	r15,	-10(r4)	;0xfff6(r4)
+    tmp[6] = k[6];
+    4158:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    415c:	5f 4f 06 00 	mov.b	6(r15),	r15	;0x0006(r15)
+    4160:	c4 4f f7 ff 	mov.b	r15,	-9(r4)	;0xfff7(r4)
+    tmp[7] = k[7];
+    4164:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4168:	5f 4f 07 00 	mov.b	7(r15),	r15	;0x0007(r15)
+    416c:	c4 4f f8 ff 	mov.b	r15,	-8(r4)	;0xfff8(r4)
+
+    for (i=0 ; i<4 ; i++)
+    4170:	c4 43 f0 ff 	mov.b	#0,	-16(r4)	;r3 As==00, 0xfff0(r4)
+    4174:	30 3c       	jmp	$+98     	;abs 0x41d6
+    {
+        k[i] = tmp[((i+1)&0x3)+4];
+    4176:	5f 44 f0 ff 	mov.b	-16(r4),r15	;0xfff0(r4)
+    417a:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    417e:	5e 44 f0 ff 	mov.b	-16(r4),r14	;0xfff0(r4)
+    4182:	1e 53       	inc	r14		
+    4184:	3e f0 03 00 	and	#3,	r14	;#0x0003
+    4188:	2e 52       	add	#4,	r14	;r2 As==10
+    418a:	0d 44       	mov	r4,	r13	
+    418c:	3d 50 f1 ff 	add	#-15,	r13	;#0xfff1
+    4190:	0e 5d       	add	r13,	r14	
+    4192:	6e 4e       	mov.b	@r14,	r14	
+    4194:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+        k[i+4] = tmp[((i+1)&0x3)+4] ^ tmp[(i+1)&0x3];
+    4198:	5f 44 f0 ff 	mov.b	-16(r4),r15	;0xfff0(r4)
+    419c:	2f 52       	add	#4,	r15	;r2 As==10
+    419e:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    41a2:	5e 44 f0 ff 	mov.b	-16(r4),r14	;0xfff0(r4)
+    41a6:	1e 53       	inc	r14		
+    41a8:	3e f0 03 00 	and	#3,	r14	;#0x0003
+    41ac:	2e 52       	add	#4,	r14	;r2 As==10
+    41ae:	0d 44       	mov	r4,	r13	
+    41b0:	3d 50 f1 ff 	add	#-15,	r13	;#0xfff1
+    41b4:	0e 5d       	add	r13,	r14	
+    41b6:	6d 4e       	mov.b	@r14,	r13	
+    41b8:	5e 44 f0 ff 	mov.b	-16(r4),r14	;0xfff0(r4)
+    41bc:	1e 53       	inc	r14		
+    41be:	3e f0 03 00 	and	#3,	r14	;#0x0003
+    41c2:	0c 44       	mov	r4,	r12	
+    41c4:	3c 50 f1 ff 	add	#-15,	r12	;#0xfff1
+    41c8:	0e 5c       	add	r12,	r14	
+    41ca:	6e 4e       	mov.b	@r14,	r14	
+    41cc:	4e ed       	xor.b	r13,	r14	
+    41ce:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+    tmp[4] = k[4];
+    tmp[5] = k[5];
+    tmp[6] = k[6];
+    tmp[7] = k[7];
+
+    for (i=0 ; i<4 ; i++)
+    41d2:	d4 53 f0 ff 	inc.b	-16(r4)	;0xfff0(r4)
+    41d6:	e4 92 f0 ff 	cmp.b	#4,	-16(r4)	;r2 As==10, 0xfff0(r4)
+    41da:	cd 2b       	jnc	$-100    	;abs 0x4176
+    {
+        k[i] = tmp[((i+1)&0x3)+4];
+        k[i+4] = tmp[((i+1)&0x3)+4] ^ tmp[(i+1)&0x3];
+    }
+
+    k[2] = k[2] ^ r;
+    41dc:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    41e0:	2f 53       	incd	r15		
+    41e2:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    41e6:	2e 53       	incd	r14		
+    41e8:	6e 4e       	mov.b	@r14,	r14	
+    41ea:	5e e4 fc ff 	xor.b	-4(r4),	r14	;0xfffc(r4)
+    41ee:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+    k[5] = (sBox[k[5]&0x0f]) | (sBox[k[5]>>4] << 4);
+    41f2:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    41f6:	3e 50 05 00 	add	#5,	r14	;#0x0005
+    41fa:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    41fe:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    4202:	6f 4f       	mov.b	@r15,	r15	
+    4204:	4f 4f       	mov.b	r15,	r15	
+    4206:	3f f0 0f 00 	and	#15,	r15	;#0x000f
+    420a:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    420e:	4d 4f       	mov.b	r15,	r13	
+    4210:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4214:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    4218:	6f 4f       	mov.b	@r15,	r15	
+    421a:	4f 4f       	mov.b	r15,	r15	
+    421c:	4f 4f       	mov.b	r15,	r15	
+    421e:	12 c3       	clrc			
+    4220:	4f 10       	rrc.b	r15		
+    4222:	12 c3       	clrc			
+    4224:	4f 10       	rrc.b	r15		
+    4226:	12 c3       	clrc			
+    4228:	4f 10       	rrc.b	r15		
+    422a:	12 c3       	clrc			
+    422c:	4f 10       	rrc.b	r15		
+    422e:	4f 4f       	mov.b	r15,	r15	
+    4230:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    4234:	4f 4f       	mov.b	r15,	r15	
+    4236:	0f 5f       	rla	r15		
+    4238:	0f 5f       	rla	r15		
+    423a:	0f 5f       	rla	r15		
+    423c:	0f 5f       	rla	r15		
+    423e:	4f 4f       	mov.b	r15,	r15	
+    4240:	4f dd       	bis.b	r13,	r15	
+    4242:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+    k[6] = (sBox[k[6]&0x0f]) | (sBox[k[6]>>4] << 4);
+    4246:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    424a:	3e 50 06 00 	add	#6,	r14	;#0x0006
+    424e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4252:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    4256:	6f 4f       	mov.b	@r15,	r15	
+    4258:	4f 4f       	mov.b	r15,	r15	
+    425a:	3f f0 0f 00 	and	#15,	r15	;#0x000f
+    425e:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    4262:	4d 4f       	mov.b	r15,	r13	
+    4264:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4268:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    426c:	6f 4f       	mov.b	@r15,	r15	
+    426e:	4f 4f       	mov.b	r15,	r15	
+    4270:	4f 4f       	mov.b	r15,	r15	
+    4272:	12 c3       	clrc			
+    4274:	4f 10       	rrc.b	r15		
+    4276:	12 c3       	clrc			
+    4278:	4f 10       	rrc.b	r15		
+    427a:	12 c3       	clrc			
+    427c:	4f 10       	rrc.b	r15		
+    427e:	12 c3       	clrc			
+    4280:	4f 10       	rrc.b	r15		
+    4282:	4f 4f       	mov.b	r15,	r15	
+    4284:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    4288:	4f 4f       	mov.b	r15,	r15	
+    428a:	0f 5f       	rla	r15		
+    428c:	0f 5f       	rla	r15		
+    428e:	0f 5f       	rla	r15		
+    4290:	0f 5f       	rla	r15		
+    4292:	4f 4f       	mov.b	r15,	r15	
+    4294:	4f dd       	bis.b	r13,	r15	
+    4296:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+}
+    429a:	31 50 0e 00 	add	#14,	r1	;#0x000e
+    429e:	34 41       	pop	r4		
+    42a0:	30 41       	ret			
+
+000042a2 <InvKeySetup>:
+
+ void InvKeySetup ( u8 k[], u8 r )
+{
+    42a2:	04 12       	push	r4		
+    42a4:	04 41       	mov	r1,	r4	
+    42a6:	24 53       	incd	r4		
+    42a8:	31 50 f2 ff 	add	#-14,	r1	;#0xfff2
+    42ac:	84 4f fa ff 	mov	r15,	-6(r4)	;0xfffa(r4)
+    42b0:	c4 4e fc ff 	mov.b	r14,	-4(r4)	;0xfffc(r4)
+    u8 i;
+    u8 tmp[8];
+
+    k[2] = k[2] ^ r;
+    42b4:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    42b8:	2f 53       	incd	r15		
+    42ba:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    42be:	2e 53       	incd	r14		
+    42c0:	6e 4e       	mov.b	@r14,	r14	
+    42c2:	5e e4 fc ff 	xor.b	-4(r4),	r14	;0xfffc(r4)
+    42c6:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+    k[5] = (sBox[k[5]&0x0f]) | (sBox[k[5]>>4] << 4);
+    42ca:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    42ce:	3e 50 05 00 	add	#5,	r14	;#0x0005
+    42d2:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    42d6:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    42da:	6f 4f       	mov.b	@r15,	r15	
+    42dc:	4f 4f       	mov.b	r15,	r15	
+    42de:	3f f0 0f 00 	and	#15,	r15	;#0x000f
+    42e2:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    42e6:	4d 4f       	mov.b	r15,	r13	
+    42e8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    42ec:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    42f0:	6f 4f       	mov.b	@r15,	r15	
+    42f2:	4f 4f       	mov.b	r15,	r15	
+    42f4:	4f 4f       	mov.b	r15,	r15	
+    42f6:	12 c3       	clrc			
+    42f8:	4f 10       	rrc.b	r15		
+    42fa:	12 c3       	clrc			
+    42fc:	4f 10       	rrc.b	r15		
+    42fe:	12 c3       	clrc			
+    4300:	4f 10       	rrc.b	r15		
+    4302:	12 c3       	clrc			
+    4304:	4f 10       	rrc.b	r15		
+    4306:	4f 4f       	mov.b	r15,	r15	
+    4308:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    430c:	4f 4f       	mov.b	r15,	r15	
+    430e:	0f 5f       	rla	r15		
+    4310:	0f 5f       	rla	r15		
+    4312:	0f 5f       	rla	r15		
+    4314:	0f 5f       	rla	r15		
+    4316:	4f 4f       	mov.b	r15,	r15	
+    4318:	4f dd       	bis.b	r13,	r15	
+    431a:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+    k[6] = (sBox[k[6]&0x0f]) | (sBox[k[6]>>4] << 4);
+    431e:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    4322:	3e 50 06 00 	add	#6,	r14	;#0x0006
+    4326:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    432a:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    432e:	6f 4f       	mov.b	@r15,	r15	
+    4330:	4f 4f       	mov.b	r15,	r15	
+    4332:	3f f0 0f 00 	and	#15,	r15	;#0x000f
+    4336:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    433a:	4d 4f       	mov.b	r15,	r13	
+    433c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4340:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    4344:	6f 4f       	mov.b	@r15,	r15	
+    4346:	4f 4f       	mov.b	r15,	r15	
+    4348:	4f 4f       	mov.b	r15,	r15	
+    434a:	12 c3       	clrc			
+    434c:	4f 10       	rrc.b	r15		
+    434e:	12 c3       	clrc			
+    4350:	4f 10       	rrc.b	r15		
+    4352:	12 c3       	clrc			
+    4354:	4f 10       	rrc.b	r15		
+    4356:	12 c3       	clrc			
+    4358:	4f 10       	rrc.b	r15		
+    435a:	4f 4f       	mov.b	r15,	r15	
+    435c:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    4360:	4f 4f       	mov.b	r15,	r15	
+    4362:	0f 5f       	rla	r15		
+    4364:	0f 5f       	rla	r15		
+    4366:	0f 5f       	rla	r15		
+    4368:	0f 5f       	rla	r15		
+    436a:	4f 4f       	mov.b	r15,	r15	
+    436c:	4f dd       	bis.b	r13,	r15	
+    436e:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+
+    tmp[0] = k[0];
+    4372:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4376:	6f 4f       	mov.b	@r15,	r15	
+    4378:	c4 4f f1 ff 	mov.b	r15,	-15(r4)	;0xfff1(r4)
+    tmp[1] = k[1];
+    437c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4380:	5f 4f 01 00 	mov.b	1(r15),	r15	;0x0001(r15)
+    4384:	c4 4f f2 ff 	mov.b	r15,	-14(r4)	;0xfff2(r4)
+    tmp[2] = k[2];
+    4388:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    438c:	5f 4f 02 00 	mov.b	2(r15),	r15	;0x0002(r15)
+    4390:	c4 4f f3 ff 	mov.b	r15,	-13(r4)	;0xfff3(r4)
+    tmp[3] = k[3];
+    4394:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4398:	5f 4f 03 00 	mov.b	3(r15),	r15	;0x0003(r15)
+    439c:	c4 4f f4 ff 	mov.b	r15,	-12(r4)	;0xfff4(r4)
+    tmp[4] = k[4];
+    43a0:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    43a4:	5f 4f 04 00 	mov.b	4(r15),	r15	;0x0004(r15)
+    43a8:	c4 4f f5 ff 	mov.b	r15,	-11(r4)	;0xfff5(r4)
+    tmp[5] = k[5];
+    43ac:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    43b0:	5f 4f 05 00 	mov.b	5(r15),	r15	;0x0005(r15)
+    43b4:	c4 4f f6 ff 	mov.b	r15,	-10(r4)	;0xfff6(r4)
+    tmp[6] = k[6];
+    43b8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    43bc:	5f 4f 06 00 	mov.b	6(r15),	r15	;0x0006(r15)
+    43c0:	c4 4f f7 ff 	mov.b	r15,	-9(r4)	;0xfff7(r4)
+    tmp[7] = k[7];
+    43c4:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    43c8:	5f 4f 07 00 	mov.b	7(r15),	r15	;0x0007(r15)
+    43cc:	c4 4f f8 ff 	mov.b	r15,	-8(r4)	;0xfff8(r4)
+
+    for (i=0 ; i<4 ; i++)
+    43d0:	c4 43 f0 ff 	mov.b	#0,	-16(r4)	;r3 As==00, 0xfff0(r4)
+    43d4:	32 3c       	jmp	$+102    	;abs 0x443a
+    {
+        k[i+4] = tmp[(i+3)&0x3];
+    43d6:	5f 44 f0 ff 	mov.b	-16(r4),r15	;0xfff0(r4)
+    43da:	2f 52       	add	#4,	r15	;r2 As==10
+    43dc:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    43e0:	5e 44 f0 ff 	mov.b	-16(r4),r14	;0xfff0(r4)
+    43e4:	3e 50 03 00 	add	#3,	r14	;#0x0003
+    43e8:	3e f0 03 00 	and	#3,	r14	;#0x0003
+    43ec:	0d 44       	mov	r4,	r13	
+    43ee:	3d 50 f1 ff 	add	#-15,	r13	;#0xfff1
+    43f2:	0e 5d       	add	r13,	r14	
+    43f4:	6e 4e       	mov.b	@r14,	r14	
+    43f6:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+        k[i] = tmp[((i+3)&0x3)+4] ^ tmp[(i+3)&0x3];
+    43fa:	5f 44 f0 ff 	mov.b	-16(r4),r15	;0xfff0(r4)
+    43fe:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    4402:	5e 44 f0 ff 	mov.b	-16(r4),r14	;0xfff0(r4)
+    4406:	3e 50 03 00 	add	#3,	r14	;#0x0003
+    440a:	3e f0 03 00 	and	#3,	r14	;#0x0003
+    440e:	2e 52       	add	#4,	r14	;r2 As==10
+    4410:	0d 44       	mov	r4,	r13	
+    4412:	3d 50 f1 ff 	add	#-15,	r13	;#0xfff1
+    4416:	0e 5d       	add	r13,	r14	
+    4418:	6d 4e       	mov.b	@r14,	r13	
+    441a:	5e 44 f0 ff 	mov.b	-16(r4),r14	;0xfff0(r4)
+    441e:	3e 50 03 00 	add	#3,	r14	;#0x0003
+    4422:	3e f0 03 00 	and	#3,	r14	;#0x0003
+    4426:	0c 44       	mov	r4,	r12	
+    4428:	3c 50 f1 ff 	add	#-15,	r12	;#0xfff1
+    442c:	0e 5c       	add	r12,	r14	
+    442e:	6e 4e       	mov.b	@r14,	r14	
+    4430:	4e ed       	xor.b	r13,	r14	
+    4432:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+    tmp[4] = k[4];
+    tmp[5] = k[5];
+    tmp[6] = k[6];
+    tmp[7] = k[7];
+
+    for (i=0 ; i<4 ; i++)
+    4436:	d4 53 f0 ff 	inc.b	-16(r4)	;0xfff0(r4)
+    443a:	e4 92 f0 ff 	cmp.b	#4,	-16(r4)	;r2 As==10, 0xfff0(r4)
+    443e:	cb 2b       	jnc	$-104    	;abs 0x43d6
+    {
+        k[i+4] = tmp[(i+3)&0x3];
+        k[i] = tmp[((i+3)&0x3)+4] ^ tmp[(i+3)&0x3];
+    }
+}
+    4440:	31 50 0e 00 	add	#14,	r1	;#0x000e
+    4444:	34 41       	pop	r4		
+    4446:	30 41       	ret			
+
+00004448 <Encrypt>:
+
+
+ void Encrypt ( u8 text[], u8 crypt[], u8 key[] )
+{
+    4448:	04 12       	push	r4		
+    444a:	04 41       	mov	r1,	r4	
+    444c:	24 53       	incd	r4		
+    444e:	31 50 f0 ff 	add	#-16,	r1	;#0xfff0
+    4452:	84 4f f8 ff 	mov	r15,	-8(r4)	;0xfff8(r4)
+    4456:	84 4e fa ff 	mov	r14,	-6(r4)	;0xfffa(r4)
+    445a:	84 4d fc ff 	mov	r13,	-4(r4)	;0xfffc(r4)
+    u8 i;
+    for (i=0 ; i<8 ; i++)
+    445e:	c4 43 ee ff 	mov.b	#0,	-18(r4)	;r3 As==00, 0xffee(r4)
+    4462:	0d 3c       	jmp	$+28     	;abs 0x447e
+    {
+        crypt[i] = text[i];
+    4464:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4468:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    446c:	5e 44 ee ff 	mov.b	-18(r4),r14	;0xffee(r4)
+    4470:	1e 54 f8 ff 	add	-8(r4),	r14	;0xfff8(r4)
+    4474:	6e 4e       	mov.b	@r14,	r14	
+    4476:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+
+
+ void Encrypt ( u8 text[], u8 crypt[], u8 key[] )
+{
+    u8 i;
+    for (i=0 ; i<8 ; i++)
+    447a:	d4 53 ee ff 	inc.b	-18(r4)	;0xffee(r4)
+    447e:	f4 92 ee ff 	cmp.b	#8,	-18(r4)	;r2 As==11, 0xffee(r4)
+    4482:	f0 2b       	jnc	$-30     	;abs 0x4464
+        crypt[i] = text[i];
+    }
+
+    u8 t[8];
+    u8 r;
+    for (r=1 ; r<13 ; r++)
+    4484:	d4 43 ef ff 	mov.b	#1,	-17(r4)	;r3 As==01, 0xffef(r4)
+    4488:	30 40 90 47 	br	#0x4790	
+    {
+
+        for (i=0 ; i<8 ; i++)
+    448c:	c4 43 ee ff 	mov.b	#0,	-18(r4)	;r3 As==00, 0xffee(r4)
+    4490:	13 3c       	jmp	$+40     	;abs 0x44b8
+        {
+            crypt[i] = crypt[i] ^ key[i];
+    4492:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4496:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    449a:	5e 44 ee ff 	mov.b	-18(r4),r14	;0xffee(r4)
+    449e:	1e 54 fa ff 	add	-6(r4),	r14	;0xfffa(r4)
+    44a2:	6d 4e       	mov.b	@r14,	r13	
+    44a4:	5e 44 ee ff 	mov.b	-18(r4),r14	;0xffee(r4)
+    44a8:	1e 54 fc ff 	add	-4(r4),	r14	;0xfffc(r4)
+    44ac:	6e 4e       	mov.b	@r14,	r14	
+    44ae:	4e ed       	xor.b	r13,	r14	
+    44b0:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+    u8 t[8];
+    u8 r;
+    for (r=1 ; r<13 ; r++)
+    {
+
+        for (i=0 ; i<8 ; i++)
+    44b4:	d4 53 ee ff 	inc.b	-18(r4)	;0xffee(r4)
+    44b8:	f4 92 ee ff 	cmp.b	#8,	-18(r4)	;r2 As==11, 0xffee(r4)
+    44bc:	ea 2b       	jnc	$-42     	;abs 0x4492
+        {
+            crypt[i] = crypt[i] ^ key[i];
+        }
+
+        for (i=0 ; i<8 ; i++)
+    44be:	c4 43 ee ff 	mov.b	#0,	-18(r4)	;r3 As==00, 0xffee(r4)
+    44c2:	2d 3c       	jmp	$+92     	;abs 0x451e
+        {
+            crypt[i] = (sBox[crypt[i]&0xf]) | (sBox[crypt[i]>>4] << 4);
+    44c4:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    44c8:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    44cc:	0e 5f       	add	r15,	r14	
+    44ce:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    44d2:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    44d6:	6f 4f       	mov.b	@r15,	r15	
+    44d8:	4f 4f       	mov.b	r15,	r15	
+    44da:	3f f0 0f 00 	and	#15,	r15	;#0x000f
+    44de:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    44e2:	4d 4f       	mov.b	r15,	r13	
+    44e4:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    44e8:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    44ec:	6f 4f       	mov.b	@r15,	r15	
+    44ee:	4f 4f       	mov.b	r15,	r15	
+    44f0:	4f 4f       	mov.b	r15,	r15	
+    44f2:	12 c3       	clrc			
+    44f4:	4f 10       	rrc.b	r15		
+    44f6:	12 c3       	clrc			
+    44f8:	4f 10       	rrc.b	r15		
+    44fa:	12 c3       	clrc			
+    44fc:	4f 10       	rrc.b	r15		
+    44fe:	12 c3       	clrc			
+    4500:	4f 10       	rrc.b	r15		
+    4502:	4f 4f       	mov.b	r15,	r15	
+    4504:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    4508:	4f 4f       	mov.b	r15,	r15	
+    450a:	0f 5f       	rla	r15		
+    450c:	0f 5f       	rla	r15		
+    450e:	0f 5f       	rla	r15		
+    4510:	0f 5f       	rla	r15		
+    4512:	4f 4f       	mov.b	r15,	r15	
+    4514:	4f dd       	bis.b	r13,	r15	
+    4516:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+        for (i=0 ; i<8 ; i++)
+        {
+            crypt[i] = crypt[i] ^ key[i];
+        }
+
+        for (i=0 ; i<8 ; i++)
+    451a:	d4 53 ee ff 	inc.b	-18(r4)	;0xffee(r4)
+    451e:	f4 92 ee ff 	cmp.b	#8,	-18(r4)	;r2 As==11, 0xffee(r4)
+    4522:	d0 2b       	jnc	$-94     	;abs 0x44c4
+        {
+            crypt[i] = (sBox[crypt[i]&0xf]) | (sBox[crypt[i]>>4] << 4);
+        }
+
+        for (i=0 ; i<8 ; i++)
+    4524:	c4 43 ee ff 	mov.b	#0,	-18(r4)	;r3 As==00, 0xffee(r4)
+    4528:	14 3c       	jmp	$+42     	;abs 0x4552
+        {
+            t[(i+6)&0x7] = crypt[i];
+    452a:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    452e:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    4532:	0d 4f       	mov	r15,	r13	
+    4534:	3d f0 07 00 	and	#7,	r13	;#0x0007
+    4538:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    453c:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    4540:	6e 4f       	mov.b	@r15,	r14	
+    4542:	0f 44       	mov	r4,	r15	
+    4544:	3f 50 f0 ff 	add	#-16,	r15	;#0xfff0
+    4548:	0f 5d       	add	r13,	r15	
+    454a:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+        for (i=0 ; i<8 ; i++)
+        {
+            crypt[i] = (sBox[crypt[i]&0xf]) | (sBox[crypt[i]>>4] << 4);
+        }
+
+        for (i=0 ; i<8 ; i++)
+    454e:	d4 53 ee ff 	inc.b	-18(r4)	;0xffee(r4)
+    4552:	f4 92 ee ff 	cmp.b	#8,	-18(r4)	;r2 As==11, 0xffee(r4)
+    4556:	e9 2b       	jnc	$-44     	;abs 0x452a
+        {
+            t[(i+6)&0x7] = crypt[i];
+
+        }
+
+        crypt[0] = L(t[0] ^ t[1]) ^ t[1] ^ t[2] ^ t[3];
+    4558:	5e 44 f0 ff 	mov.b	-16(r4),r14	;0xfff0(r4)
+    455c:	5f 44 f1 ff 	mov.b	-15(r4),r15	;0xfff1(r4)
+    4560:	4f ee       	xor.b	r14,	r15	
+    4562:	4f 4f       	mov.b	r15,	r15	
+    4564:	0f 5f       	rla	r15		
+    4566:	4e 4f       	mov.b	r15,	r14	
+    4568:	5d 44 f0 ff 	mov.b	-16(r4),r13	;0xfff0(r4)
+    456c:	5f 44 f1 ff 	mov.b	-15(r4),r15	;0xfff1(r4)
+    4570:	4f ed       	xor.b	r13,	r15	
+    4572:	4f 4f       	mov.b	r15,	r15	
+    4574:	8f 11       	sxt	r15		
+    4576:	8f 10       	swpb	r15		
+    4578:	4f 4f       	mov.b	r15,	r15	
+    457a:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    457e:	4e ef       	xor.b	r15,	r14	
+    4580:	5f 44 f1 ff 	mov.b	-15(r4),r15	;0xfff1(r4)
+    4584:	4e ef       	xor.b	r15,	r14	
+    4586:	5f 44 f2 ff 	mov.b	-14(r4),r15	;0xfff2(r4)
+    458a:	4e ef       	xor.b	r15,	r14	
+    458c:	5f 44 f3 ff 	mov.b	-13(r4),r15	;0xfff3(r4)
+    4590:	4f ee       	xor.b	r14,	r15	
+    4592:	4e 4f       	mov.b	r15,	r14	
+    4594:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4598:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+        crypt[1] = L(t[1] ^ t[2]) ^ t[0] ^ t[2] ^ t[3];
+    459c:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    45a0:	1e 53       	inc	r14		
+    45a2:	5d 44 f1 ff 	mov.b	-15(r4),r13	;0xfff1(r4)
+    45a6:	5f 44 f2 ff 	mov.b	-14(r4),r15	;0xfff2(r4)
+    45aa:	4f ed       	xor.b	r13,	r15	
+    45ac:	4f 4f       	mov.b	r15,	r15	
+    45ae:	0f 5f       	rla	r15		
+    45b0:	4d 4f       	mov.b	r15,	r13	
+    45b2:	5c 44 f1 ff 	mov.b	-15(r4),r12	;0xfff1(r4)
+    45b6:	5f 44 f2 ff 	mov.b	-14(r4),r15	;0xfff2(r4)
+    45ba:	4f ec       	xor.b	r12,	r15	
+    45bc:	4f 4f       	mov.b	r15,	r15	
+    45be:	8f 11       	sxt	r15		
+    45c0:	8f 10       	swpb	r15		
+    45c2:	4f 4f       	mov.b	r15,	r15	
+    45c4:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    45c8:	4d ef       	xor.b	r15,	r13	
+    45ca:	5f 44 f0 ff 	mov.b	-16(r4),r15	;0xfff0(r4)
+    45ce:	4d ef       	xor.b	r15,	r13	
+    45d0:	5f 44 f2 ff 	mov.b	-14(r4),r15	;0xfff2(r4)
+    45d4:	4d ef       	xor.b	r15,	r13	
+    45d6:	5f 44 f3 ff 	mov.b	-13(r4),r15	;0xfff3(r4)
+    45da:	4f ed       	xor.b	r13,	r15	
+    45dc:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+        crypt[2] = L(t[2] ^ t[3]) ^ t[0] ^ t[1] ^ t[3];
+    45e0:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    45e4:	2e 53       	incd	r14		
+    45e6:	5d 44 f2 ff 	mov.b	-14(r4),r13	;0xfff2(r4)
+    45ea:	5f 44 f3 ff 	mov.b	-13(r4),r15	;0xfff3(r4)
+    45ee:	4f ed       	xor.b	r13,	r15	
+    45f0:	4f 4f       	mov.b	r15,	r15	
+    45f2:	0f 5f       	rla	r15		
+    45f4:	4d 4f       	mov.b	r15,	r13	
+    45f6:	5c 44 f2 ff 	mov.b	-14(r4),r12	;0xfff2(r4)
+    45fa:	5f 44 f3 ff 	mov.b	-13(r4),r15	;0xfff3(r4)
+    45fe:	4f ec       	xor.b	r12,	r15	
+    4600:	4f 4f       	mov.b	r15,	r15	
+    4602:	8f 11       	sxt	r15		
+    4604:	8f 10       	swpb	r15		
+    4606:	4f 4f       	mov.b	r15,	r15	
+    4608:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    460c:	4d ef       	xor.b	r15,	r13	
+    460e:	5f 44 f0 ff 	mov.b	-16(r4),r15	;0xfff0(r4)
+    4612:	4d ef       	xor.b	r15,	r13	
+    4614:	5f 44 f1 ff 	mov.b	-15(r4),r15	;0xfff1(r4)
+    4618:	4d ef       	xor.b	r15,	r13	
+    461a:	5f 44 f3 ff 	mov.b	-13(r4),r15	;0xfff3(r4)
+    461e:	4f ed       	xor.b	r13,	r15	
+    4620:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+        crypt[3] = L(t[3] ^ t[0]) ^ t[0] ^ t[1] ^ t[2];
+    4624:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    4628:	3e 50 03 00 	add	#3,	r14	;#0x0003
+    462c:	5d 44 f3 ff 	mov.b	-13(r4),r13	;0xfff3(r4)
+    4630:	5f 44 f0 ff 	mov.b	-16(r4),r15	;0xfff0(r4)
+    4634:	4f ed       	xor.b	r13,	r15	
+    4636:	4f 4f       	mov.b	r15,	r15	
+    4638:	0f 5f       	rla	r15		
+    463a:	4d 4f       	mov.b	r15,	r13	
+    463c:	5c 44 f3 ff 	mov.b	-13(r4),r12	;0xfff3(r4)
+    4640:	5f 44 f0 ff 	mov.b	-16(r4),r15	;0xfff0(r4)
+    4644:	4f ec       	xor.b	r12,	r15	
+    4646:	4f 4f       	mov.b	r15,	r15	
+    4648:	8f 11       	sxt	r15		
+    464a:	8f 10       	swpb	r15		
+    464c:	4f 4f       	mov.b	r15,	r15	
+    464e:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4652:	4d ef       	xor.b	r15,	r13	
+    4654:	5f 44 f0 ff 	mov.b	-16(r4),r15	;0xfff0(r4)
+    4658:	4d ef       	xor.b	r15,	r13	
+    465a:	5f 44 f1 ff 	mov.b	-15(r4),r15	;0xfff1(r4)
+    465e:	4d ef       	xor.b	r15,	r13	
+    4660:	5f 44 f2 ff 	mov.b	-14(r4),r15	;0xfff2(r4)
+    4664:	4f ed       	xor.b	r13,	r15	
+    4666:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+        crypt[4] = L(t[4] ^ t[5]) ^ t[5] ^ t[6] ^ t[7];
+    466a:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    466e:	2e 52       	add	#4,	r14	;r2 As==10
+    4670:	5d 44 f4 ff 	mov.b	-12(r4),r13	;0xfff4(r4)
+    4674:	5f 44 f5 ff 	mov.b	-11(r4),r15	;0xfff5(r4)
+    4678:	4f ed       	xor.b	r13,	r15	
+    467a:	4f 4f       	mov.b	r15,	r15	
+    467c:	0f 5f       	rla	r15		
+    467e:	4d 4f       	mov.b	r15,	r13	
+    4680:	5c 44 f4 ff 	mov.b	-12(r4),r12	;0xfff4(r4)
+    4684:	5f 44 f5 ff 	mov.b	-11(r4),r15	;0xfff5(r4)
+    4688:	4f ec       	xor.b	r12,	r15	
+    468a:	4f 4f       	mov.b	r15,	r15	
+    468c:	8f 11       	sxt	r15		
+    468e:	8f 10       	swpb	r15		
+    4690:	4f 4f       	mov.b	r15,	r15	
+    4692:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4696:	4d ef       	xor.b	r15,	r13	
+    4698:	5f 44 f5 ff 	mov.b	-11(r4),r15	;0xfff5(r4)
+    469c:	4d ef       	xor.b	r15,	r13	
+    469e:	5f 44 f6 ff 	mov.b	-10(r4),r15	;0xfff6(r4)
+    46a2:	4d ef       	xor.b	r15,	r13	
+    46a4:	5f 44 f7 ff 	mov.b	-9(r4),	r15	;0xfff7(r4)
+    46a8:	4f ed       	xor.b	r13,	r15	
+    46aa:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+        crypt[5] = L(t[5] ^ t[6]) ^ t[4] ^ t[6] ^ t[7];
+    46ae:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    46b2:	3e 50 05 00 	add	#5,	r14	;#0x0005
+    46b6:	5d 44 f5 ff 	mov.b	-11(r4),r13	;0xfff5(r4)
+    46ba:	5f 44 f6 ff 	mov.b	-10(r4),r15	;0xfff6(r4)
+    46be:	4f ed       	xor.b	r13,	r15	
+    46c0:	4f 4f       	mov.b	r15,	r15	
+    46c2:	0f 5f       	rla	r15		
+    46c4:	4d 4f       	mov.b	r15,	r13	
+    46c6:	5c 44 f5 ff 	mov.b	-11(r4),r12	;0xfff5(r4)
+    46ca:	5f 44 f6 ff 	mov.b	-10(r4),r15	;0xfff6(r4)
+    46ce:	4f ec       	xor.b	r12,	r15	
+    46d0:	4f 4f       	mov.b	r15,	r15	
+    46d2:	8f 11       	sxt	r15		
+    46d4:	8f 10       	swpb	r15		
+    46d6:	4f 4f       	mov.b	r15,	r15	
+    46d8:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    46dc:	4d ef       	xor.b	r15,	r13	
+    46de:	5f 44 f4 ff 	mov.b	-12(r4),r15	;0xfff4(r4)
+    46e2:	4d ef       	xor.b	r15,	r13	
+    46e4:	5f 44 f6 ff 	mov.b	-10(r4),r15	;0xfff6(r4)
+    46e8:	4d ef       	xor.b	r15,	r13	
+    46ea:	5f 44 f7 ff 	mov.b	-9(r4),	r15	;0xfff7(r4)
+    46ee:	4f ed       	xor.b	r13,	r15	
+    46f0:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+        crypt[6] = L(t[6] ^ t[7]) ^ t[4] ^ t[5] ^ t[7];
+    46f4:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    46f8:	3e 50 06 00 	add	#6,	r14	;#0x0006
+    46fc:	5d 44 f6 ff 	mov.b	-10(r4),r13	;0xfff6(r4)
+    4700:	5f 44 f7 ff 	mov.b	-9(r4),	r15	;0xfff7(r4)
+    4704:	4f ed       	xor.b	r13,	r15	
+    4706:	4f 4f       	mov.b	r15,	r15	
+    4708:	0f 5f       	rla	r15		
+    470a:	4d 4f       	mov.b	r15,	r13	
+    470c:	5c 44 f6 ff 	mov.b	-10(r4),r12	;0xfff6(r4)
+    4710:	5f 44 f7 ff 	mov.b	-9(r4),	r15	;0xfff7(r4)
+    4714:	4f ec       	xor.b	r12,	r15	
+    4716:	4f 4f       	mov.b	r15,	r15	
+    4718:	8f 11       	sxt	r15		
+    471a:	8f 10       	swpb	r15		
+    471c:	4f 4f       	mov.b	r15,	r15	
+    471e:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4722:	4d ef       	xor.b	r15,	r13	
+    4724:	5f 44 f4 ff 	mov.b	-12(r4),r15	;0xfff4(r4)
+    4728:	4d ef       	xor.b	r15,	r13	
+    472a:	5f 44 f5 ff 	mov.b	-11(r4),r15	;0xfff5(r4)
+    472e:	4d ef       	xor.b	r15,	r13	
+    4730:	5f 44 f7 ff 	mov.b	-9(r4),	r15	;0xfff7(r4)
+    4734:	4f ed       	xor.b	r13,	r15	
+    4736:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+        crypt[7] = L(t[7] ^ t[4]) ^ t[4] ^ t[5] ^ t[6];
+    473a:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    473e:	3e 50 07 00 	add	#7,	r14	;#0x0007
+    4742:	5d 44 f7 ff 	mov.b	-9(r4),	r13	;0xfff7(r4)
+    4746:	5f 44 f4 ff 	mov.b	-12(r4),r15	;0xfff4(r4)
+    474a:	4f ed       	xor.b	r13,	r15	
+    474c:	4f 4f       	mov.b	r15,	r15	
+    474e:	0f 5f       	rla	r15		
+    4750:	4d 4f       	mov.b	r15,	r13	
+    4752:	5c 44 f7 ff 	mov.b	-9(r4),	r12	;0xfff7(r4)
+    4756:	5f 44 f4 ff 	mov.b	-12(r4),r15	;0xfff4(r4)
+    475a:	4f ec       	xor.b	r12,	r15	
+    475c:	4f 4f       	mov.b	r15,	r15	
+    475e:	8f 11       	sxt	r15		
+    4760:	8f 10       	swpb	r15		
+    4762:	4f 4f       	mov.b	r15,	r15	
+    4764:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4768:	4d ef       	xor.b	r15,	r13	
+    476a:	5f 44 f4 ff 	mov.b	-12(r4),r15	;0xfff4(r4)
+    476e:	4d ef       	xor.b	r15,	r13	
+    4770:	5f 44 f5 ff 	mov.b	-11(r4),r15	;0xfff5(r4)
+    4774:	4d ef       	xor.b	r15,	r13	
+    4776:	5f 44 f6 ff 	mov.b	-10(r4),r15	;0xfff6(r4)
+    477a:	4f ed       	xor.b	r13,	r15	
+    477c:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+
+        KeySetup(key,r);
+    4780:	5e 44 ef ff 	mov.b	-17(r4),r14	;0xffef(r4)
+    4784:	1f 44 fc ff 	mov	-4(r4),	r15	;0xfffc(r4)
+    4788:	b0 12 00 41 	call	#0x4100	
+        crypt[i] = text[i];
+    }
+
+    u8 t[8];
+    u8 r;
+    for (r=1 ; r<13 ; r++)
+    478c:	d4 53 ef ff 	inc.b	-17(r4)	;0xffef(r4)
+    4790:	f4 90 0d 00 	cmp.b	#13,	-17(r4)	;#0x000d, 0xffef(r4)
+    4794:	ef ff 
+    4796:	02 2c       	jc	$+6      	;abs 0x479c
+    4798:	30 40 8c 44 	br	#0x448c	
+
+        KeySetup(key,r);
+
+    }
+
+    for (i=0 ; i<8 ; i++)
+    479c:	c4 43 ee ff 	mov.b	#0,	-18(r4)	;r3 As==00, 0xffee(r4)
+    47a0:	13 3c       	jmp	$+40     	;abs 0x47c8
+    {
+        crypt[i] = crypt[i] ^ key[i];
+    47a2:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    47a6:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    47aa:	5e 44 ee ff 	mov.b	-18(r4),r14	;0xffee(r4)
+    47ae:	1e 54 fa ff 	add	-6(r4),	r14	;0xfffa(r4)
+    47b2:	6d 4e       	mov.b	@r14,	r13	
+    47b4:	5e 44 ee ff 	mov.b	-18(r4),r14	;0xffee(r4)
+    47b8:	1e 54 fc ff 	add	-4(r4),	r14	;0xfffc(r4)
+    47bc:	6e 4e       	mov.b	@r14,	r14	
+    47be:	4e ed       	xor.b	r13,	r14	
+    47c0:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+
+        KeySetup(key,r);
+
+    }
+
+    for (i=0 ; i<8 ; i++)
+    47c4:	d4 53 ee ff 	inc.b	-18(r4)	;0xffee(r4)
+    47c8:	f4 92 ee ff 	cmp.b	#8,	-18(r4)	;r2 As==11, 0xffee(r4)
+    47cc:	ea 2b       	jnc	$-42     	;abs 0x47a2
+    {
+        crypt[i] = crypt[i] ^ key[i];
+    }
+
+}
+    47ce:	31 50 10 00 	add	#16,	r1	;#0x0010
+    47d2:	34 41       	pop	r4		
+    47d4:	30 41       	ret			
+
+000047d6 <Decrypt>:
+
+
+ void Decrypt ( u8 text[], u8 crypt[], u8 key[] )
+{
+    47d6:	04 12       	push	r4		
+    47d8:	04 41       	mov	r1,	r4	
+    47da:	24 53       	incd	r4		
+    47dc:	31 50 ee ff 	add	#-18,	r1	;#0xffee
+    47e0:	84 4f f8 ff 	mov	r15,	-8(r4)	;0xfff8(r4)
+    47e4:	84 4e fa ff 	mov	r14,	-6(r4)	;0xfffa(r4)
+    47e8:	84 4d fc ff 	mov	r13,	-4(r4)	;0xfffc(r4)
+    u8 i;
+    for (i=0 ; i<8 ; i++)
+    47ec:	c4 43 ec ff 	mov.b	#0,	-20(r4)	;r3 As==00, 0xffec(r4)
+    47f0:	0d 3c       	jmp	$+28     	;abs 0x480c
+    {
+        crypt[i] = text[i];
+    47f2:	5f 44 ec ff 	mov.b	-20(r4),r15	;0xffec(r4)
+    47f6:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    47fa:	5e 44 ec ff 	mov.b	-20(r4),r14	;0xffec(r4)
+    47fe:	1e 54 f8 ff 	add	-8(r4),	r14	;0xfff8(r4)
+    4802:	6e 4e       	mov.b	@r14,	r14	
+    4804:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+
+
+ void Decrypt ( u8 text[], u8 crypt[], u8 key[] )
+{
+    u8 i;
+    for (i=0 ; i<8 ; i++)
+    4808:	d4 53 ec ff 	inc.b	-20(r4)	;0xffec(r4)
+    480c:	f4 92 ec ff 	cmp.b	#8,	-20(r4)	;r2 As==11, 0xffec(r4)
+    4810:	f0 2b       	jnc	$-30     	;abs 0x47f2
+    {
+        crypt[i] = text[i];
+    }
+
+    for (i=0 ; i<8 ; i++)
+    4812:	c4 43 ec ff 	mov.b	#0,	-20(r4)	;r3 As==00, 0xffec(r4)
+    4816:	13 3c       	jmp	$+40     	;abs 0x483e
+    {
+        crypt[i] = crypt[i] ^ key[i];
+    4818:	5f 44 ec ff 	mov.b	-20(r4),r15	;0xffec(r4)
+    481c:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    4820:	5e 44 ec ff 	mov.b	-20(r4),r14	;0xffec(r4)
+    4824:	1e 54 fa ff 	add	-6(r4),	r14	;0xfffa(r4)
+    4828:	6d 4e       	mov.b	@r14,	r13	
+    482a:	5e 44 ec ff 	mov.b	-20(r4),r14	;0xffec(r4)
+    482e:	1e 54 fc ff 	add	-4(r4),	r14	;0xfffc(r4)
+    4832:	6e 4e       	mov.b	@r14,	r14	
+    4834:	4e ed       	xor.b	r13,	r14	
+    4836:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+    for (i=0 ; i<8 ; i++)
+    {
+        crypt[i] = text[i];
+    }
+
+    for (i=0 ; i<8 ; i++)
+    483a:	d4 53 ec ff 	inc.b	-20(r4)	;0xffec(r4)
+    483e:	f4 92 ec ff 	cmp.b	#8,	-20(r4)	;r2 As==11, 0xffec(r4)
+    4842:	ea 2b       	jnc	$-42     	;abs 0x4818
+        crypt[i] = crypt[i] ^ key[i];
+    }
+
+    u8 t[8];
+    u8 r;
+    for (r=12 ; r>0 ; r--)
+    4844:	f4 40 0c 00 	mov.b	#12,	-19(r4)	;#0x000c, 0xffed(r4)
+    4848:	ed ff 
+    484a:	30 40 40 54 	br	#0x5440	
+    {
+        u8 var1 = crypt[3]^crypt[1]^crypt[2]^crypt[0];
+    484e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4852:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4856:	6e 4f       	mov.b	@r15,	r14	
+    4858:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    485c:	1f 53       	inc	r15		
+    485e:	6f 4f       	mov.b	@r15,	r15	
+    4860:	4e ef       	xor.b	r15,	r14	
+    4862:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4866:	2f 53       	incd	r15		
+    4868:	6f 4f       	mov.b	@r15,	r15	
+    486a:	4e ef       	xor.b	r15,	r14	
+    486c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4870:	6f 4f       	mov.b	@r15,	r15	
+    4872:	4d 4e       	mov.b	r14,	r13	
+    4874:	4d ef       	xor.b	r15,	r13	
+    4876:	c4 4d ee ff 	mov.b	r13,	-18(r4)	;0xffee(r4)
+        u8 var2 = crypt[7]^crypt[6]^crypt[5]^crypt[4];
+    487a:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    487e:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    4882:	6e 4f       	mov.b	@r15,	r14	
+    4884:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4888:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    488c:	6f 4f       	mov.b	@r15,	r15	
+    488e:	4e ef       	xor.b	r15,	r14	
+    4890:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4894:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    4898:	6f 4f       	mov.b	@r15,	r15	
+    489a:	4e ef       	xor.b	r15,	r14	
+    489c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    48a0:	2f 52       	add	#4,	r15	;r2 As==10
+    48a2:	6f 4f       	mov.b	@r15,	r15	
+    48a4:	4d 4e       	mov.b	r14,	r13	
+    48a6:	4d ef       	xor.b	r15,	r13	
+    48a8:	c4 4d ef ff 	mov.b	r13,	-17(r4)	;0xffef(r4)
+
+        t[0] = L(L(L(var1)^crypt[2]^crypt[0])^crypt[1]^crypt[0])^crypt[3]^crypt[1]^crypt[2];
+    48ac:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    48b0:	0e 4f       	mov	r15,	r14	
+    48b2:	0e 5e       	rla	r14		
+    48b4:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    48b8:	4f 4f       	mov.b	r15,	r15	
+    48ba:	8f 11       	sxt	r15		
+    48bc:	8f 10       	swpb	r15		
+    48be:	4f 4f       	mov.b	r15,	r15	
+    48c0:	4f 4f       	mov.b	r15,	r15	
+    48c2:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    48c6:	0e ef       	xor	r15,	r14	
+    48c8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    48cc:	2f 53       	incd	r15		
+    48ce:	6f 4f       	mov.b	@r15,	r15	
+    48d0:	4f 4f       	mov.b	r15,	r15	
+    48d2:	0e ef       	xor	r15,	r14	
+    48d4:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    48d8:	6f 4f       	mov.b	@r15,	r15	
+    48da:	4f 4f       	mov.b	r15,	r15	
+    48dc:	0f ee       	xor	r14,	r15	
+    48de:	0e 4f       	mov	r15,	r14	
+    48e0:	0e 5e       	rla	r14		
+    48e2:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    48e6:	0f 5f       	rla	r15		
+    48e8:	4d 4f       	mov.b	r15,	r13	
+    48ea:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    48ee:	4f 4f       	mov.b	r15,	r15	
+    48f0:	8f 11       	sxt	r15		
+    48f2:	8f 10       	swpb	r15		
+    48f4:	4f 4f       	mov.b	r15,	r15	
+    48f6:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    48fa:	4d ef       	xor.b	r15,	r13	
+    48fc:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4900:	2f 53       	incd	r15		
+    4902:	6f 4f       	mov.b	@r15,	r15	
+    4904:	4d ef       	xor.b	r15,	r13	
+    4906:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    490a:	6f 4f       	mov.b	@r15,	r15	
+    490c:	4f ed       	xor.b	r13,	r15	
+    490e:	4f 4f       	mov.b	r15,	r15	
+    4910:	8f 11       	sxt	r15		
+    4912:	8f 10       	swpb	r15		
+    4914:	4f 4f       	mov.b	r15,	r15	
+    4916:	4f 4f       	mov.b	r15,	r15	
+    4918:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    491c:	0e ef       	xor	r15,	r14	
+    491e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4922:	1f 53       	inc	r15		
+    4924:	6f 4f       	mov.b	@r15,	r15	
+    4926:	4f 4f       	mov.b	r15,	r15	
+    4928:	0e ef       	xor	r15,	r14	
+    492a:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    492e:	6f 4f       	mov.b	@r15,	r15	
+    4930:	4f 4f       	mov.b	r15,	r15	
+    4932:	0f ee       	xor	r14,	r15	
+    4934:	0f 5f       	rla	r15		
+    4936:	4d 4f       	mov.b	r15,	r13	
+    4938:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    493c:	0e 4f       	mov	r15,	r14	
+    493e:	0e 5e       	rla	r14		
+    4940:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4944:	4f 4f       	mov.b	r15,	r15	
+    4946:	8f 11       	sxt	r15		
+    4948:	8f 10       	swpb	r15		
+    494a:	4f 4f       	mov.b	r15,	r15	
+    494c:	4f 4f       	mov.b	r15,	r15	
+    494e:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4952:	0e ef       	xor	r15,	r14	
+    4954:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4958:	2f 53       	incd	r15		
+    495a:	6f 4f       	mov.b	@r15,	r15	
+    495c:	4f 4f       	mov.b	r15,	r15	
+    495e:	0e ef       	xor	r15,	r14	
+    4960:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4964:	6f 4f       	mov.b	@r15,	r15	
+    4966:	4f 4f       	mov.b	r15,	r15	
+    4968:	0f ee       	xor	r14,	r15	
+    496a:	0f 5f       	rla	r15		
+    496c:	4e 4f       	mov.b	r15,	r14	
+    496e:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4972:	0f 5f       	rla	r15		
+    4974:	4c 4f       	mov.b	r15,	r12	
+    4976:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    497a:	4f 4f       	mov.b	r15,	r15	
+    497c:	8f 11       	sxt	r15		
+    497e:	8f 10       	swpb	r15		
+    4980:	4f 4f       	mov.b	r15,	r15	
+    4982:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4986:	4c ef       	xor.b	r15,	r12	
+    4988:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    498c:	2f 53       	incd	r15		
+    498e:	6f 4f       	mov.b	@r15,	r15	
+    4990:	4c ef       	xor.b	r15,	r12	
+    4992:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4996:	6f 4f       	mov.b	@r15,	r15	
+    4998:	4f ec       	xor.b	r12,	r15	
+    499a:	4f 4f       	mov.b	r15,	r15	
+    499c:	8f 11       	sxt	r15		
+    499e:	8f 10       	swpb	r15		
+    49a0:	4f 4f       	mov.b	r15,	r15	
+    49a2:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    49a6:	4e ef       	xor.b	r15,	r14	
+    49a8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    49ac:	1f 53       	inc	r15		
+    49ae:	6f 4f       	mov.b	@r15,	r15	
+    49b0:	4e ef       	xor.b	r15,	r14	
+    49b2:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    49b6:	6f 4f       	mov.b	@r15,	r15	
+    49b8:	4f ee       	xor.b	r14,	r15	
+    49ba:	4f 4f       	mov.b	r15,	r15	
+    49bc:	8f 11       	sxt	r15		
+    49be:	8f 10       	swpb	r15		
+    49c0:	4f 4f       	mov.b	r15,	r15	
+    49c2:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    49c6:	4e 4d       	mov.b	r13,	r14	
+    49c8:	4e ef       	xor.b	r15,	r14	
+    49ca:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    49ce:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    49d2:	6f 4f       	mov.b	@r15,	r15	
+    49d4:	4e ef       	xor.b	r15,	r14	
+    49d6:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    49da:	1f 53       	inc	r15		
+    49dc:	6f 4f       	mov.b	@r15,	r15	
+    49de:	4e ef       	xor.b	r15,	r14	
+    49e0:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    49e4:	2f 53       	incd	r15		
+    49e6:	6f 4f       	mov.b	@r15,	r15	
+    49e8:	4f ee       	xor.b	r14,	r15	
+    49ea:	c4 4f f0 ff 	mov.b	r15,	-16(r4)	;0xfff0(r4)
+        t[1] = L(L(L(var1)^crypt[3]^crypt[1])^crypt[2]^crypt[1])^crypt[0]^crypt[2]^crypt[3];
+    49ee:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    49f2:	0e 4f       	mov	r15,	r14	
+    49f4:	0e 5e       	rla	r14		
+    49f6:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    49fa:	4f 4f       	mov.b	r15,	r15	
+    49fc:	8f 11       	sxt	r15		
+    49fe:	8f 10       	swpb	r15		
+    4a00:	4f 4f       	mov.b	r15,	r15	
+    4a02:	4f 4f       	mov.b	r15,	r15	
+    4a04:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4a08:	0e ef       	xor	r15,	r14	
+    4a0a:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4a0e:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4a12:	6f 4f       	mov.b	@r15,	r15	
+    4a14:	4f 4f       	mov.b	r15,	r15	
+    4a16:	0e ef       	xor	r15,	r14	
+    4a18:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4a1c:	1f 53       	inc	r15		
+    4a1e:	6f 4f       	mov.b	@r15,	r15	
+    4a20:	4f 4f       	mov.b	r15,	r15	
+    4a22:	0f ee       	xor	r14,	r15	
+    4a24:	0e 4f       	mov	r15,	r14	
+    4a26:	0e 5e       	rla	r14		
+    4a28:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4a2c:	0f 5f       	rla	r15		
+    4a2e:	4d 4f       	mov.b	r15,	r13	
+    4a30:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4a34:	4f 4f       	mov.b	r15,	r15	
+    4a36:	8f 11       	sxt	r15		
+    4a38:	8f 10       	swpb	r15		
+    4a3a:	4f 4f       	mov.b	r15,	r15	
+    4a3c:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4a40:	4d ef       	xor.b	r15,	r13	
+    4a42:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4a46:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4a4a:	6f 4f       	mov.b	@r15,	r15	
+    4a4c:	4d ef       	xor.b	r15,	r13	
+    4a4e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4a52:	1f 53       	inc	r15		
+    4a54:	6f 4f       	mov.b	@r15,	r15	
+    4a56:	4f ed       	xor.b	r13,	r15	
+    4a58:	4f 4f       	mov.b	r15,	r15	
+    4a5a:	8f 11       	sxt	r15		
+    4a5c:	8f 10       	swpb	r15		
+    4a5e:	4f 4f       	mov.b	r15,	r15	
+    4a60:	4f 4f       	mov.b	r15,	r15	
+    4a62:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4a66:	0e ef       	xor	r15,	r14	
+    4a68:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4a6c:	2f 53       	incd	r15		
+    4a6e:	6f 4f       	mov.b	@r15,	r15	
+    4a70:	4f 4f       	mov.b	r15,	r15	
+    4a72:	0e ef       	xor	r15,	r14	
+    4a74:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4a78:	1f 53       	inc	r15		
+    4a7a:	6f 4f       	mov.b	@r15,	r15	
+    4a7c:	4f 4f       	mov.b	r15,	r15	
+    4a7e:	0f ee       	xor	r14,	r15	
+    4a80:	0f 5f       	rla	r15		
+    4a82:	4d 4f       	mov.b	r15,	r13	
+    4a84:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4a88:	0e 4f       	mov	r15,	r14	
+    4a8a:	0e 5e       	rla	r14		
+    4a8c:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4a90:	4f 4f       	mov.b	r15,	r15	
+    4a92:	8f 11       	sxt	r15		
+    4a94:	8f 10       	swpb	r15		
+    4a96:	4f 4f       	mov.b	r15,	r15	
+    4a98:	4f 4f       	mov.b	r15,	r15	
+    4a9a:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4a9e:	0e ef       	xor	r15,	r14	
+    4aa0:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4aa4:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4aa8:	6f 4f       	mov.b	@r15,	r15	
+    4aaa:	4f 4f       	mov.b	r15,	r15	
+    4aac:	0e ef       	xor	r15,	r14	
+    4aae:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4ab2:	1f 53       	inc	r15		
+    4ab4:	6f 4f       	mov.b	@r15,	r15	
+    4ab6:	4f 4f       	mov.b	r15,	r15	
+    4ab8:	0f ee       	xor	r14,	r15	
+    4aba:	0f 5f       	rla	r15		
+    4abc:	4e 4f       	mov.b	r15,	r14	
+    4abe:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4ac2:	0f 5f       	rla	r15		
+    4ac4:	4c 4f       	mov.b	r15,	r12	
+    4ac6:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4aca:	4f 4f       	mov.b	r15,	r15	
+    4acc:	8f 11       	sxt	r15		
+    4ace:	8f 10       	swpb	r15		
+    4ad0:	4f 4f       	mov.b	r15,	r15	
+    4ad2:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4ad6:	4c ef       	xor.b	r15,	r12	
+    4ad8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4adc:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4ae0:	6f 4f       	mov.b	@r15,	r15	
+    4ae2:	4c ef       	xor.b	r15,	r12	
+    4ae4:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4ae8:	1f 53       	inc	r15		
+    4aea:	6f 4f       	mov.b	@r15,	r15	
+    4aec:	4f ec       	xor.b	r12,	r15	
+    4aee:	4f 4f       	mov.b	r15,	r15	
+    4af0:	8f 11       	sxt	r15		
+    4af2:	8f 10       	swpb	r15		
+    4af4:	4f 4f       	mov.b	r15,	r15	
+    4af6:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4afa:	4e ef       	xor.b	r15,	r14	
+    4afc:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4b00:	2f 53       	incd	r15		
+    4b02:	6f 4f       	mov.b	@r15,	r15	
+    4b04:	4e ef       	xor.b	r15,	r14	
+    4b06:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4b0a:	1f 53       	inc	r15		
+    4b0c:	6f 4f       	mov.b	@r15,	r15	
+    4b0e:	4f ee       	xor.b	r14,	r15	
+    4b10:	4f 4f       	mov.b	r15,	r15	
+    4b12:	8f 11       	sxt	r15		
+    4b14:	8f 10       	swpb	r15		
+    4b16:	4f 4f       	mov.b	r15,	r15	
+    4b18:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4b1c:	4e 4d       	mov.b	r13,	r14	
+    4b1e:	4e ef       	xor.b	r15,	r14	
+    4b20:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4b24:	6f 4f       	mov.b	@r15,	r15	
+    4b26:	4e ef       	xor.b	r15,	r14	
+    4b28:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4b2c:	2f 53       	incd	r15		
+    4b2e:	6f 4f       	mov.b	@r15,	r15	
+    4b30:	4e ef       	xor.b	r15,	r14	
+    4b32:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4b36:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4b3a:	6f 4f       	mov.b	@r15,	r15	
+    4b3c:	4f ee       	xor.b	r14,	r15	
+    4b3e:	c4 4f f1 ff 	mov.b	r15,	-15(r4)	;0xfff1(r4)
+        t[2] = L(L(L(var1)^crypt[0]^crypt[2])^crypt[3]^crypt[2])^crypt[1]^crypt[3]^crypt[0];
+    4b42:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4b46:	0e 4f       	mov	r15,	r14	
+    4b48:	0e 5e       	rla	r14		
+    4b4a:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4b4e:	4f 4f       	mov.b	r15,	r15	
+    4b50:	8f 11       	sxt	r15		
+    4b52:	8f 10       	swpb	r15		
+    4b54:	4f 4f       	mov.b	r15,	r15	
+    4b56:	4f 4f       	mov.b	r15,	r15	
+    4b58:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4b5c:	0e ef       	xor	r15,	r14	
+    4b5e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4b62:	6f 4f       	mov.b	@r15,	r15	
+    4b64:	4f 4f       	mov.b	r15,	r15	
+    4b66:	0e ef       	xor	r15,	r14	
+    4b68:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4b6c:	2f 53       	incd	r15		
+    4b6e:	6f 4f       	mov.b	@r15,	r15	
+    4b70:	4f 4f       	mov.b	r15,	r15	
+    4b72:	0f ee       	xor	r14,	r15	
+    4b74:	0e 4f       	mov	r15,	r14	
+    4b76:	0e 5e       	rla	r14		
+    4b78:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4b7c:	0f 5f       	rla	r15		
+    4b7e:	4d 4f       	mov.b	r15,	r13	
+    4b80:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4b84:	4f 4f       	mov.b	r15,	r15	
+    4b86:	8f 11       	sxt	r15		
+    4b88:	8f 10       	swpb	r15		
+    4b8a:	4f 4f       	mov.b	r15,	r15	
+    4b8c:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4b90:	4d ef       	xor.b	r15,	r13	
+    4b92:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4b96:	6f 4f       	mov.b	@r15,	r15	
+    4b98:	4d ef       	xor.b	r15,	r13	
+    4b9a:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4b9e:	2f 53       	incd	r15		
+    4ba0:	6f 4f       	mov.b	@r15,	r15	
+    4ba2:	4f ed       	xor.b	r13,	r15	
+    4ba4:	4f 4f       	mov.b	r15,	r15	
+    4ba6:	8f 11       	sxt	r15		
+    4ba8:	8f 10       	swpb	r15		
+    4baa:	4f 4f       	mov.b	r15,	r15	
+    4bac:	4f 4f       	mov.b	r15,	r15	
+    4bae:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4bb2:	0e ef       	xor	r15,	r14	
+    4bb4:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4bb8:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4bbc:	6f 4f       	mov.b	@r15,	r15	
+    4bbe:	4f 4f       	mov.b	r15,	r15	
+    4bc0:	0e ef       	xor	r15,	r14	
+    4bc2:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4bc6:	2f 53       	incd	r15		
+    4bc8:	6f 4f       	mov.b	@r15,	r15	
+    4bca:	4f 4f       	mov.b	r15,	r15	
+    4bcc:	0f ee       	xor	r14,	r15	
+    4bce:	0f 5f       	rla	r15		
+    4bd0:	4d 4f       	mov.b	r15,	r13	
+    4bd2:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4bd6:	0e 4f       	mov	r15,	r14	
+    4bd8:	0e 5e       	rla	r14		
+    4bda:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4bde:	4f 4f       	mov.b	r15,	r15	
+    4be0:	8f 11       	sxt	r15		
+    4be2:	8f 10       	swpb	r15		
+    4be4:	4f 4f       	mov.b	r15,	r15	
+    4be6:	4f 4f       	mov.b	r15,	r15	
+    4be8:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4bec:	0e ef       	xor	r15,	r14	
+    4bee:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4bf2:	6f 4f       	mov.b	@r15,	r15	
+    4bf4:	4f 4f       	mov.b	r15,	r15	
+    4bf6:	0e ef       	xor	r15,	r14	
+    4bf8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4bfc:	2f 53       	incd	r15		
+    4bfe:	6f 4f       	mov.b	@r15,	r15	
+    4c00:	4f 4f       	mov.b	r15,	r15	
+    4c02:	0f ee       	xor	r14,	r15	
+    4c04:	0f 5f       	rla	r15		
+    4c06:	4e 4f       	mov.b	r15,	r14	
+    4c08:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4c0c:	0f 5f       	rla	r15		
+    4c0e:	4c 4f       	mov.b	r15,	r12	
+    4c10:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4c14:	4f 4f       	mov.b	r15,	r15	
+    4c16:	8f 11       	sxt	r15		
+    4c18:	8f 10       	swpb	r15		
+    4c1a:	4f 4f       	mov.b	r15,	r15	
+    4c1c:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4c20:	4c ef       	xor.b	r15,	r12	
+    4c22:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4c26:	6f 4f       	mov.b	@r15,	r15	
+    4c28:	4c ef       	xor.b	r15,	r12	
+    4c2a:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4c2e:	2f 53       	incd	r15		
+    4c30:	6f 4f       	mov.b	@r15,	r15	
+    4c32:	4f ec       	xor.b	r12,	r15	
+    4c34:	4f 4f       	mov.b	r15,	r15	
+    4c36:	8f 11       	sxt	r15		
+    4c38:	8f 10       	swpb	r15		
+    4c3a:	4f 4f       	mov.b	r15,	r15	
+    4c3c:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4c40:	4e ef       	xor.b	r15,	r14	
+    4c42:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4c46:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4c4a:	6f 4f       	mov.b	@r15,	r15	
+    4c4c:	4e ef       	xor.b	r15,	r14	
+    4c4e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4c52:	2f 53       	incd	r15		
+    4c54:	6f 4f       	mov.b	@r15,	r15	
+    4c56:	4f ee       	xor.b	r14,	r15	
+    4c58:	4f 4f       	mov.b	r15,	r15	
+    4c5a:	8f 11       	sxt	r15		
+    4c5c:	8f 10       	swpb	r15		
+    4c5e:	4f 4f       	mov.b	r15,	r15	
+    4c60:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4c64:	4e 4d       	mov.b	r13,	r14	
+    4c66:	4e ef       	xor.b	r15,	r14	
+    4c68:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4c6c:	1f 53       	inc	r15		
+    4c6e:	6f 4f       	mov.b	@r15,	r15	
+    4c70:	4e ef       	xor.b	r15,	r14	
+    4c72:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4c76:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4c7a:	6f 4f       	mov.b	@r15,	r15	
+    4c7c:	4e ef       	xor.b	r15,	r14	
+    4c7e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4c82:	6f 4f       	mov.b	@r15,	r15	
+    4c84:	4f ee       	xor.b	r14,	r15	
+    4c86:	c4 4f f2 ff 	mov.b	r15,	-14(r4)	;0xfff2(r4)
+        t[3] = L(L(L(var1)^crypt[1]^crypt[3])^crypt[0]^crypt[3])^crypt[2]^crypt[0]^crypt[1];
+    4c8a:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4c8e:	0e 4f       	mov	r15,	r14	
+    4c90:	0e 5e       	rla	r14		
+    4c92:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4c96:	4f 4f       	mov.b	r15,	r15	
+    4c98:	8f 11       	sxt	r15		
+    4c9a:	8f 10       	swpb	r15		
+    4c9c:	4f 4f       	mov.b	r15,	r15	
+    4c9e:	4f 4f       	mov.b	r15,	r15	
+    4ca0:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4ca4:	0e ef       	xor	r15,	r14	
+    4ca6:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4caa:	1f 53       	inc	r15		
+    4cac:	6f 4f       	mov.b	@r15,	r15	
+    4cae:	4f 4f       	mov.b	r15,	r15	
+    4cb0:	0e ef       	xor	r15,	r14	
+    4cb2:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4cb6:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4cba:	6f 4f       	mov.b	@r15,	r15	
+    4cbc:	4f 4f       	mov.b	r15,	r15	
+    4cbe:	0f ee       	xor	r14,	r15	
+    4cc0:	0e 4f       	mov	r15,	r14	
+    4cc2:	0e 5e       	rla	r14		
+    4cc4:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4cc8:	0f 5f       	rla	r15		
+    4cca:	4d 4f       	mov.b	r15,	r13	
+    4ccc:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4cd0:	4f 4f       	mov.b	r15,	r15	
+    4cd2:	8f 11       	sxt	r15		
+    4cd4:	8f 10       	swpb	r15		
+    4cd6:	4f 4f       	mov.b	r15,	r15	
+    4cd8:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4cdc:	4d ef       	xor.b	r15,	r13	
+    4cde:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4ce2:	1f 53       	inc	r15		
+    4ce4:	6f 4f       	mov.b	@r15,	r15	
+    4ce6:	4d ef       	xor.b	r15,	r13	
+    4ce8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4cec:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4cf0:	6f 4f       	mov.b	@r15,	r15	
+    4cf2:	4f ed       	xor.b	r13,	r15	
+    4cf4:	4f 4f       	mov.b	r15,	r15	
+    4cf6:	8f 11       	sxt	r15		
+    4cf8:	8f 10       	swpb	r15		
+    4cfa:	4f 4f       	mov.b	r15,	r15	
+    4cfc:	4f 4f       	mov.b	r15,	r15	
+    4cfe:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4d02:	0e ef       	xor	r15,	r14	
+    4d04:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4d08:	6f 4f       	mov.b	@r15,	r15	
+    4d0a:	4f 4f       	mov.b	r15,	r15	
+    4d0c:	0e ef       	xor	r15,	r14	
+    4d0e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4d12:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4d16:	6f 4f       	mov.b	@r15,	r15	
+    4d18:	4f 4f       	mov.b	r15,	r15	
+    4d1a:	0f ee       	xor	r14,	r15	
+    4d1c:	0f 5f       	rla	r15		
+    4d1e:	4d 4f       	mov.b	r15,	r13	
+    4d20:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4d24:	0e 4f       	mov	r15,	r14	
+    4d26:	0e 5e       	rla	r14		
+    4d28:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4d2c:	4f 4f       	mov.b	r15,	r15	
+    4d2e:	8f 11       	sxt	r15		
+    4d30:	8f 10       	swpb	r15		
+    4d32:	4f 4f       	mov.b	r15,	r15	
+    4d34:	4f 4f       	mov.b	r15,	r15	
+    4d36:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4d3a:	0e ef       	xor	r15,	r14	
+    4d3c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4d40:	1f 53       	inc	r15		
+    4d42:	6f 4f       	mov.b	@r15,	r15	
+    4d44:	4f 4f       	mov.b	r15,	r15	
+    4d46:	0e ef       	xor	r15,	r14	
+    4d48:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4d4c:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4d50:	6f 4f       	mov.b	@r15,	r15	
+    4d52:	4f 4f       	mov.b	r15,	r15	
+    4d54:	0f ee       	xor	r14,	r15	
+    4d56:	0f 5f       	rla	r15		
+    4d58:	4e 4f       	mov.b	r15,	r14	
+    4d5a:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4d5e:	0f 5f       	rla	r15		
+    4d60:	4c 4f       	mov.b	r15,	r12	
+    4d62:	5f 44 ee ff 	mov.b	-18(r4),r15	;0xffee(r4)
+    4d66:	4f 4f       	mov.b	r15,	r15	
+    4d68:	8f 11       	sxt	r15		
+    4d6a:	8f 10       	swpb	r15		
+    4d6c:	4f 4f       	mov.b	r15,	r15	
+    4d6e:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4d72:	4c ef       	xor.b	r15,	r12	
+    4d74:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4d78:	1f 53       	inc	r15		
+    4d7a:	6f 4f       	mov.b	@r15,	r15	
+    4d7c:	4c ef       	xor.b	r15,	r12	
+    4d7e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4d82:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4d86:	6f 4f       	mov.b	@r15,	r15	
+    4d88:	4f ec       	xor.b	r12,	r15	
+    4d8a:	4f 4f       	mov.b	r15,	r15	
+    4d8c:	8f 11       	sxt	r15		
+    4d8e:	8f 10       	swpb	r15		
+    4d90:	4f 4f       	mov.b	r15,	r15	
+    4d92:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4d96:	4e ef       	xor.b	r15,	r14	
+    4d98:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4d9c:	6f 4f       	mov.b	@r15,	r15	
+    4d9e:	4e ef       	xor.b	r15,	r14	
+    4da0:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4da4:	3f 50 03 00 	add	#3,	r15	;#0x0003
+    4da8:	6f 4f       	mov.b	@r15,	r15	
+    4daa:	4f ee       	xor.b	r14,	r15	
+    4dac:	4f 4f       	mov.b	r15,	r15	
+    4dae:	8f 11       	sxt	r15		
+    4db0:	8f 10       	swpb	r15		
+    4db2:	4f 4f       	mov.b	r15,	r15	
+    4db4:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4db8:	4e 4d       	mov.b	r13,	r14	
+    4dba:	4e ef       	xor.b	r15,	r14	
+    4dbc:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4dc0:	2f 53       	incd	r15		
+    4dc2:	6f 4f       	mov.b	@r15,	r15	
+    4dc4:	4e ef       	xor.b	r15,	r14	
+    4dc6:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4dca:	6f 4f       	mov.b	@r15,	r15	
+    4dcc:	4e ef       	xor.b	r15,	r14	
+    4dce:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4dd2:	1f 53       	inc	r15		
+    4dd4:	6f 4f       	mov.b	@r15,	r15	
+    4dd6:	4f ee       	xor.b	r14,	r15	
+    4dd8:	c4 4f f3 ff 	mov.b	r15,	-13(r4)	;0xfff3(r4)
+
+        t[4] = L(L(L(var2)^crypt[6]^crypt[4])^crypt[5]^crypt[4])^crypt[7]^crypt[5]^crypt[6];
+    4ddc:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4de0:	0e 4f       	mov	r15,	r14	
+    4de2:	0e 5e       	rla	r14		
+    4de4:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4de8:	4f 4f       	mov.b	r15,	r15	
+    4dea:	8f 11       	sxt	r15		
+    4dec:	8f 10       	swpb	r15		
+    4dee:	4f 4f       	mov.b	r15,	r15	
+    4df0:	4f 4f       	mov.b	r15,	r15	
+    4df2:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4df6:	0e ef       	xor	r15,	r14	
+    4df8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4dfc:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    4e00:	6f 4f       	mov.b	@r15,	r15	
+    4e02:	4f 4f       	mov.b	r15,	r15	
+    4e04:	0e ef       	xor	r15,	r14	
+    4e06:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4e0a:	2f 52       	add	#4,	r15	;r2 As==10
+    4e0c:	6f 4f       	mov.b	@r15,	r15	
+    4e0e:	4f 4f       	mov.b	r15,	r15	
+    4e10:	0f ee       	xor	r14,	r15	
+    4e12:	0e 4f       	mov	r15,	r14	
+    4e14:	0e 5e       	rla	r14		
+    4e16:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4e1a:	0f 5f       	rla	r15		
+    4e1c:	4d 4f       	mov.b	r15,	r13	
+    4e1e:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4e22:	4f 4f       	mov.b	r15,	r15	
+    4e24:	8f 11       	sxt	r15		
+    4e26:	8f 10       	swpb	r15		
+    4e28:	4f 4f       	mov.b	r15,	r15	
+    4e2a:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4e2e:	4d ef       	xor.b	r15,	r13	
+    4e30:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4e34:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    4e38:	6f 4f       	mov.b	@r15,	r15	
+    4e3a:	4d ef       	xor.b	r15,	r13	
+    4e3c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4e40:	2f 52       	add	#4,	r15	;r2 As==10
+    4e42:	6f 4f       	mov.b	@r15,	r15	
+    4e44:	4f ed       	xor.b	r13,	r15	
+    4e46:	4f 4f       	mov.b	r15,	r15	
+    4e48:	8f 11       	sxt	r15		
+    4e4a:	8f 10       	swpb	r15		
+    4e4c:	4f 4f       	mov.b	r15,	r15	
+    4e4e:	4f 4f       	mov.b	r15,	r15	
+    4e50:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4e54:	0e ef       	xor	r15,	r14	
+    4e56:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4e5a:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    4e5e:	6f 4f       	mov.b	@r15,	r15	
+    4e60:	4f 4f       	mov.b	r15,	r15	
+    4e62:	0e ef       	xor	r15,	r14	
+    4e64:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4e68:	2f 52       	add	#4,	r15	;r2 As==10
+    4e6a:	6f 4f       	mov.b	@r15,	r15	
+    4e6c:	4f 4f       	mov.b	r15,	r15	
+    4e6e:	0f ee       	xor	r14,	r15	
+    4e70:	0f 5f       	rla	r15		
+    4e72:	4d 4f       	mov.b	r15,	r13	
+    4e74:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4e78:	0e 4f       	mov	r15,	r14	
+    4e7a:	0e 5e       	rla	r14		
+    4e7c:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4e80:	4f 4f       	mov.b	r15,	r15	
+    4e82:	8f 11       	sxt	r15		
+    4e84:	8f 10       	swpb	r15		
+    4e86:	4f 4f       	mov.b	r15,	r15	
+    4e88:	4f 4f       	mov.b	r15,	r15	
+    4e8a:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4e8e:	0e ef       	xor	r15,	r14	
+    4e90:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4e94:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    4e98:	6f 4f       	mov.b	@r15,	r15	
+    4e9a:	4f 4f       	mov.b	r15,	r15	
+    4e9c:	0e ef       	xor	r15,	r14	
+    4e9e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4ea2:	2f 52       	add	#4,	r15	;r2 As==10
+    4ea4:	6f 4f       	mov.b	@r15,	r15	
+    4ea6:	4f 4f       	mov.b	r15,	r15	
+    4ea8:	0f ee       	xor	r14,	r15	
+    4eaa:	0f 5f       	rla	r15		
+    4eac:	4e 4f       	mov.b	r15,	r14	
+    4eae:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4eb2:	0f 5f       	rla	r15		
+    4eb4:	4c 4f       	mov.b	r15,	r12	
+    4eb6:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4eba:	4f 4f       	mov.b	r15,	r15	
+    4ebc:	8f 11       	sxt	r15		
+    4ebe:	8f 10       	swpb	r15		
+    4ec0:	4f 4f       	mov.b	r15,	r15	
+    4ec2:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4ec6:	4c ef       	xor.b	r15,	r12	
+    4ec8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4ecc:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    4ed0:	6f 4f       	mov.b	@r15,	r15	
+    4ed2:	4c ef       	xor.b	r15,	r12	
+    4ed4:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4ed8:	2f 52       	add	#4,	r15	;r2 As==10
+    4eda:	6f 4f       	mov.b	@r15,	r15	
+    4edc:	4f ec       	xor.b	r12,	r15	
+    4ede:	4f 4f       	mov.b	r15,	r15	
+    4ee0:	8f 11       	sxt	r15		
+    4ee2:	8f 10       	swpb	r15		
+    4ee4:	4f 4f       	mov.b	r15,	r15	
+    4ee6:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4eea:	4e ef       	xor.b	r15,	r14	
+    4eec:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4ef0:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    4ef4:	6f 4f       	mov.b	@r15,	r15	
+    4ef6:	4e ef       	xor.b	r15,	r14	
+    4ef8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4efc:	2f 52       	add	#4,	r15	;r2 As==10
+    4efe:	6f 4f       	mov.b	@r15,	r15	
+    4f00:	4f ee       	xor.b	r14,	r15	
+    4f02:	4f 4f       	mov.b	r15,	r15	
+    4f04:	8f 11       	sxt	r15		
+    4f06:	8f 10       	swpb	r15		
+    4f08:	4f 4f       	mov.b	r15,	r15	
+    4f0a:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4f0e:	4e 4d       	mov.b	r13,	r14	
+    4f10:	4e ef       	xor.b	r15,	r14	
+    4f12:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4f16:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    4f1a:	6f 4f       	mov.b	@r15,	r15	
+    4f1c:	4e ef       	xor.b	r15,	r14	
+    4f1e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4f22:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    4f26:	6f 4f       	mov.b	@r15,	r15	
+    4f28:	4e ef       	xor.b	r15,	r14	
+    4f2a:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4f2e:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    4f32:	6f 4f       	mov.b	@r15,	r15	
+    4f34:	4f ee       	xor.b	r14,	r15	
+    4f36:	c4 4f f4 ff 	mov.b	r15,	-12(r4)	;0xfff4(r4)
+        t[5] = L(L(L(var2)^crypt[7]^crypt[5])^crypt[6]^crypt[5])^crypt[4]^crypt[6]^crypt[7];
+    4f3a:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4f3e:	0e 4f       	mov	r15,	r14	
+    4f40:	0e 5e       	rla	r14		
+    4f42:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4f46:	4f 4f       	mov.b	r15,	r15	
+    4f48:	8f 11       	sxt	r15		
+    4f4a:	8f 10       	swpb	r15		
+    4f4c:	4f 4f       	mov.b	r15,	r15	
+    4f4e:	4f 4f       	mov.b	r15,	r15	
+    4f50:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4f54:	0e ef       	xor	r15,	r14	
+    4f56:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4f5a:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    4f5e:	6f 4f       	mov.b	@r15,	r15	
+    4f60:	4f 4f       	mov.b	r15,	r15	
+    4f62:	0e ef       	xor	r15,	r14	
+    4f64:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4f68:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    4f6c:	6f 4f       	mov.b	@r15,	r15	
+    4f6e:	4f 4f       	mov.b	r15,	r15	
+    4f70:	0f ee       	xor	r14,	r15	
+    4f72:	0e 4f       	mov	r15,	r14	
+    4f74:	0e 5e       	rla	r14		
+    4f76:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4f7a:	0f 5f       	rla	r15		
+    4f7c:	4d 4f       	mov.b	r15,	r13	
+    4f7e:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4f82:	4f 4f       	mov.b	r15,	r15	
+    4f84:	8f 11       	sxt	r15		
+    4f86:	8f 10       	swpb	r15		
+    4f88:	4f 4f       	mov.b	r15,	r15	
+    4f8a:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    4f8e:	4d ef       	xor.b	r15,	r13	
+    4f90:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4f94:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    4f98:	6f 4f       	mov.b	@r15,	r15	
+    4f9a:	4d ef       	xor.b	r15,	r13	
+    4f9c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4fa0:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    4fa4:	6f 4f       	mov.b	@r15,	r15	
+    4fa6:	4f ed       	xor.b	r13,	r15	
+    4fa8:	4f 4f       	mov.b	r15,	r15	
+    4faa:	8f 11       	sxt	r15		
+    4fac:	8f 10       	swpb	r15		
+    4fae:	4f 4f       	mov.b	r15,	r15	
+    4fb0:	4f 4f       	mov.b	r15,	r15	
+    4fb2:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4fb6:	0e ef       	xor	r15,	r14	
+    4fb8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4fbc:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    4fc0:	6f 4f       	mov.b	@r15,	r15	
+    4fc2:	4f 4f       	mov.b	r15,	r15	
+    4fc4:	0e ef       	xor	r15,	r14	
+    4fc6:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4fca:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    4fce:	6f 4f       	mov.b	@r15,	r15	
+    4fd0:	4f 4f       	mov.b	r15,	r15	
+    4fd2:	0f ee       	xor	r14,	r15	
+    4fd4:	0f 5f       	rla	r15		
+    4fd6:	4d 4f       	mov.b	r15,	r13	
+    4fd8:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4fdc:	0e 4f       	mov	r15,	r14	
+    4fde:	0e 5e       	rla	r14		
+    4fe0:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    4fe4:	4f 4f       	mov.b	r15,	r15	
+    4fe6:	8f 11       	sxt	r15		
+    4fe8:	8f 10       	swpb	r15		
+    4fea:	4f 4f       	mov.b	r15,	r15	
+    4fec:	4f 4f       	mov.b	r15,	r15	
+    4fee:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    4ff2:	0e ef       	xor	r15,	r14	
+    4ff4:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    4ff8:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    4ffc:	6f 4f       	mov.b	@r15,	r15	
+    4ffe:	4f 4f       	mov.b	r15,	r15	
+    5000:	0e ef       	xor	r15,	r14	
+    5002:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5006:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    500a:	6f 4f       	mov.b	@r15,	r15	
+    500c:	4f 4f       	mov.b	r15,	r15	
+    500e:	0f ee       	xor	r14,	r15	
+    5010:	0f 5f       	rla	r15		
+    5012:	4e 4f       	mov.b	r15,	r14	
+    5014:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    5018:	0f 5f       	rla	r15		
+    501a:	4c 4f       	mov.b	r15,	r12	
+    501c:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    5020:	4f 4f       	mov.b	r15,	r15	
+    5022:	8f 11       	sxt	r15		
+    5024:	8f 10       	swpb	r15		
+    5026:	4f 4f       	mov.b	r15,	r15	
+    5028:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    502c:	4c ef       	xor.b	r15,	r12	
+    502e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5032:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    5036:	6f 4f       	mov.b	@r15,	r15	
+    5038:	4c ef       	xor.b	r15,	r12	
+    503a:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    503e:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    5042:	6f 4f       	mov.b	@r15,	r15	
+    5044:	4f ec       	xor.b	r12,	r15	
+    5046:	4f 4f       	mov.b	r15,	r15	
+    5048:	8f 11       	sxt	r15		
+    504a:	8f 10       	swpb	r15		
+    504c:	4f 4f       	mov.b	r15,	r15	
+    504e:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    5052:	4e ef       	xor.b	r15,	r14	
+    5054:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5058:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    505c:	6f 4f       	mov.b	@r15,	r15	
+    505e:	4e ef       	xor.b	r15,	r14	
+    5060:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5064:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    5068:	6f 4f       	mov.b	@r15,	r15	
+    506a:	4f ee       	xor.b	r14,	r15	
+    506c:	4f 4f       	mov.b	r15,	r15	
+    506e:	8f 11       	sxt	r15		
+    5070:	8f 10       	swpb	r15		
+    5072:	4f 4f       	mov.b	r15,	r15	
+    5074:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    5078:	4e 4d       	mov.b	r13,	r14	
+    507a:	4e ef       	xor.b	r15,	r14	
+    507c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5080:	2f 52       	add	#4,	r15	;r2 As==10
+    5082:	6f 4f       	mov.b	@r15,	r15	
+    5084:	4e ef       	xor.b	r15,	r14	
+    5086:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    508a:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    508e:	6f 4f       	mov.b	@r15,	r15	
+    5090:	4e ef       	xor.b	r15,	r14	
+    5092:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5096:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    509a:	6f 4f       	mov.b	@r15,	r15	
+    509c:	4f ee       	xor.b	r14,	r15	
+    509e:	c4 4f f5 ff 	mov.b	r15,	-11(r4)	;0xfff5(r4)
+        t[6] = L(L(L(var2)^crypt[4]^crypt[6])^crypt[7]^crypt[6])^crypt[5]^crypt[7]^crypt[4];
+    50a2:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    50a6:	0e 4f       	mov	r15,	r14	
+    50a8:	0e 5e       	rla	r14		
+    50aa:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    50ae:	4f 4f       	mov.b	r15,	r15	
+    50b0:	8f 11       	sxt	r15		
+    50b2:	8f 10       	swpb	r15		
+    50b4:	4f 4f       	mov.b	r15,	r15	
+    50b6:	4f 4f       	mov.b	r15,	r15	
+    50b8:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    50bc:	0e ef       	xor	r15,	r14	
+    50be:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    50c2:	2f 52       	add	#4,	r15	;r2 As==10
+    50c4:	6f 4f       	mov.b	@r15,	r15	
+    50c6:	4f 4f       	mov.b	r15,	r15	
+    50c8:	0e ef       	xor	r15,	r14	
+    50ca:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    50ce:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    50d2:	6f 4f       	mov.b	@r15,	r15	
+    50d4:	4f 4f       	mov.b	r15,	r15	
+    50d6:	0f ee       	xor	r14,	r15	
+    50d8:	0e 4f       	mov	r15,	r14	
+    50da:	0e 5e       	rla	r14		
+    50dc:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    50e0:	0f 5f       	rla	r15		
+    50e2:	4d 4f       	mov.b	r15,	r13	
+    50e4:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    50e8:	4f 4f       	mov.b	r15,	r15	
+    50ea:	8f 11       	sxt	r15		
+    50ec:	8f 10       	swpb	r15		
+    50ee:	4f 4f       	mov.b	r15,	r15	
+    50f0:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    50f4:	4d ef       	xor.b	r15,	r13	
+    50f6:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    50fa:	2f 52       	add	#4,	r15	;r2 As==10
+    50fc:	6f 4f       	mov.b	@r15,	r15	
+    50fe:	4d ef       	xor.b	r15,	r13	
+    5100:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5104:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    5108:	6f 4f       	mov.b	@r15,	r15	
+    510a:	4f ed       	xor.b	r13,	r15	
+    510c:	4f 4f       	mov.b	r15,	r15	
+    510e:	8f 11       	sxt	r15		
+    5110:	8f 10       	swpb	r15		
+    5112:	4f 4f       	mov.b	r15,	r15	
+    5114:	4f 4f       	mov.b	r15,	r15	
+    5116:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    511a:	0e ef       	xor	r15,	r14	
+    511c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5120:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    5124:	6f 4f       	mov.b	@r15,	r15	
+    5126:	4f 4f       	mov.b	r15,	r15	
+    5128:	0e ef       	xor	r15,	r14	
+    512a:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    512e:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    5132:	6f 4f       	mov.b	@r15,	r15	
+    5134:	4f 4f       	mov.b	r15,	r15	
+    5136:	0f ee       	xor	r14,	r15	
+    5138:	0f 5f       	rla	r15		
+    513a:	4d 4f       	mov.b	r15,	r13	
+    513c:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    5140:	0e 4f       	mov	r15,	r14	
+    5142:	0e 5e       	rla	r14		
+    5144:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    5148:	4f 4f       	mov.b	r15,	r15	
+    514a:	8f 11       	sxt	r15		
+    514c:	8f 10       	swpb	r15		
+    514e:	4f 4f       	mov.b	r15,	r15	
+    5150:	4f 4f       	mov.b	r15,	r15	
+    5152:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    5156:	0e ef       	xor	r15,	r14	
+    5158:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    515c:	2f 52       	add	#4,	r15	;r2 As==10
+    515e:	6f 4f       	mov.b	@r15,	r15	
+    5160:	4f 4f       	mov.b	r15,	r15	
+    5162:	0e ef       	xor	r15,	r14	
+    5164:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5168:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    516c:	6f 4f       	mov.b	@r15,	r15	
+    516e:	4f 4f       	mov.b	r15,	r15	
+    5170:	0f ee       	xor	r14,	r15	
+    5172:	0f 5f       	rla	r15		
+    5174:	4e 4f       	mov.b	r15,	r14	
+    5176:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    517a:	0f 5f       	rla	r15		
+    517c:	4c 4f       	mov.b	r15,	r12	
+    517e:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    5182:	4f 4f       	mov.b	r15,	r15	
+    5184:	8f 11       	sxt	r15		
+    5186:	8f 10       	swpb	r15		
+    5188:	4f 4f       	mov.b	r15,	r15	
+    518a:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    518e:	4c ef       	xor.b	r15,	r12	
+    5190:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5194:	2f 52       	add	#4,	r15	;r2 As==10
+    5196:	6f 4f       	mov.b	@r15,	r15	
+    5198:	4c ef       	xor.b	r15,	r12	
+    519a:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    519e:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    51a2:	6f 4f       	mov.b	@r15,	r15	
+    51a4:	4f ec       	xor.b	r12,	r15	
+    51a6:	4f 4f       	mov.b	r15,	r15	
+    51a8:	8f 11       	sxt	r15		
+    51aa:	8f 10       	swpb	r15		
+    51ac:	4f 4f       	mov.b	r15,	r15	
+    51ae:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    51b2:	4e ef       	xor.b	r15,	r14	
+    51b4:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    51b8:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    51bc:	6f 4f       	mov.b	@r15,	r15	
+    51be:	4e ef       	xor.b	r15,	r14	
+    51c0:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    51c4:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    51c8:	6f 4f       	mov.b	@r15,	r15	
+    51ca:	4f ee       	xor.b	r14,	r15	
+    51cc:	4f 4f       	mov.b	r15,	r15	
+    51ce:	8f 11       	sxt	r15		
+    51d0:	8f 10       	swpb	r15		
+    51d2:	4f 4f       	mov.b	r15,	r15	
+    51d4:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    51d8:	4e 4d       	mov.b	r13,	r14	
+    51da:	4e ef       	xor.b	r15,	r14	
+    51dc:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    51e0:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    51e4:	6f 4f       	mov.b	@r15,	r15	
+    51e6:	4e ef       	xor.b	r15,	r14	
+    51e8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    51ec:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    51f0:	6f 4f       	mov.b	@r15,	r15	
+    51f2:	4e ef       	xor.b	r15,	r14	
+    51f4:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    51f8:	2f 52       	add	#4,	r15	;r2 As==10
+    51fa:	6f 4f       	mov.b	@r15,	r15	
+    51fc:	4f ee       	xor.b	r14,	r15	
+    51fe:	c4 4f f6 ff 	mov.b	r15,	-10(r4)	;0xfff6(r4)
+        t[7] = L(L(L(var2)^crypt[5]^crypt[7])^crypt[4]^crypt[7])^crypt[6]^crypt[4]^crypt[5];
+    5202:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    5206:	0e 4f       	mov	r15,	r14	
+    5208:	0e 5e       	rla	r14		
+    520a:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    520e:	4f 4f       	mov.b	r15,	r15	
+    5210:	8f 11       	sxt	r15		
+    5212:	8f 10       	swpb	r15		
+    5214:	4f 4f       	mov.b	r15,	r15	
+    5216:	4f 4f       	mov.b	r15,	r15	
+    5218:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    521c:	0e ef       	xor	r15,	r14	
+    521e:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5222:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    5226:	6f 4f       	mov.b	@r15,	r15	
+    5228:	4f 4f       	mov.b	r15,	r15	
+    522a:	0e ef       	xor	r15,	r14	
+    522c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5230:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    5234:	6f 4f       	mov.b	@r15,	r15	
+    5236:	4f 4f       	mov.b	r15,	r15	
+    5238:	0f ee       	xor	r14,	r15	
+    523a:	0e 4f       	mov	r15,	r14	
+    523c:	0e 5e       	rla	r14		
+    523e:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    5242:	0f 5f       	rla	r15		
+    5244:	4d 4f       	mov.b	r15,	r13	
+    5246:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    524a:	4f 4f       	mov.b	r15,	r15	
+    524c:	8f 11       	sxt	r15		
+    524e:	8f 10       	swpb	r15		
+    5250:	4f 4f       	mov.b	r15,	r15	
+    5252:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    5256:	4d ef       	xor.b	r15,	r13	
+    5258:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    525c:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    5260:	6f 4f       	mov.b	@r15,	r15	
+    5262:	4d ef       	xor.b	r15,	r13	
+    5264:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5268:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    526c:	6f 4f       	mov.b	@r15,	r15	
+    526e:	4f ed       	xor.b	r13,	r15	
+    5270:	4f 4f       	mov.b	r15,	r15	
+    5272:	8f 11       	sxt	r15		
+    5274:	8f 10       	swpb	r15		
+    5276:	4f 4f       	mov.b	r15,	r15	
+    5278:	4f 4f       	mov.b	r15,	r15	
+    527a:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    527e:	0e ef       	xor	r15,	r14	
+    5280:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5284:	2f 52       	add	#4,	r15	;r2 As==10
+    5286:	6f 4f       	mov.b	@r15,	r15	
+    5288:	4f 4f       	mov.b	r15,	r15	
+    528a:	0e ef       	xor	r15,	r14	
+    528c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5290:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    5294:	6f 4f       	mov.b	@r15,	r15	
+    5296:	4f 4f       	mov.b	r15,	r15	
+    5298:	0f ee       	xor	r14,	r15	
+    529a:	0f 5f       	rla	r15		
+    529c:	4d 4f       	mov.b	r15,	r13	
+    529e:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    52a2:	0e 4f       	mov	r15,	r14	
+    52a4:	0e 5e       	rla	r14		
+    52a6:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    52aa:	4f 4f       	mov.b	r15,	r15	
+    52ac:	8f 11       	sxt	r15		
+    52ae:	8f 10       	swpb	r15		
+    52b0:	4f 4f       	mov.b	r15,	r15	
+    52b2:	4f 4f       	mov.b	r15,	r15	
+    52b4:	3f f0 1b 00 	and	#27,	r15	;#0x001b
+    52b8:	0e ef       	xor	r15,	r14	
+    52ba:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    52be:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    52c2:	6f 4f       	mov.b	@r15,	r15	
+    52c4:	4f 4f       	mov.b	r15,	r15	
+    52c6:	0e ef       	xor	r15,	r14	
+    52c8:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    52cc:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    52d0:	6f 4f       	mov.b	@r15,	r15	
+    52d2:	4f 4f       	mov.b	r15,	r15	
+    52d4:	0f ee       	xor	r14,	r15	
+    52d6:	0f 5f       	rla	r15		
+    52d8:	4e 4f       	mov.b	r15,	r14	
+    52da:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    52de:	0f 5f       	rla	r15		
+    52e0:	4c 4f       	mov.b	r15,	r12	
+    52e2:	5f 44 ef ff 	mov.b	-17(r4),r15	;0xffef(r4)
+    52e6:	4f 4f       	mov.b	r15,	r15	
+    52e8:	8f 11       	sxt	r15		
+    52ea:	8f 10       	swpb	r15		
+    52ec:	4f 4f       	mov.b	r15,	r15	
+    52ee:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    52f2:	4c ef       	xor.b	r15,	r12	
+    52f4:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    52f8:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    52fc:	6f 4f       	mov.b	@r15,	r15	
+    52fe:	4c ef       	xor.b	r15,	r12	
+    5300:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5304:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    5308:	6f 4f       	mov.b	@r15,	r15	
+    530a:	4f ec       	xor.b	r12,	r15	
+    530c:	4f 4f       	mov.b	r15,	r15	
+    530e:	8f 11       	sxt	r15		
+    5310:	8f 10       	swpb	r15		
+    5312:	4f 4f       	mov.b	r15,	r15	
+    5314:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    5318:	4e ef       	xor.b	r15,	r14	
+    531a:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    531e:	2f 52       	add	#4,	r15	;r2 As==10
+    5320:	6f 4f       	mov.b	@r15,	r15	
+    5322:	4e ef       	xor.b	r15,	r14	
+    5324:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5328:	3f 50 07 00 	add	#7,	r15	;#0x0007
+    532c:	6f 4f       	mov.b	@r15,	r15	
+    532e:	4f ee       	xor.b	r14,	r15	
+    5330:	4f 4f       	mov.b	r15,	r15	
+    5332:	8f 11       	sxt	r15		
+    5334:	8f 10       	swpb	r15		
+    5336:	4f 4f       	mov.b	r15,	r15	
+    5338:	7f f0 1b 00 	and.b	#27,	r15	;#0x001b
+    533c:	4e 4d       	mov.b	r13,	r14	
+    533e:	4e ef       	xor.b	r15,	r14	
+    5340:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5344:	3f 50 06 00 	add	#6,	r15	;#0x0006
+    5348:	6f 4f       	mov.b	@r15,	r15	
+    534a:	4e ef       	xor.b	r15,	r14	
+    534c:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    5350:	2f 52       	add	#4,	r15	;r2 As==10
+    5352:	6f 4f       	mov.b	@r15,	r15	
+    5354:	4e ef       	xor.b	r15,	r14	
+    5356:	1f 44 fa ff 	mov	-6(r4),	r15	;0xfffa(r4)
+    535a:	3f 50 05 00 	add	#5,	r15	;#0x0005
+    535e:	6f 4f       	mov.b	@r15,	r15	
+    5360:	4f ee       	xor.b	r14,	r15	
+    5362:	c4 4f f7 ff 	mov.b	r15,	-9(r4)	;0xfff7(r4)
+
+        for (i=0 ; i<8 ; i++)
+    5366:	c4 43 ec ff 	mov.b	#0,	-20(r4)	;r3 As==00, 0xffec(r4)
+    536a:	13 3c       	jmp	$+40     	;abs 0x5392
+        {
+            crypt[i] = t[(i+6)&0x7];
+    536c:	5f 44 ec ff 	mov.b	-20(r4),r15	;0xffec(r4)
+    5370:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    5374:	5e 44 ec ff 	mov.b	-20(r4),r14	;0xffec(r4)
+    5378:	3e 50 06 00 	add	#6,	r14	;#0x0006
+    537c:	3e f0 07 00 	and	#7,	r14	;#0x0007
+    5380:	0d 44       	mov	r4,	r13	
+    5382:	3d 50 f0 ff 	add	#-16,	r13	;#0xfff0
+    5386:	0e 5d       	add	r13,	r14	
+    5388:	6e 4e       	mov.b	@r14,	r14	
+    538a:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+        t[4] = L(L(L(var2)^crypt[6]^crypt[4])^crypt[5]^crypt[4])^crypt[7]^crypt[5]^crypt[6];
+        t[5] = L(L(L(var2)^crypt[7]^crypt[5])^crypt[6]^crypt[5])^crypt[4]^crypt[6]^crypt[7];
+        t[6] = L(L(L(var2)^crypt[4]^crypt[6])^crypt[7]^crypt[6])^crypt[5]^crypt[7]^crypt[4];
+        t[7] = L(L(L(var2)^crypt[5]^crypt[7])^crypt[4]^crypt[7])^crypt[6]^crypt[4]^crypt[5];
+
+        for (i=0 ; i<8 ; i++)
+    538e:	d4 53 ec ff 	inc.b	-20(r4)	;0xffec(r4)
+    5392:	f4 92 ec ff 	cmp.b	#8,	-20(r4)	;r2 As==11, 0xffec(r4)
+    5396:	ea 2b       	jnc	$-42     	;abs 0x536c
+        {
+            crypt[i] = t[(i+6)&0x7];
+        }
+
+        for (i=0 ; i<8 ; i++)
+    5398:	c4 43 ec ff 	mov.b	#0,	-20(r4)	;r3 As==00, 0xffec(r4)
+    539c:	2d 3c       	jmp	$+92     	;abs 0x53f8
+        {
+            crypt[i] = (sBox[crypt[i]&0xf]) | (sBox[crypt[i]>>4] << 4);
+    539e:	5f 44 ec ff 	mov.b	-20(r4),r15	;0xffec(r4)
+    53a2:	1e 44 fa ff 	mov	-6(r4),	r14	;0xfffa(r4)
+    53a6:	0e 5f       	add	r15,	r14	
+    53a8:	5f 44 ec ff 	mov.b	-20(r4),r15	;0xffec(r4)
+    53ac:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    53b0:	6f 4f       	mov.b	@r15,	r15	
+    53b2:	4f 4f       	mov.b	r15,	r15	
+    53b4:	3f f0 0f 00 	and	#15,	r15	;#0x000f
+    53b8:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    53bc:	4d 4f       	mov.b	r15,	r13	
+    53be:	5f 44 ec ff 	mov.b	-20(r4),r15	;0xffec(r4)
+    53c2:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    53c6:	6f 4f       	mov.b	@r15,	r15	
+    53c8:	4f 4f       	mov.b	r15,	r15	
+    53ca:	4f 4f       	mov.b	r15,	r15	
+    53cc:	12 c3       	clrc			
+    53ce:	4f 10       	rrc.b	r15		
+    53d0:	12 c3       	clrc			
+    53d2:	4f 10       	rrc.b	r15		
+    53d4:	12 c3       	clrc			
+    53d6:	4f 10       	rrc.b	r15		
+    53d8:	12 c3       	clrc			
+    53da:	4f 10       	rrc.b	r15		
+    53dc:	4f 4f       	mov.b	r15,	r15	
+    53de:	5f 4f 5a 55 	mov.b	21850(r15),r15	;0x555a(r15)
+    53e2:	4f 4f       	mov.b	r15,	r15	
+    53e4:	0f 5f       	rla	r15		
+    53e6:	0f 5f       	rla	r15		
+    53e8:	0f 5f       	rla	r15		
+    53ea:	0f 5f       	rla	r15		
+    53ec:	4f 4f       	mov.b	r15,	r15	
+    53ee:	4f dd       	bis.b	r13,	r15	
+    53f0:	ce 4f 00 00 	mov.b	r15,	0(r14)	;0x0000(r14)
+        for (i=0 ; i<8 ; i++)
+        {
+            crypt[i] = t[(i+6)&0x7];
+        }
+
+        for (i=0 ; i<8 ; i++)
+    53f4:	d4 53 ec ff 	inc.b	-20(r4)	;0xffec(r4)
+    53f8:	f4 92 ec ff 	cmp.b	#8,	-20(r4)	;r2 As==11, 0xffec(r4)
+    53fc:	d0 2b       	jnc	$-94     	;abs 0x539e
+        {
+            crypt[i] = (sBox[crypt[i]&0xf]) | (sBox[crypt[i]>>4] << 4);
+        }
+
+        InvKeySetup(key,r);
+    53fe:	5e 44 ed ff 	mov.b	-19(r4),r14	;0xffed(r4)
+    5402:	1f 44 fc ff 	mov	-4(r4),	r15	;0xfffc(r4)
+    5406:	b0 12 a2 42 	call	#0x42a2	
+
+        for (i=0 ; i<8 ; i++)
+    540a:	c4 43 ec ff 	mov.b	#0,	-20(r4)	;r3 As==00, 0xffec(r4)
+    540e:	13 3c       	jmp	$+40     	;abs 0x5436
+        {
+            crypt[i] = crypt[i] ^ key[i];
+    5410:	5f 44 ec ff 	mov.b	-20(r4),r15	;0xffec(r4)
+    5414:	1f 54 fa ff 	add	-6(r4),	r15	;0xfffa(r4)
+    5418:	5e 44 ec ff 	mov.b	-20(r4),r14	;0xffec(r4)
+    541c:	1e 54 fa ff 	add	-6(r4),	r14	;0xfffa(r4)
+    5420:	6d 4e       	mov.b	@r14,	r13	
+    5422:	5e 44 ec ff 	mov.b	-20(r4),r14	;0xffec(r4)
+    5426:	1e 54 fc ff 	add	-4(r4),	r14	;0xfffc(r4)
+    542a:	6e 4e       	mov.b	@r14,	r14	
+    542c:	4e ed       	xor.b	r13,	r14	
+    542e:	cf 4e 00 00 	mov.b	r14,	0(r15)	;0x0000(r15)
+            crypt[i] = (sBox[crypt[i]&0xf]) | (sBox[crypt[i]>>4] << 4);
+        }
+
+        InvKeySetup(key,r);
+
+        for (i=0 ; i<8 ; i++)
+    5432:	d4 53 ec ff 	inc.b	-20(r4)	;0xffec(r4)
+    5436:	f4 92 ec ff 	cmp.b	#8,	-20(r4)	;r2 As==11, 0xffec(r4)
+    543a:	ea 2b       	jnc	$-42     	;abs 0x5410
+        crypt[i] = crypt[i] ^ key[i];
+    }
+
+    u8 t[8];
+    u8 r;
+    for (r=12 ; r>0 ; r--)
+    543c:	f4 53 ed ff 	add.b	#-1,	-19(r4)	;r3 As==11, 0xffed(r4)
+    5440:	c4 93 ed ff 	tst.b	-19(r4)	;0xffed(r4)
+    5444:	02 24       	jz	$+6      	;abs 0x544a
+    5446:	30 40 4e 48 	br	#0x484e	
+            crypt[i] = crypt[i] ^ key[i];
+        }
+
+    }
+
+}
+    544a:	31 50 12 00 	add	#18,	r1	;#0x0012
+    544e:	34 41       	pop	r4		
+    5450:	30 41       	ret			
+
+00005452 <delay>:
+/**************************************************/
+/********************* DELAY **********************/
+/**************************************************/
+
+void delay(unsigned int d) 
+{
+    5452:	04 12       	push	r4		
+    5454:	04 41       	mov	r1,	r4	
+    5456:	24 53       	incd	r4		
+    5458:	31 50 fa ff 	add	#-6,	r1	;#0xfffa
+    545c:	84 4f fc ff 	mov	r15,	-4(r4)	;0xfffc(r4)
+  unsigned int i,j;
+  for(j=0; j < 0xff; j++)
+    5460:	84 43 fa ff 	mov	#0,	-6(r4)	;r3 As==00, 0xfffa(r4)
+    5464:	0d 3c       	jmp	$+28     	;abs 0x5480
+    {
+      for (i = 0; i<d; i++) 
+    5466:	84 43 f8 ff 	mov	#0,	-8(r4)	;r3 As==00, 0xfff8(r4)
+    546a:	04 3c       	jmp	$+10     	;abs 0x5474
+	{
+	  nop();
+    546c:	03 43       	nop			
+	  nop();
+    546e:	03 43       	nop			
+void delay(unsigned int d) 
+{
+  unsigned int i,j;
+  for(j=0; j < 0xff; j++)
+    {
+      for (i = 0; i<d; i++) 
+    5470:	94 53 f8 ff 	inc	-8(r4)		;0xfff8(r4)
+    5474:	94 94 fc ff 	cmp	-4(r4),	-8(r4)	;0xfffc(r4), 0xfff8(r4)
+    5478:	f8 ff 
+    547a:	f8 2b       	jnc	$-14     	;abs 0x546c
+/**************************************************/
+
+void delay(unsigned int d) 
+{
+  unsigned int i,j;
+  for(j=0; j < 0xff; j++)
+    547c:	94 53 fa ff 	inc	-6(r4)		;0xfffa(r4)
+    5480:	b4 90 ff 00 	cmp	#255,	-6(r4)	;#0x00ff, 0xfffa(r4)
+    5484:	fa ff 
+    5486:	ef 2b       	jnc	$-32     	;abs 0x5466
+	{
+	  nop();
+	  nop();
+	}
+    }
+}
+    5488:	31 50 06 00 	add	#6,	r1	;#0x0006
+    548c:	34 41       	pop	r4		
+    548e:	30 41       	ret			
+
+00005490 <uart1_init>:
+
+#define UART1_BIT_RX (1 << UART1_PIN_RX)
+#define UART1_BIT_TX (1 << UART1_PIN_TX)
+
+int uart1_init()
+{
+    5490:	04 12       	push	r4		
+    5492:	04 41       	mov	r1,	r4	
+    5494:	24 53       	incd	r4		
+
+  WDTCTL = WDTPW + WDTHOLD;
+    5496:	b2 40 80 5a 	mov	#23168,	&0x0120	;#0x5a80
+    549a:	20 01 
+
+  P1IE   = 0x00;        // Interrupt enable
+    549c:	c2 43 25 00 	mov.b	#0,	&0x0025	;r3 As==00
+  P2IE   = 0x00;        // 0:disable 1:enable
+    54a0:	c2 43 2d 00 	mov.b	#0,	&0x002d	;r3 As==00
+
+  //Init of MSP430 Usart1 pins
+  P3SEL |= (UART1_BIT_RX | UART1_BIT_TX);
+    54a4:	5f 42 1b 00 	mov.b	&0x001b,r15	
+    54a8:	7f d0 c0 ff 	bis.b	#-64,	r15	;#0xffc0
+    54ac:	c2 4f 1b 00 	mov.b	r15,	&0x001b	
+
+  //Init of USART1 Module
+  U1ME  |= UTXE1|URXE1;           //Enable USART1 transmiter and receiver (UART mode)
+    54b0:	5f 42 05 00 	mov.b	&0x0005,r15	
+    54b4:	7f d0 30 00 	bis.b	#48,	r15	;#0x0030
+    54b8:	c2 4f 05 00 	mov.b	r15,	&0x0005	
+  
+  U1CTL  = SWRST;                 //reset
+    54bc:	d2 43 78 00 	mov.b	#1,	&0x0078	;r3 As==01
+  U1CTL  = CHAR;                  //init & release reset
+    54c0:	f2 40 10 00 	mov.b	#16,	&0x0078	;#0x0010
+    54c4:	78 00 
+  
+  U1TCTL = SSEL1 | TXEPT;        //use SMCLK 
+    54c6:	f2 40 21 00 	mov.b	#33,	&0x0079	;#0x0021
+    54ca:	79 00 
+  U1RCTL = 0;
+    54cc:	c2 43 7a 00 	mov.b	#0,	&0x007a	;r3 As==00
+  // 38400 @ SMCLK 1MHz
+#define U1BR1_INIT        0
+#define U1BR0_INIT        0x1B
+#define U1MCTL_INIT       0x03
+  
+  U1BR1  = U1BR1_INIT;
+    54d0:	c2 43 7d 00 	mov.b	#0,	&0x007d	;r3 As==00
+  U1BR0  = U1BR0_INIT;
+    54d4:	f2 40 1b 00 	mov.b	#27,	&0x007c	;#0x001b
+    54d8:	7c 00 
+  U1MCTL = U1MCTL_INIT;
+    54da:	f2 40 03 00 	mov.b	#3,	&0x007b	;#0x0003
+    54de:	7b 00 
+
+  delay(0x800);
+    54e0:	3f 40 00 08 	mov	#2048,	r15	;#0x0800
+    54e4:	b0 12 52 54 	call	#0x5452	
+  return 0;
+    54e8:	0f 43       	clr	r15		
+}
+    54ea:	34 41       	pop	r4		
+    54ec:	30 41       	ret			
+
+000054ee <uart1_putchar>:
+
+int uart1_putchar(int c)
+{
+    54ee:	04 12       	push	r4		
+    54f0:	04 41       	mov	r1,	r4	
+    54f2:	24 53       	incd	r4		
+    54f4:	21 83       	decd	r1		
+    54f6:	84 4f fc ff 	mov	r15,	-4(r4)	;0xfffc(r4)
+  U1TXBUF = c;
+    54fa:	1f 44 fc ff 	mov	-4(r4),	r15	;0xfffc(r4)
+    54fe:	4f 4f       	mov.b	r15,	r15	
+    5500:	c2 4f 7f 00 	mov.b	r15,	&0x007f	
+  while ((U1TCTL & TXEPT) != TXEPT);
+    5504:	03 43       	nop			
+    5506:	5f 42 79 00 	mov.b	&0x0079,r15	
+    550a:	4f 4f       	mov.b	r15,	r15	
+    550c:	1f f3       	and	#1,	r15	;r3 As==01
+    550e:	0f 93       	tst	r15		
+    5510:	fa 27       	jz	$-10     	;abs 0x5506
+  return (unsigned char)c;
+    5512:	1f 44 fc ff 	mov	-4(r4),	r15	;0xfffc(r4)
+    5516:	4f 4f       	mov.b	r15,	r15	
+    5518:	4f 4f       	mov.b	r15,	r15	
+}
+    551a:	21 53       	incd	r1		
+    551c:	34 41       	pop	r4		
+    551e:	30 41       	ret			
+
+00005520 <putchar>:
+/**************************************************/
+/******************** PUT CHAR *********************/
+/**************************************************/
+
+int putchar(int c)
+{
+    5520:	04 12       	push	r4		
+    5522:	04 41       	mov	r1,	r4	
+    5524:	24 53       	incd	r4		
+    5526:	21 83       	decd	r1		
+    5528:	84 4f fc ff 	mov	r15,	-4(r4)	;0xfffc(r4)
+  return uart1_putchar(c);
+    552c:	1f 44 fc ff 	mov	-4(r4),	r15	;0xfffc(r4)
+    5530:	b0 12 ee 54 	call	#0x54ee	
+}
+    5534:	21 53       	incd	r1		
+    5536:	34 41       	pop	r4		
+    5538:	30 41       	ret			
+
+0000553a <start_encrypt>:
+/******************** END EXPE*********************/
+/**************************************************/
+
+void
+start_encrypt()
+{
+    553a:	04 12       	push	r4		
+    553c:	04 41       	mov	r1,	r4	
+    553e:	24 53       	incd	r4		
+  ;
+}
+    5540:	34 41       	pop	r4		
+    5542:	30 41       	ret			
+
+00005544 <start_decrypt>:
+void
+start_decrypt()
+{
+    5544:	04 12       	push	r4		
+    5546:	04 41       	mov	r1,	r4	
+    5548:	24 53       	incd	r4		
+  ;
+}
+    554a:	34 41       	pop	r4		
+    554c:	30 41       	ret			
+
+0000554e <end_expe>:
+
+
+void
+end_expe()
+{
+    554e:	04 12       	push	r4		
+    5550:	04 41       	mov	r1,	r4	
+    5552:	24 53       	incd	r4		
+  ;
+}
+    5554:	34 41       	pop	r4		
+    5556:	30 41       	ret			
+
+00005558 <_unexpected_>:
+    5558:	00 13       	reti			
+
+Disassembly of section .vectors:
+
+0000ffe0 <__ivtbl_16>:
+    ffe0:	fc 40 fc 40 fc 40 fc 40 fc 40 fc 40 fc 40 fc 40     .@.@.@.@.@.@.@.@
+    fff0:	fc 40 fc 40 fc 40 fc 40 fc 40 fc 40 fc 40 00 40     .@.@.@.@.@.@.@.@

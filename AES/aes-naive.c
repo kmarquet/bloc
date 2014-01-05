@@ -1,0 +1,463 @@
+/*  aes-naive.c 
+ * msp430 crypto librarie
+ * Written by Paul Ferrand <paul.ferrand@insa-lyon.fr>
+ */
+#include "aes-naive.h"
+#include "tools.h"
+
+
+#ifdef STATIC_LOGTABLES
+ 
+static const u8 Logtable[256] = {
+	0,   0,  25,   1,  50,   2,  26, 198,  75, 199,  27, 104,  51, 238, 223,   3, 
+	100,   4, 224,  14,  52, 141, 129, 239,  76, 113,   8, 200, 248, 105,  28, 193, 
+	125, 194,  29, 181, 249, 185,  39, 106,  77, 228, 166, 114, 154, 201,   9, 120, 
+	101,  47, 138,   5,  33,  15, 225,  36,  18, 240, 130,  69,  53, 147, 218, 142, 
+	150, 143, 219, 189,  54, 208, 206, 148,  19,  92, 210, 241,  64,  70, 131,  56, 
+	102, 221, 253,  48, 191,   6, 139,  98, 179,  37, 226, 152,  34, 136, 145,  16, 
+	126, 110,  72, 195, 163, 182,  30,  66,  58, 107,  40,  84, 250, 133,  61, 186, 
+	43, 121,  10,  21, 155, 159,  94, 202,  78, 212, 172, 229, 243, 115, 167,  87, 
+	175,  88, 168,  80, 244, 234, 214, 116,  79, 174, 233, 213, 231, 230, 173, 232, 
+	44, 215, 117, 122, 235,  22,  11, 245,  89, 203,  95, 176, 156, 169,  81, 160, 
+	127,  12, 246, 111,  23, 196,  73, 236, 216,  67,  31,  45, 164, 118, 123, 183, 
+	204, 187,  62,  90, 251,  96, 177, 134,  59,  82, 161, 108, 170,  85,  41, 157, 
+	151, 178, 135, 144,  97, 190, 220, 252, 188, 149, 207, 205,  55,  63,  91, 209, 
+	83,  57, 132,  60,  65, 162, 109,  71,  20,  42, 158,  93,  86, 242, 211, 171, 
+	68,  17, 146, 217,  35,  32,  46, 137, 180, 124, 184,  38, 119, 153, 227, 165, 
+	103,  74, 237, 222, 197,  49, 254,  24,  13,  99, 140, 128, 192, 247, 112,   7, 
+    };
+
+static const u8 ALogtable[256] = {
+	1,   3,   5,  15,  17,  51,  85, 255,  26,  46, 114, 150, 161, 248,  19,  53, 
+	95, 225,  56,  72, 216, 115, 149, 164, 247,   2,   6,  10,  30,  34, 102, 170, 
+	229,  52,  92, 228,  55,  89, 235,  38, 106, 190, 217, 112, 144, 171, 230,  49, 
+	83, 245,   4,  12,  20,  60,  68, 204,  79, 209, 104, 184, 211, 110, 178, 205, 
+	76, 212, 103, 169, 224,  59,  77, 215,  98, 166, 241,   8,  24,  40, 120, 136, 
+	131, 158, 185, 208, 107, 189, 220, 127, 129, 152, 179, 206,  73, 219, 118, 154, 
+	181, 196,  87, 249,  16,  48,  80, 240,  11,  29,  39, 105, 187, 214,  97, 163, 
+	254,  25,  43, 125, 135, 146, 173, 236,  47, 113, 147, 174, 233,  32,  96, 160, 
+	251,  22,  58,  78, 210, 109, 183, 194,  93, 231,  50,  86, 250,  21,  63,  65, 
+	195,  94, 226,  61,  71, 201,  64, 192,  91, 237,  44, 116, 156, 191, 218, 117, 
+	159, 186, 213, 100, 172, 239,  42, 126, 130, 157, 188, 223, 122, 142, 137, 128, 
+	155, 182, 193,  88, 232,  35, 101, 175, 234,  37, 111, 177, 200,  67, 197,  84, 
+	252,  31,  33,  99, 165, 244,   7,   9,  27,  45, 119, 153, 176, 203,  70, 202, 
+	69, 207,  74, 222, 121, 139, 134, 145, 168, 227,  62,  66, 198,  81, 243,  14, 
+	18,  54,  90, 238,  41, 123, 141, 140, 143, 138, 133, 148, 167, 242,  13,  23, 
+	57,  75, 221, 124, 132, 151, 162, 253,  28,  36, 108, 180, 199,  82, 246,   1, 
+    };
+
+#define LOG(i) Logtable[i]
+#define ALOG(i) ALogtable[i]
+ 
+#else /* !STATIC_LOGTABLES */
+
+u8 galois_alog( u8 x ) // anti-logarithm gen 3
+{
+    u8 atb = 1, z;
+
+    while (x--) {z = atb; atb <<= 1; if (z & 0x80) atb^= 0x1b; atb ^= z;}
+
+    return atb;
+}
+
+u8 galois_log( u8 x ) // logarithm gen 3
+{
+    u8 atb = 1, i = 0, z;
+
+    do {
+        if (atb == x) break;
+        z = atb; atb <<= 1; if (z & 0x80) atb^= 0x1b; atb ^= z;
+    } while (++i > 0);
+
+    return i;
+}
+
+#define LOG(i) galois_log(i)
+#define ALOG(i) galois_alog(i) 
+
+#endif
+
+u8 galois_mul( u8 a, u8 b)
+{
+	if (a && b)
+	{
+		return ALOG((LOG(a) + LOG(b)) % 255);
+	}
+	else
+		return 0;
+}
+
+u8 galois_mulinv( u8 x ) // multiplicative inverse
+{
+    return (x) ? ALOG(255 - LOG(x)) : 0;
+}
+
+#ifdef STATIC_SBOXES
+static const u8 SBox[256] = {		
+	0x63, 0x7c, 0x77, 0x7b, 0xf2, 0x6b, 0x6f, 0xc5,
+	0x30, 0x01, 0x67, 0x2b, 0xfe, 0xd7, 0xab, 0x76,
+	0xca, 0x82, 0xc9, 0x7d, 0xfa, 0x59, 0x47, 0xf0,
+	0xad, 0xd4, 0xa2, 0xaf, 0x9c, 0xa4, 0x72, 0xc0,
+	0xb7, 0xfd, 0x93, 0x26, 0x36, 0x3f, 0xf7, 0xcc,
+	0x34, 0xa5, 0xe5, 0xf1, 0x71, 0xd8, 0x31, 0x15,
+	0x04, 0xc7, 0x23, 0xc3, 0x18, 0x96, 0x05, 0x9a,
+	0x07, 0x12, 0x80, 0xe2, 0xeb, 0x27, 0xb2, 0x75,
+	0x09, 0x83, 0x2c, 0x1a, 0x1b, 0x6e, 0x5a, 0xa0,
+	0x52, 0x3b, 0xd6, 0xb3, 0x29, 0xe3, 0x2f, 0x84,
+	0x53, 0xd1, 0x00, 0xed, 0x20, 0xfc, 0xb1, 0x5b,
+	0x6a, 0xcb, 0xbe, 0x39, 0x4a, 0x4c, 0x58, 0xcf,
+	0xd0, 0xef, 0xaa, 0xfb, 0x43, 0x4d, 0x33, 0x85,
+	0x45, 0xf9, 0x02, 0x7f, 0x50, 0x3c, 0x9f, 0xa8,
+	0x51, 0xa3, 0x40, 0x8f, 0x92, 0x9d, 0x38, 0xf5,
+	0xbc, 0xb6, 0xda, 0x21, 0x10, 0xff, 0xf3, 0xd2,
+	0xcd, 0x0c, 0x13, 0xec, 0x5f, 0x97, 0x44, 0x17,
+	0xc4, 0xa7, 0x7e, 0x3d, 0x64, 0x5d, 0x19, 0x73,
+	0x60, 0x81, 0x4f, 0xdc, 0x22, 0x2a, 0x90, 0x88,
+	0x46, 0xee, 0xb8, 0x14, 0xde, 0x5e, 0x0b, 0xdb,
+	0xe0, 0x32, 0x3a, 0x0a, 0x49, 0x06, 0x24, 0x5c,
+	0xc2, 0xd3, 0xac, 0x62, 0x91, 0x95, 0xe4, 0x79,
+	0xe7, 0xc8, 0x37, 0x6d, 0x8d, 0xd5, 0x4e, 0xa9,
+	0x6c, 0x56, 0xf4, 0xea, 0x65, 0x7a, 0xae, 0x08,
+	0xba, 0x78, 0x25, 0x2e, 0x1c, 0xa6, 0xb4, 0xc6,
+	0xe8, 0xdd, 0x74, 0x1f, 0x4b, 0xbd, 0x8b, 0x8a,
+	0x70, 0x3e, 0xb5, 0x66, 0x48, 0x03, 0xf6, 0x0e,
+	0x61, 0x35, 0x57, 0xb9, 0x86, 0xc1, 0x1d, 0x9e,
+	0xe1, 0xf8, 0x98, 0x11, 0x69, 0xd9, 0x8e, 0x94,
+	0x9b, 0x1e, 0x87, 0xe9, 0xce, 0x55, 0x28, 0xdf,
+	0x8c, 0xa1, 0x89, 0x0d, 0xbf, 0xe6, 0x42, 0x68,
+	0x41, 0x99, 0x2d, 0x0f, 0xb0, 0x54, 0xbb, 0x16
+};
+
+static const u8 InvSBox[256] = {
+	0x52, 0x09, 0x6a, 0xd5, 0x30, 0x36, 0xa5, 0x38,
+	0xbf, 0x40, 0xa3, 0x9e, 0x81, 0xf3, 0xd7, 0xfb,
+	0x7c, 0xe3, 0x39, 0x82, 0x9b, 0x2f, 0xff, 0x87,
+	0x34, 0x8e, 0x43, 0x44, 0xc4, 0xde, 0xe9, 0xcb,
+	0x54, 0x7b, 0x94, 0x32, 0xa6, 0xc2, 0x23, 0x3d,
+	0xee, 0x4c, 0x95, 0x0b, 0x42, 0xfa, 0xc3, 0x4e,
+	0x08, 0x2e, 0xa1, 0x66, 0x28, 0xd9, 0x24, 0xb2,
+	0x76, 0x5b, 0xa2, 0x49, 0x6d, 0x8b, 0xd1, 0x25,
+	0x72, 0xf8, 0xf6, 0x64, 0x86, 0x68, 0x98, 0x16,
+	0xd4, 0xa4, 0x5c, 0xcc, 0x5d, 0x65, 0xb6, 0x92,
+	0x6c, 0x70, 0x48, 0x50, 0xfd, 0xed, 0xb9, 0xda,
+	0x5e, 0x15, 0x46, 0x57, 0xa7, 0x8d, 0x9d, 0x84,
+	0x90, 0xd8, 0xab, 0x00, 0x8c, 0xbc, 0xd3, 0x0a,
+	0xf7, 0xe4, 0x58, 0x05, 0xb8, 0xb3, 0x45, 0x06,
+	0xd0, 0x2c, 0x1e, 0x8f, 0xca, 0x3f, 0x0f, 0x02,
+	0xc1, 0xaf, 0xbd, 0x03, 0x01, 0x13, 0x8a, 0x6b,
+	0x3a, 0x91, 0x11, 0x41, 0x4f, 0x67, 0xdc, 0xea,
+	0x97, 0xf2, 0xcf, 0xce, 0xf0, 0xb4, 0xe6, 0x73,
+	0x96, 0xac, 0x74, 0x22, 0xe7, 0xad, 0x35, 0x85,
+	0xe2, 0xf9, 0x37, 0xe8, 0x1c, 0x75, 0xdf, 0x6e,
+	0x47, 0xf1, 0x1a, 0x71, 0x1d, 0x29, 0xc5, 0x89,
+	0x6f, 0xb7, 0x62, 0x0e, 0xaa, 0x18, 0xbe, 0x1b,
+	0xfc, 0x56, 0x3e, 0x4b, 0xc6, 0xd2, 0x79, 0x20,
+	0x9a, 0xdb, 0xc0, 0xfe, 0x78, 0xcd, 0x5a, 0xf4,
+	0x1f, 0xdd, 0xa8, 0x33, 0x88, 0x07, 0xc7, 0x31,
+	0xb1, 0x12, 0x10, 0x59, 0x27, 0x80, 0xec, 0x5f,
+	0x60, 0x51, 0x7f, 0xa9, 0x19, 0xb5, 0x4a, 0x0d,
+	0x2d, 0xe5, 0x7a, 0x9f, 0x93, 0xc9, 0x9c, 0xef,
+	0xa0, 0xe0, 0x3b, 0x4d, 0xae, 0x2a, 0xf5, 0xb0,
+	0xc8, 0xeb, 0xbb, 0x3c, 0x83, 0x53, 0x99, 0x61,
+	0x17, 0x2b, 0x04, 0x7e, 0xba, 0x77, 0xd6, 0x26,
+	0xe1, 0x69, 0x14, 0x63, 0x55, 0x21, 0x0c, 0x7d
+};
+#define SBOX(i) SBox[i]
+#define INVSBOX(i) InvSBox[i]
+
+#else /* !STATIC_SBOXES, calculate the multiplicative inverse in GF(256) 
+			and apply the affine transformation using logarithms */
+
+u8 rj_SBox(u8 x)
+{
+    u8 y, sb;
+
+    sb = y = galois_mulinv(x);
+    y = ( y << 1 ) | ( y >> 7 ); 
+	sb ^= y;  
+	y = ( y << 1 ) | ( y >> 7 ); 
+	sb ^= y; 
+    y = ( y << 1 ) | ( y >> 7 ); 
+	sb ^= y;  
+	y = ( y << 1 ) | ( y >> 7 );
+	sb ^= y;
+
+    return ( sb ^ 0x63 );
+}
+
+u8 rj_InvSBox( u8 x )
+{
+	/* Marche pas QQ */
+	u8 y, isb;
+	
+	isb = y = x ^ 0x05;
+	isb = y = ( y >> 2 ) | ( y << 6 );
+	y = ( y >> 3 ) | ( y << 4 );
+	isb ^= y;
+	y = ( y >> 3 ) | ( y << 4 );
+	isb ^= y;
+	
+	return ( galois_mulinv(isb) ); 
+}
+
+#define SBOX(i) rj_SBox(i)
+#define INVSBOX(i) rj_InvSBox(i)
+
+
+
+#endif /* STATIC_SBOXES */
+
+static const u8 rcon[10] =
+{
+    0x01, 0x02, 0x04, 0x08,
+    0x10, 0x20, 0x40, 0x80,
+    0x1B, 0x36
+};
+
+#define AES_BYTE_MODULO 0x1b
+#define AES_2_MUL( x ) ( ((x) << 1) ^ ( AES_BYTE_MODULO * ((x) >> 7) ) )
+#define AES_4_MUL( x ) ( AES_2_MUL(AES_2_MUL(x)) )
+#define AES_8_MUL( x ) ( AES_2_MUL(AES_2_MUL(AES_2_MUL(x))) )
+
+#define AES_3_MUL( x ) ( AES_2_MUL(x) ^ x )
+#define AES_9_MUL( x ) ( AES_8_MUL(x) ^ x )
+#define AES_B_MUL( x ) ( AES_8_MUL(x) ^ AES_2_MUL(x) ^ x )
+#define AES_D_MUL( x ) ( AES_8_MUL(x) ^ AES_4_MUL(x) ^ x )
+#define AES_E_MUL( x ) ( AES_8_MUL(x) ^ AES_4_MUL(x) ^ AES_2_MUL(x) )
+
+#ifdef INLINE
+inline
+#endif /* INLINE */
+void SubBytes( u8 *state )
+{
+	int i;
+	for( i = 0; i < AES_BLOCK_SIZE; ++i)
+		state[i] = SBOX( state[i] );
+}
+
+#ifdef INLINE
+inline
+#endif /* INLINE */
+void ShiftRows( u8 *state )
+{
+/* TODO : Maybe opt here, stated that 
+	a = b, b = a <-> a ^= b ^= a ^= b
+	a = b, b = c, c = a <-> a^=b^=c^=a^=b^=c^=a^=b
+	...
+	*/
+/* It seems it cannot be efficiently done with a loop anyway
+	(basically something of the form : 
+		temp = state[4*i]
+		state[4*i + ((4 - i + 3) % 4)] = state[4*i + ((1 + i) % 4]
+		state[4*i + ((4 - i + 2) % 4)] = state[4*i + ((2 + i) % 4]
+		state[4*i + ((4 - i + 1) % 4)] = state[4*i + ((3 + i) % 4]
+		state[4*i + (4 - i)] = temp
+	should work but take a load of int ops. So I unroll
+	the 12 perms here. */
+	u8 temp;
+	temp 		= state[1];
+	state[1] 	= state[5];
+	state[5] 	= state[9];
+	state[9] 	= state[13];
+	state[13] 	= temp;
+	temp 		= state[2];
+	state[2] 	= state[10];
+	state[10] 	= temp;
+	temp 		= state[6];
+	state[6] 	= state[14];
+	state[14] 	= temp;
+	temp 		= state[15];
+	state[15] 	= state[11];
+	state[11] 	= state[7];
+	state[7] 	= state[3];
+	state[3] 	= temp;
+}
+
+u8 rj_Xtime( u8 x )
+{
+	return (x & 0x80) ? ((x << 1) ^ 0x1b) : (x << 1);
+}
+
+#ifdef INLINE
+inline
+#endif /* INLINE */
+void MixColumns( u8 *state )
+{
+	u8 a, b, c, d, e;
+	int i;
+	for( i = 0; i < 16; i += 4 )
+	{
+		a = state[i  ];
+		b = state[i+1];
+		c = state[i+2];
+		d = state[i+3];
+		e = a ^ b ^ c ^ d;
+		state[i  ] ^= e ^ rj_Xtime( a ^ b );
+		state[i+1] ^= e ^ rj_Xtime( b ^ c );
+		state[i+2] ^= e ^ rj_Xtime( c ^ d );
+		state[i+3] ^= e ^ rj_Xtime( d ^ a );
+	}
+}
+
+#ifdef INLINE
+inline
+#endif /* INLINE */
+void AddRoundKey( u8 *state, u8 *round_key )
+{
+	int i;
+	for( i = 0; i < AES_BLOCK_SIZE; ++i )
+		state[i] ^= round_key[i];
+}
+
+#ifdef INLINE
+inline
+#endif /* INLINE */
+void InvSubBytes( u8 *state )
+{
+	int i;
+	for( i = 0; i < AES_BLOCK_SIZE; ++i)
+		state[i] = INVSBOX( state[i] );
+}
+
+#ifdef INLINE
+inline
+#endif /* INLINE */
+void InvShiftRows( u8 *state )
+{
+	u8 temp;
+	temp 		= state[13];
+	state[13] 	= state[9];
+	state[9] 	= state[5];
+	state[5] 	= state[1];
+	state[1] 	= temp;
+	temp 		= state[2];
+	state[2] 	= state[10];
+	state[10] 	= temp;
+	temp 		= state[6];
+	state[6] 	= state[14];
+	state[14] 	= temp;
+	temp 		= state[3];
+	state[3] 	= state[7];
+	state[7] 	= state[11];
+	state[11] 	= state[15];
+	state[15] 	= temp;
+}
+
+#ifdef INLINE
+inline
+#endif /* INLINE */
+void InvMixColumns( u8 *state )
+{
+	int i;
+	u8 a, b, c, d, e, x, y, z;
+	for( i = 0; i < 16; i += 4 )
+	{
+		a = state[i  ];
+		b = state[i+1];
+		c = state[i+2];
+		d = state[i+3];
+		e = a ^ b ^ c ^ d;
+		
+		z = rj_Xtime(e);
+		x = e ^ rj_Xtime( rj_Xtime( z ^ a ^ c ) );
+		y = e ^ rj_Xtime( rj_Xtime( z ^ b ^ d ) );
+		
+		state[i  ] ^= x ^ rj_Xtime( a ^ b );
+		state[i+1] ^= y ^ rj_Xtime( b ^ c );
+		state[i+2] ^= x ^ rj_Xtime( c ^ d );
+		state[i+3] ^= y ^ rj_Xtime( d ^ a );
+	}
+}
+
+void AES_init_variable_keylength( AES_CTX *ctx, u8 *key, int klen)
+{
+	int i = 0;
+	int klen_b = (klen >> 3);
+	u8 * wcKey;
+	u8 * wcKey_minus; /* key_schedule[i - 1] in word counts */
+	u8 * wcKey_minus_klen; /* key_schedule[i - klen] in word counts */
+	int rcon_index = 0;
+
+	if (klen == 128)
+	{
+		ctx->rounds = 10;
+	}
+	else if (klen == 192)
+	{
+		ctx->rounds = 12;
+	}
+	else /* if (klen == 256)*/
+	{
+		ctx->rounds = 14;
+	}
+	
+	for (i = 0; i < klen_b; ++i)
+	{
+		ctx->enc_ks[i] = key[i];
+//		ctx->dec_ks[ctx->rounds - i] = key[klen_b - i];
+	}
+	
+	for(i = klen_b; i < (ctx->rounds + 1) * klen_b; i += 4)
+	{
+		wcKey = &ctx->enc_ks[i]; 
+		wcKey_minus = &ctx->enc_ks[i - 4];
+		wcKey_minus_klen = &ctx->enc_ks[i - klen_b];
+		if (i % klen_b == 0)
+		{
+			
+			wcKey[0] = SBOX(wcKey_minus[1]) ^ rcon[rcon_index++] ^ wcKey_minus_klen[0];
+			wcKey[1] = SBOX(wcKey_minus[2]) ^ wcKey_minus_klen[1];
+			wcKey[2] = SBOX(wcKey_minus[3]) ^ wcKey_minus_klen[2];
+			wcKey[3] = SBOX(wcKey_minus[0]) ^ wcKey_minus_klen[3];
+		}
+		else
+		{
+			wcKey[0] = wcKey_minus_klen[0] ^ wcKey_minus[0];
+			wcKey[1] = wcKey_minus_klen[1] ^ wcKey_minus[1];
+			wcKey[2] = wcKey_minus_klen[2] ^ wcKey_minus[2];
+			wcKey[3] = wcKey_minus_klen[3] ^ wcKey_minus[3];
+		}
+	}
+	
+}
+
+void AES_init( AES_CTX *ctx, u8 *key )
+{
+	AES_init_variable_keylength( ctx, key, 128 );
+}
+
+
+
+void AES_encrypt( AES_CTX *ctx, u8 *in, u8 *out)
+{
+	memcpy(out, in, AES_BLOCK_SIZE);
+	int i;
+	AddRoundKey( out, &ctx->enc_ks[0] );
+	for( i = 1; i < ctx->rounds; ++i)
+	{
+		SubBytes(out);
+		ShiftRows(out);
+		MixColumns(out);
+		AddRoundKey(out, &ctx->enc_ks[AES_BLOCK_SIZE * i]);
+	}
+	SubBytes(out);
+	ShiftRows(out);
+	AddRoundKey(out, &ctx->enc_ks[AES_BLOCK_SIZE * ctx->rounds]);
+}
+
+void AES_decrypt( AES_CTX *ctx, u8 *in, u8 *out)
+{
+	memcpy(out, in, AES_BLOCK_SIZE);
+	int i;
+	AddRoundKey( out, &ctx->enc_ks[AES_BLOCK_SIZE * ctx->rounds] );
+	for( i = ctx->rounds - 1; i > 0; --i)
+	{
+		InvShiftRows(out);
+		InvSubBytes(out);
+		AddRoundKey(out, &ctx->enc_ks[AES_BLOCK_SIZE * i]);
+		InvMixColumns(out);
+	}
+	InvShiftRows(out);
+	InvSubBytes(out);
+	AddRoundKey(out, &ctx->enc_ks[0]);
+}

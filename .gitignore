@@ -1,0 +1,9 @@
+clefia*
+*.txt
+**/exec
+**/exec-e
+*.lst
+*.o
+*.elf
+*.hex
+*.d

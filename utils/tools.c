@@ -1,5 +1,11 @@
+#if MCU == msp430fg4618
+#include "msp430fg4618.h"
+#else
 #include <msp430.h>
+#endif
+
 #include <stdio.h>
+
 
 /**************************************************/
 /******************** MEMCPY **********************/
@@ -35,69 +41,62 @@ void delay(unsigned int d)
     }
 }
 
-/**************************************************/
-/********************* CLOCK **********************/
-/**************************************************/
+/*********** SPECIFIC PART *************/
+#if MCU == msp430fg4618
 
-
-/**************************************************/
-/********************* UART 1 *********************/
-/**************************************************/
-#define UART1_PIN_RX 7
-#define UART1_PIN_TX 6
-
-#define UART1_BIT_RX (1 << UART1_PIN_RX)
-#define UART1_BIT_TX (1 << UART1_PIN_TX)
-
-int uart1_init()
+void
+rtc_init()
 {
+  RTCCTL = RTCHOLD + RTCMODE_2 + RTCTEV_3 + RTCIE; // SMCLK clock ; 32-bit overflow
+  RTCNT1 = 0x00; // reset counter
+  RTCNT2 = 0x00;
+  RTCNT3 = 0x00;
+  RTCNT4 = 0x00;
 
-  WDTCTL = WDTPW + WDTHOLD;
-
-  P1IE   = 0x00;        // Interrupt enable
-  P2IE   = 0x00;        // 0:disable 1:enable
-
-  //Init of MSP430 Usart1 pins
-  P3SEL |= (UART1_BIT_RX | UART1_BIT_TX);
-
-  //Init of USART1 Module
-  U1ME  |= UTXE1|URXE1;           //Enable USART1 transmiter and receiver (UART mode)
-  
-  U1CTL  = SWRST;                 //reset
-  U1CTL  = CHAR;                  //init & release reset
-  
-  U1TCTL = SSEL1 | TXEPT;        //use SMCLK 
-  U1RCTL = 0;
-
-  // 38400 @ SMCLK 1MHz
-#define U1BR1_INIT        0
-#define U1BR0_INIT        0x1B
-#define U1MCTL_INIT       0x03
-  
-  U1BR1  = U1BR1_INIT;
-  U1BR0  = U1BR0_INIT;
-  U1MCTL = U1MCTL_INIT;
-
-  delay(0x800);
-  return 0;
+  //  RTCCTL |= ; // enable interrupts
 }
 
-int uart1_putchar(int c)
+void
+rtc_start()
 {
-  U1TXBUF = c;
-  while ((U1TCTL & TXEPT) != TXEPT);
-  return (unsigned char)c;
+  RTCCTL &= ~RTCHOLD; // Start RTC
+}
+
+void
+rtc_stop()
+{
+  RTCCTL |= RTCHOLD; // Stop RTC
+}
+
+void
+rtc_restart()
+{
+  RTCNT1 = 0x00; // reset counter
+  RTCNT2 = 0x00;
+  RTCNT3 = 0x00;
+  RTCNT4 = 0x00;
+  rtc_start();
 }
 
 
-/**************************************************/
-/******************** PUT CHAR *********************/
-/**************************************************/
+unsigned long int
+get_rtc_count()
+{  
+  unsigned long int rtcnt;
+  unsigned long int cnt1, cnt2, cnt3, cnt4;
 
-int putchar(int c)
-{
-  return uart1_putchar(c);
+  cnt1 = RTCNT1;
+  cnt2 = RTCNT2;
+  cnt3 = RTCNT3;
+  cnt4 = RTCNT4;
+
+  rtcnt = (cnt4 << 24) + (cnt3 << 16) + (cnt2 << 8) + cnt1;
+  
+  return rtcnt;
 }
+
+#endif
+
 
 /**************************************************/
 /******************** END EXPE*********************/
@@ -106,18 +105,30 @@ int putchar(int c)
 void
 start_encrypt()
 {
-  ;
+#if MCU == msp430fg4618
+  WDTCTL = WDTPW + WDTHOLD; // stop watchdog timer
+  rtc_init();
+  rtc_start();
+#endif
+
 }
 void
 start_decrypt()
 {
-  ;
+#if MCU == msp430fg4618
+  rtc_stop();
+  unsigned long int cnt = get_rtc_count();
+  rtc_restart();
+#endif
 }
 
 
 void
 end_expe()
 {
-  ;
+#if MCU == msp430fg4618
+  rtc_stop();
+  unsigned long int cnt = get_rtc_count();
+  rtc_restart();
+#endif
 }
-

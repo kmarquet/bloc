@@ -4,10 +4,8 @@ expe:
 	./expe.sh && ./generate_perf_tab.sh
 
 html:
-	for file in `ls PERFS*.tex`
-	do
-		latex2html $file
-	done
+	./generate_html.sh
+
 firefox:
-	firefox PERFS-O0/index.html PERFS-O1/index.html PERFS-O2/index.html PERFS-O3/index.html
+	( cd results && firefox	 PERFS-O0/index.html PERFS-O1/index.html PERFS-O2/index.html PERFS-O3/index.html )
 

@@ -36,7 +36,7 @@ void Encrypt ( u64 text[], u64 crypt[], u64 key[] )
     for ( i=0 ; i<68 ; i++ )
     {
         tmp = crypt[0];
-        crypt[0] = crypt[1] ^ ((ROTATE_LEFT_64(crypt[0],1)) & (ROTATE_LEFT_64(crypt[0],8))) ^ (ROTATE_LEFT_64(crypt[0],2)) ^ key[i];
+        crypt[0] = crypt[1] ^ ((ROTATE_LEFT_64(crypt[0],1)) & (ROTATE_LEFT_BYTE_64(crypt[0]))) ^ (ROTATE_LEFT_64(crypt[0],2)) ^ key[i];
         crypt[1] = tmp;
     }
 }
@@ -51,7 +51,7 @@ void Decrypt ( u64 text[], u64 crypt[], u64 key[] )
     for ( i=0 ; i<68 ; i++ )
     {
         tmp = crypt[1];
-        crypt[1] = crypt[0] ^ ((ROTATE_LEFT_64(crypt[1],1)) & (ROTATE_LEFT_64(crypt[1],8))) ^ (ROTATE_LEFT_64(crypt[1],2)) ^ key[67-i];
+        crypt[1] = crypt[0] ^ ((ROTATE_LEFT_64(crypt[1],1)) & (ROTATE_LEFT_BYTE_64(crypt[1]))) ^ (ROTATE_LEFT_64(crypt[1],2)) ^ key[67-i];
         crypt[0] = tmp;
     }
 }

@@ -4,6 +4,7 @@
  */
 #include "aes-naive.h"
 #include "tools.h"
+#include <string.h>
 
 
 #ifdef STATIC_LOGTABLES

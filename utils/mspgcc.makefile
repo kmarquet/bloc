@@ -24,29 +24,28 @@ ifndef NAMES
 $(error Required NAMES variable is undefined in Makefile.\
   Please define NAMES containing all targets name without extension)
 endif # NAMES
+
 ifndef SRC
 $(error Required SRC variable is undefined in Makefile.\
   Please define SRC containing common source files that must be compiled for all targets.\
   If there is no shared sources filed, define it empty)
 endif # SRC
+
 ifndef INCLUDES
 $(error Required INCLUDES variable is undefined in Makefile.\
   Please define INCLUDES containing compiler include parameter\
   If there is no include needed, define it empty)
 endif # INCLUDES
 
-##### THIS MCU FOR ALL !! #####
-CPU        = -mmcu=msp430f1611
-
 CC      = msp430-gcc
+LD	= msp430-gcc
+
 OBJCOPY = msp430-objcopy
 OBJDUMP = msp430-objdump
 RM      = -rm -f
 
 DEBUG   ?= -g
-OPT     ?= -O0
-
-CPU     ?= -mmcu=msp430f1611
+OPT     ?= -O3
 
 Warnings += -Wall -Wpointer-arith -Wbad-function-cast
 WARNINGS += -Wcast-align -Wsign-compare -Waggregate-return # -Wmissing-prototypes
@@ -57,23 +56,26 @@ WARNINGS += -Wunused # -Wmissing-declarations
 
 # New version on mspgcc (Uniarch) from mspgcc.sf.net defines a __MSPGCC__ variable
 # http://sourceforge.net/apps/mediawiki/mspgcc/index.php?title=Devel:Uniarch#User_Visible_Changes
-CC_UNIARCH = $(shell ((echo "\#ifdef __MSPGCC__";echo "\#error";echo "\#endif")|$(CC) -o /dev/null -c -xc - 2> /dev/null)||echo "TRUE")
+# CC_UNIARCH = $(shell ((echo "\#ifdef __MSPGCC__";echo "\#error";echo "\#endif")|$(CC) -o /dev/null -c -xc - 2> /dev/null)||echo "TRUE")
 
-ifeq ($(CC_UNIARCH), TRUE)
-GCC_4_INCLUDE = -I$(UTILS_PATH)/mspgcc-uniarch
+# ifeq ($(CC_UNIARCH), TRUE)
+# GCC_4_INCLUDE = -I$(UTILS_PATH)/mspgcc-uniarch
 
-# unsupported with gcc-3.2.3 but usefull
-WARNINGS += -Wfatal-errors
-endif # CC_UNIARCH
+# # unsupported with gcc-3.2.3 but usefull
+# WARNINGS += -Wfatal-errors
+# endif # CC_UNIARCH
 
 
-ASFLAGS += ${CPU} -D_GNU_ASSEMBLER_
-ASFLAGS += $(OPT) $(DEBUG) $(GCC_4_INCLUDE) $(INCLUDES)
+ASFLAGS += -mmcu=$(MCU) -D_GNU_ASSEMBLER_
+ASFLAGS += $(DEBUG) $(GCC_4_INCLUDE) $(INCLUDES)
 
-CFLAGS += $(CPU) -DGCC_MSP430
-CFLAGS += -MMD -MP -MF $(basename $@).d  # generate dependencies file
-CFLAGS += $(OPT) $(DEBUG) $(GCC_4_INCLUDE) $(INCLUDES) $(WARNINGS)
-CFLAGS += -Wl,-gc-sections
+CFLAGS +=  -mmcu=$(MCU) -DGCC_MSP430 -DMCU=$(MCU)
+#CFLAGS += -MMD -MP -MF $(basename $@).d  # generate dependencies file
+CFLAGS += $(DEBUG) $(GCC_4_INCLUDE) $(INCLUDES) $(WARNINGS)
+CFLAGS += -ffunction-sections -fdata-sections
+
+LDFLAGS += -Wl,-gc-sections
+
 #CFLAGS += -nodefaultlibs
 
 .PHONY: all clean
@@ -91,6 +93,8 @@ DEPS = $(SRCS:.c=.d)
 
 ASMOBJ = $(ASM:.S=.o)
 
+TMP_FILES = finished.txt
+
 all : $(TARGETS)
 
 %.hex : %.elf
@@ -105,17 +109,18 @@ all : $(TARGETS)
 # but is really linked with only the needed files
 
 %.elf : $(OBJS) $(ASMOBJ)
-	$(CC) -o $@ $(CFLAGS)  $(OBJ) $(SRC_$(basename $@):.c=.o) $(ASMOBJ)
-
+	$(LD) -mmcu=$(MCU) -o $@ $(LDFLAGS) $(OBJS) $(ASMOBJ)
 
 $(OBJS) :%.o : %.c $(filter-out %.d, $(MAKEFILE_LIST))
-	$(CC) -c $(CFLAGS) $< -o $@
+	@echo $(OPT_LEVEL)
+	@echo $(MCU)
+	$(CC) -c $(OPT_LEVEL) $(CFLAGS) $< -o $@
 
 $(ASMOBJ) :%.o : %.S
-	$(CC) -c $(ASFLAGS) $< -o $@
+	$(CC) -c $(OPT_LEVEL) $(ASFLAGS) $< -o $@
 
 clean :
-	$(RM) $(TARGETS) $(OBJS) ${ASMOBJ} $(DEPS) *.elf *.hex wsim.*
+	$(RM) $(TARGETS) $(OBJS) ${ASMOBJ} $(DEPS) $(TMP_FILES) *.elf *.hex wsim.*
 
 realclean: clean 
 	$(RM) *.log *.trc *.vcd *.pkt

@@ -1,7 +1,7 @@
 target remote localhost:2000
 file main.elf
 
-#set logging on
+#Set logging on
 #set logging file log.txt
 #set logging redirect on
 #
@@ -13,13 +13,13 @@ continue
 
 set $bos = $r1
 
-#p/x *((unsigned int *) $bos - 2000) @2000
+#p/x *((unsigned int *) $bos - 4000) @4000
 
 b end_expe
 c
-p/x *((unsigned int *) $bos - 2000) @2000
+p/x *((unsigned int *) $bos - 4000) @4000
 
-#set $diff = 0
+#Set $diff = 0
 #set $max = 0
 
 #set $mc_address = &memcpy

@@ -1,16 +1,14 @@
 #!/bin/sh
 
-HASH_FUNC_DIRS="AES CLEFIA128 CLEFIA192 CLEFIA256 DESXL DIRnoekeon HIGHT IDEA INDnoekeon KATAN32 KATAN48 KATAN64 KLEIN64 KLEIN80 KLEIN96 KTANTAN32 KTANTAN48 KTANTAN64 LBlock LED128 LED128_tcalc LED128_tdur LED64 LED64_tcalc LED64_tdur MCRYPTON64 MCRYPTON96 MCRYPTON128 MIBS64 MIBS80 PRESENT_SIZE PRESENT_SPEED Piccolo128 Piccolo80 SEA SKIPJACK TWINE80 TWINE128 SIMON64_96 SIMON64_128 SIMON96_96 SIMON96_144 SIMON128_128 SPECK64_96 SPECK64_128 SPECK96_96 SPECK96_144 SPECK128_128 LILLIPUT" #PRINCE
+#set -o verbose
 
-#HASH_FUNC_DIRS="AES"
-
+#HASH_FUNC_DIRS="AES CLEFIA128 CLEFIA192 CLEFIA256 DESXL DIRnoekeon HIGHT IDEA INDnoekeon KATAN32 KATAN48 KATAN64 KLEIN64 KLEIN80 KLEIN96 KTANTAN32 KTANTAN48 KTANTAN64 LBlock LED128 LED128_tcalc LED128_tdur LED64 LED64_tcalc LED64_tdur MCRYPTON64 MCRYPTON96 MCRYPTON128 MIBS64 MIBS80 PRESENT_SIZE PRESENT_SPEED Piccolo128 Piccolo80 SEA SKIPJACK TWINE80 TWINE128 SIMON64_96 SIMON64_128 SIMON96_96 SIMON96_144 SIMON128_128 SPECK64_96 SPECK64_128 SPECK96_96 SPECK96_144 SPECK128_128 LILLIPUT" #PRINCE
+HASH_FUNC_DIRS="AES"
 #HASH_FUNC_DIRS="KTANTAN64 PRESENT_SPEED"
-
 #HASH_FUNC_DIRS="CLEFIA128 LILLIPUT"
 
-OPT_LEVEL="-O0 -O1 -O2 -O3 -Os"
-
-#HASH_FUNC_DIRS="KATAN32 KATAN48 KATAN64"
+#OPT_LEVEL="-O0 -O1 -O2 -O3 -Os"
+OPT_LEVEL="-O3"
 
 #TODO : KATAN_KTANTAN_16bits
 
@@ -21,14 +19,13 @@ RESULT_DIR="$BASE_DIR/results"
 rm -rf $RESULT_DIR
 mkdir $RESULT_DIR
 
-LOG_FILE="$BASE_DIR/results/LOG.txt"
+LOG_FILE="$RESULT_DIR/LOG-hard.txt"
 rm -f "$LOG_FILE"
 touch "$LOG_FILE"
 
-
 for level in $OPT_LEVEL
 do
-    RESULT_FILE="${RESULT_DIR}/MEMORY${level}.tex"
+    RESULT_FILE="${RESULT_DIR}/MEMORY${level}-hard.tex"
 
     rm -f "$RESULT_FILE"
     touch "$RESULT_FILE"
@@ -44,13 +41,13 @@ do
 	cd ${BASE_DIR}/${FUNC_DIR}
 
 	make clean #Pour forcer la remise à jour des fichiers
-	make MCU="msp430f1611" OPT_LEVEL=$level || exit 1
+	make MCU="msp430fg4618" OPT_LEVEL=$level || exit 1
 
-	FUNC_LOG_FILE="${BASE_DIR}/${FUNC_DIR}/log${level}.txt"
+	FUNC_LOG_FILE="${BASE_DIR}/${FUNC_DIR}/log${level}-hard.txt"
 	touch "$FUNC_LOG_FILE"
 	cat /dev/null >| $LOG_FILE
 
-	SIM_FILE="${BASE_DIR}/${FUNC_DIR}/SIM_RESULTS${level}.txt"
+	SIM_FILE="${BASE_DIR}/${FUNC_DIR}/SIM_RESULTS${level}-hard.txt"
 	touch "$SIM_FILE"
 	cat /dev/null >| $SIM_FILE
 
@@ -59,7 +56,8 @@ do
 
 
 	echo -------- MEMORY ----------
-	mspdebug -n sim "prog main.elf" gdb &
+	DEVFILE=`ls /dev/* | grep 'tty.TIV'`
+	mspdebug -j -d $DEVFILE uif 'prog main.elf' gdb &
 	msp430-gdb -x ../address.gdb >| "$FUNC_LOG_FILE"
 
 	if test $? -ne 0
@@ -69,7 +67,9 @@ do
 	fi
 
 	cat "$FUNC_LOG_FILE" >> "$LOG_FILE"
+
 	NOT_USED=`cat "$FUNC_LOG_FILE" | grep "0xffff" | cut -d '<' -f2 | cut -d '>' -f1 | cut -d ' ' -f2`
+	echo $NOT_USED
 	STACK_SIZE=`expr 4000 - $NOT_USED`
 	DATA_SIZE=`msp430-size main.elf | grep -v text | cut -f 1`
 
@@ -126,26 +126,20 @@ do
 		FOUND_END=1
 	    fi
 	done
-
+	
 	START_ENCRYPT_ADDRESS=0x`cat ./encrypt_address.txt`
 	START_DECRYPT_ADDRESS=0x`cat ./decrypt_address.txt`
 	END_EXPE_ADDRESS=0x`cat ./end_expe_address.txt`
 	
-	cp "$UTILS_DIR"/exec.generic ./exec
-	sed -i -e "s/START_ENCRYPT_ADD/${START_ENCRYPT_ADDRESS}/g" ./exec
-	sed -i -e "s/START_DECRYPT_ADD/${START_DECRYPT_ADDRESS}/g" ./exec
-	sed -i -e "s/END_EXPE_ADD/${END_EXPE_ADDRESS}/g" ./exec
+	cp "$UTILS_DIR"/rtc_generic.gdb ./rtc.gdb
+	sed -i -e "s/START_ENCRYPT_ADD/${START_ENCRYPT_ADDRESS}/g" ./rtc.gdb
+	sed -i -e "s/START_DECRYPT_ADD/${START_DECRYPT_ADDRESS}/g" ./rtc.gdb
+	sed -i -e "s/END_EXPE_ADD/${END_EXPE_ADDRESS}/g" ./rtc.gdb
 
-	mspdebug sim < ./exec > $SIM_FILE &
-	LASTPID=`ps u | grep mspdebug | grep -v grep | cut -d' ' -f2`
-	while ! test -f finished.txt
-	do
-	    echo ...waiting pid $LASTPID...
-	    sleep 2
-	done
-#    kill -2 $LASTPID
+	mspdebug -j -d $DEVFILE uif 'prog main.elf' gdb &
+	msp430-gdb -x ../rtc.gdb >| "$SIM_FILE"
+
 	pwd
-	rm finished.txt
 	rm main.elf
 	echo ---------- END -----------
     done

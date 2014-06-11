@@ -31,7 +31,7 @@ void Encrypt ( u32 text[], u32 crypt[], u32 key[] )
     for ( i=0 ; i<44 ; i++ )
     {
         tmp = crypt[0];
-        crypt[0] = crypt[1] ^ ((ROTATE_LEFT_32(crypt[0],1)) & (ROTATE_LEFT_32(crypt[0],8))) ^ (ROTATE_LEFT_32(crypt[0],2)) ^ key[i];
+        crypt[0] = crypt[1] ^ ((ROTATE_LEFT_32(crypt[0],1)) & (ROTATE_LEFT_BYTE_32(crypt[0]))) ^ (ROTATE_LEFT_32(crypt[0],2)) ^ key[i];
         crypt[1] = tmp;
     }
 }
@@ -46,7 +46,7 @@ void Decrypt ( u32 text[], u32 crypt[], u32 key[] )
     for ( i=0 ; i<44 ; i++ )
     {
         tmp = crypt[1];
-        crypt[1] = crypt[0] ^ ((ROTATE_LEFT_32(crypt[1],1)) & (ROTATE_LEFT_32(crypt[1],8))) ^ (ROTATE_LEFT_32(crypt[1],2)) ^ key[43-i];
+        crypt[1] = crypt[0] ^ ((ROTATE_LEFT_32(crypt[1],1)) & (ROTATE_LEFT_BYTE_32(crypt[1]))) ^ (ROTATE_LEFT_32(crypt[1],2)) ^ key[43-i];
         crypt[0] = tmp;
     }
 }

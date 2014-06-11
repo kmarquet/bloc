@@ -17,7 +17,7 @@ echo 96 > SEA/BLOCK_SIZE.txt
 
 echo 64 > TWINE80/BLOCK_SIZE.txt
 echo 64 > TWINE128/BLOCK_SIZE.txt
-echo 64 > PRINCE/BLOCK_SIZE.txt
+#echo 64 > PRINCE/BLOCK_SIZE.txt
 echo 64 > SPECK64_96/BLOCK_SIZE.txt
 echo 64 > SPECK64_128/BLOCK_SIZE.txt
 echo 64 > SIMON64_96/BLOCK_SIZE.txt
@@ -34,8 +34,8 @@ echo 64 > LED128_tcalc/BLOCK_SIZE.txt
 echo 64 > LED128_tdur/BLOCK_SIZE.txt
 echo 64 > Piccolo128/BLOCK_SIZE.txt
 echo 64 > Piccolo80/BLOCK_SIZE.txt
-echo 64 > TEA/BLOCK_SIZE.txt
-echo 64 > XTEA/BLOCK_SIZE.txt
+# echo 64 > TEA/BLOCK_SIZE.txt
+#echo 64 > XTEA/BLOCK_SIZE.txt
 echo 64 > SKIPJACK/BLOCK_SIZE.txt
 echo 64 > IDEA/BLOCK_SIZE.txt
 echo 64 > HIGHT/BLOCK_SIZE.txt
@@ -56,3 +56,4 @@ echo 48 > KTANTAN48/BLOCK_SIZE.txt
 echo 32 > KATAN32/BLOCK_SIZE.txt
 echo 32 > KTANTAN32/BLOCK_SIZE.txt
 
+echo 80 > LILLIPUT/BLOCK_SIZE.txt

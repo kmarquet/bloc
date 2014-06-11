@@ -139,7 +139,6 @@ do
 	mspdebug -j -d $DEVFILE uif 'prog main.elf' gdb &
 	msp430-gdb -x ../rtc.gdb >| "$SIM_FILE"
 
-	pwd
 	rm main.elf
 	echo ---------- END -----------
     done

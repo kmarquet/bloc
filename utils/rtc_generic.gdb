@@ -5,11 +5,9 @@ end
 
 target remote localhost:2000
 file main.elf
-layout split
-focus cmd
 
-break START_DECRYPT_ADD
-break setbreak END_EXPE_ADD
+break *START_DECRYPT_ADD
+break *END_EXPE_ADD
 
 continue
 
@@ -21,4 +19,5 @@ continue
 drtc
 print "DECRYPT_SMCLK:"
 print $count
-continue
+
+quit

@@ -137,7 +137,7 @@ do
 	sed -i -e "s/END_EXPE_ADD/${END_EXPE_ADDRESS}/g" ./rtc.gdb
 
 	mspdebug -j -d $DEVFILE uif 'prog main.elf' gdb &
-	msp430-gdb -x ../rtc.gdb >| "$SIM_FILE"
+	msp430-gdb -x rtc.gdb >| "$SIM_FILE"
 
 	rm main.elf
 	echo ---------- END -----------

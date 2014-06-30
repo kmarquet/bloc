@@ -1,10 +1,8 @@
-#if MCU == msp430fg4618
+#if REALPLATFORM
 #include "msp430fg4618.h"
 #else
 #include <msp430.h>
 #endif
-
-#include <stdio.h>
 
 
 /**************************************************/
@@ -42,7 +40,7 @@ void delay(unsigned int d)
 }
 
 /*********** SPECIFIC PART *************/
-#if MCU == msp430fg4618
+#if REALPLATFORM
 
 void
 rtc_init()
@@ -105,17 +103,16 @@ get_rtc_count()
 void
 start_encrypt()
 {
-#if MCU == msp430fg4618
-  WDTCTL = WDTPW + WDTHOLD; // stop watchdog timer
+#if REALPLATFORM
   rtc_init();
   rtc_start();
 #endif
-
 }
+
 void
 start_decrypt()
 {
-#if MCU == msp430fg4618
+#if REALPLATFORM
   rtc_stop();
   unsigned long int cnt = get_rtc_count();
   rtc_restart();
@@ -126,7 +123,7 @@ start_decrypt()
 void
 end_expe()
 {
-#if MCU == msp430fg4618
+#if REALPLATFORM
   rtc_stop();
   unsigned long int cnt = get_rtc_count();
   rtc_restart();

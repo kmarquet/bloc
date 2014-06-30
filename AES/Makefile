@@ -1,5 +1,3 @@
-#CPU        = -mmcu=msp430f1611
-
 # Path to utilitaries
 UTILS_PATH = ../utils
 

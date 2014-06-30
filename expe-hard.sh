@@ -2,13 +2,9 @@
 
 #set -o verbose
 
-#HASH_FUNC_DIRS="AES CLEFIA128 CLEFIA192 CLEFIA256 DESXL DIRnoekeon HIGHT IDEA INDnoekeon KATAN32 KATAN48 KATAN64 KLEIN64 KLEIN80 KLEIN96 KTANTAN32 KTANTAN48 KTANTAN64 LBlock LED128 LED128_tcalc LED128_tdur LED64 LED64_tcalc LED64_tdur MCRYPTON64 MCRYPTON96 MCRYPTON128 MIBS64 MIBS80 PRESENT_SIZE PRESENT_SPEED Piccolo128 Piccolo80 SEA SKIPJACK TWINE80 TWINE128 SIMON64_96 SIMON64_128 SIMON96_96 SIMON96_144 SIMON128_128 SPECK64_96 SPECK64_128 SPECK96_96 SPECK96_144 SPECK128_128 LILLIPUT" #PRINCE
-HASH_FUNC_DIRS="AES"
-#HASH_FUNC_DIRS="KTANTAN64 PRESENT_SPEED"
-#HASH_FUNC_DIRS="CLEFIA128 LILLIPUT"
+HASH_FUNC_DIRS="AES CLEFIA128 CLEFIA192 CLEFIA256 DESXL DIRnoekeon HIGHT IDEA INDnoekeon KATAN32 KATAN48 KATAN64 KLEIN64 KLEIN80 KLEIN96 KTANTAN32 KTANTAN48 KTANTAN64 LBlock LED128 LED128_tcalc LED128_tdur LED64 LED64_tcalc LED64_tdur MCRYPTON64 MCRYPTON96 MCRYPTON128 MIBS64 MIBS80 PRESENT_SIZE PRESENT_SPEED Piccolo128 Piccolo80 SEA SKIPJACK TWINE80 TWINE128 SIMON64_96 SIMON64_128 SIMON96_96 SIMON96_144 SIMON128_128 SPECK64_96 SPECK64_128 SPECK96_96 SPECK96_144 SPECK128_128 LILLIPUT PRINCE XTEA"
 
-#OPT_LEVEL="-O0 -O1 -O2 -O3 -Os"
-OPT_LEVEL="-O3"
+OPT_LEVEL="-O3 -Os"
 
 #TODO : KATAN_KTANTAN_16bits
 
@@ -25,23 +21,16 @@ touch "$LOG_FILE"
 
 for level in $OPT_LEVEL
 do
-    RESULT_FILE="${RESULT_DIR}/MEMORY${level}-hard.tex"
-
-    rm -f "$RESULT_FILE"
-    touch "$RESULT_FILE"
-    
-    echo "\\\begin{tabular} {c | c}" >> $RESULT_FILE
-    echo "\\hline" >> $RESULT_FILE
-    echo "Function & Stack size (bytes) & Data Size (bytes)" >> $RESULT_FILE
-    echo "\\\\\\\\hline" >> $RESULT_FILE
-
+    echo "=============================="
+    echo "========= Optim $level ========="
+    echo "=============================="
     for FUNC_DIR in $HASH_FUNC_DIRS
     do
 	echo ------- cd ${BASE_DIR}/${FUNC_DIR} ------------
 	cd ${BASE_DIR}/${FUNC_DIR}
 
 	make clean #Pour forcer la remise à jour des fichiers
-	make MCU="msp430fg4618" OPT_LEVEL=$level || exit 1
+	make MCU="msp430fg4618" REALPLATFORM=1 OPT_LEVEL=$level || exit 1
 
 	FUNC_LOG_FILE="${BASE_DIR}/${FUNC_DIR}/log${level}-hard.txt"
 	touch "$FUNC_LOG_FILE"
@@ -51,14 +40,18 @@ do
 	touch "$SIM_FILE"
 	cat /dev/null >| $SIM_FILE
 
+	MEMORY_FILE="${BASE_DIR}/${FUNC_DIR}/MEMORY${level}-hard.txt"
+	touch "$MEMORY_FILE"
+	cat /dev/null >| $MEMORY_FILE
+
 	elfile=`ls *.elf`
 	cp $elfile main.elf
 
-
 	echo -------- MEMORY ----------
 	DEVFILE=`ls /dev/* | grep 'tty.TIV'`
+	echo mspdebug -j -d $DEVFILE uif 'prog main.elf' gdb
 	mspdebug -j -d $DEVFILE uif 'prog main.elf' gdb &
-	msp430-gdb -x ../address.gdb >| "$FUNC_LOG_FILE"
+	msp430-gdb -x ../address-hard.gdb >| "$FUNC_LOG_FILE"
 
 	if test $? -ne 0
 	then
@@ -69,12 +62,11 @@ do
 	cat "$FUNC_LOG_FILE" >> "$LOG_FILE"
 
 	NOT_USED=`cat "$FUNC_LOG_FILE" | grep "0xffff" | cut -d '<' -f2 | cut -d '>' -f1 | cut -d ' ' -f2`
-	echo $NOT_USED
-	STACK_SIZE=`expr 4000 - $NOT_USED`
+	STACK_SIZE=`expr 8000 - $NOT_USED`
 	DATA_SIZE=`msp430-size main.elf | grep -v text | cut -f 1`
 
-	echo "$FUNC_DIR & $STACK_SIZE & $DATA_SIZE" >> $RESULT_FILE
-	echo "\\\\\\\\\\hline" >> $RESULT_FILE
+	echo "stack: $STACK_SIZE"  > $MEMORY_FILE
+	echo "data: $DATA_SIZE" >> $MEMORY_FILE
 
 	rm $FUNC_LOG_FILE
 	
@@ -142,7 +134,5 @@ do
 	rm main.elf
 	echo ---------- END -----------
     done
-
-    echo "\end{tabular}" >> $RESULT_FILE
 done
 

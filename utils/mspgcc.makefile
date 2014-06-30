@@ -69,7 +69,7 @@ WARNINGS += -Wunused # -Wmissing-declarations
 ASFLAGS += -mmcu=$(MCU) -D_GNU_ASSEMBLER_
 ASFLAGS += $(DEBUG) $(GCC_4_INCLUDE) $(INCLUDES)
 
-CFLAGS +=  -mmcu=$(MCU) -DGCC_MSP430 -DMCU=$(MCU)
+CFLAGS +=  -mmcu=$(MCU) -DGCC_MSP430 -DREALPLATFORM=$(REALPLATFORM) -mdisable-watchdog
 #CFLAGS += -MMD -MP -MF $(basename $@).d  # generate dependencies file
 CFLAGS += $(DEBUG) $(GCC_4_INCLUDE) $(INCLUDES) $(WARNINGS)
 CFLAGS += -ffunction-sections -fdata-sections
@@ -109,11 +109,9 @@ all : $(TARGETS)
 # but is really linked with only the needed files
 
 %.elf : $(OBJS) $(ASMOBJ)
-	$(LD) -mmcu=$(MCU) -o $@ $(LDFLAGS) $(OBJS) $(ASMOBJ)
+	$(LD) -mdisable-watchdog -mmcu=$(MCU) -DREALPLATFORM=$(REALPLATFORM) -o $@ $(LDFLAGS) $(OBJS) $(ASMOBJ)
 
 $(OBJS) :%.o : %.c $(filter-out %.d, $(MAKEFILE_LIST))
-	@echo $(OPT_LEVEL)
-	@echo $(MCU)
 	$(CC) -c $(OPT_LEVEL) $(CFLAGS) $< -o $@
 
 $(ASMOBJ) :%.o : %.S

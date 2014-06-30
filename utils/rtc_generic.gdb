@@ -12,12 +12,10 @@ break *END_EXPE_ADD
 continue
 
 drtc
-print "ENCRYPT_SMCLK:"
-print $count
+printf "ENCRYPT_SMCLK: %u\n", $count
 continue
 
 drtc
-print "DECRYPT_SMCLK:"
-print $count
+printf "DECRYPT_SMCLK: %u\n", $count
 
 quit

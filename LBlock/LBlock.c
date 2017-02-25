@@ -66,40 +66,54 @@ static const u8 S9[16] = {11, 5, 15, 0, 7, 2, 9, 13, 4, 8, 1, 12, 14, 10, 3, 6};
 }
 
 
+void Swap(u8 block[8])
+{
+    u8 tmp[4];
+
+    tmp[0] = block[0];
+    tmp[1] = block[1];
+    tmp[2] = block[2];
+    tmp[3] = block[3];
+
+    block[0] = block[4];
+    block[1] = block[5];
+    block[2] = block[6];
+    block[3] = block[7];
+
+    block[4] = tmp[0];
+    block[5] = tmp[1];
+    block[6] = tmp[2];
+    block[7] = tmp[3];
+}
+
  void OneRound(u8 x[8], u8 k[4])
 {
 	u8 t[4],tmp[4];
-	
-	tmp[0]=x[4];
-	tmp[1]=x[5];
-	tmp[2]=x[6];
-	tmp[3]=x[7];	
-	
-	
+
 	// AJOUT CLE
-    x[4]=x[4]^k[0]; 
-    x[5]=x[5]^k[1]; 
-    x[6]=x[6]^k[2]; 
-    x[7]=x[7]^k[3];         
+    tmp[0]=x[4]^k[0];
+    tmp[1]=x[5]^k[1];
+    tmp[2]=x[6]^k[2];
+    tmp[3]=x[7]^k[3];         
 
     // PASSAGE DANS LES BOITES S
-    x[4] = ((S1[((x[4])>>4) & 0x0F])<<4)^S0[(x[4] & 0x0F)];
-    x[5] = ((S3[((x[5])>>4) & 0x0F])<<4)^S2[(x[5] & 0x0F)];
-    x[6] = ((S5[((x[6])>>4) & 0x0F])<<4)^S4[(x[6] & 0x0F)];
-    x[7] = ((S7[((x[7])>>4) & 0x0F])<<4)^S6[(x[7] & 0x0F)];            
+    tmp[0] = ((S1[((tmp[0])>>4) & 0x0F])<<4)^S0[(tmp[0] & 0x0F)];
+    tmp[1] = ((S3[((tmp[1])>>4) & 0x0F])<<4)^S2[(tmp[1] & 0x0F)];
+    tmp[2] = ((S5[((tmp[2])>>4) & 0x0F])<<4)^S4[(tmp[2] & 0x0F)];
+    tmp[3] = ((S7[((tmp[3])>>4) & 0x0F])<<4)^S6[(tmp[3] & 0x0F)];          
     
     // PASSAGE DE LA PERMUTATION P
-	t[0] =((x[4]>>4) & 0x0F)^(x[5] & 0xF0);
-	t[1] = (x[4] & 0x0F) ^ ((x[5]& 0x0F)<<4);
-	t[2] = ((x[6]>>4) & 0x0F)^(x[7] & 0xF0);
-	t[3] = (x[6] & 0x0F) ^ ((x[7]& 0x0F)<<4);
+	t[0] =((tmp[0]>>4) & 0x0F)^(tmp[1] & 0xF0);
+	t[1] = (tmp[0] & 0x0F) ^ ((tmp[1]& 0x0F)<<4);
+	t[2] = ((tmp[2]>>4) & 0x0F)^(tmp[3] & 0xF0);
+	t[3] = (tmp[2] & 0x0F) ^ ((tmp[3]& 0x0F)<<4);
     // FIN DE LA FONCTION F
 
     // PARTIE GAUCHE AVEC DECALAGE DE 8 SUR LA GAUCHE  
-    x[4]=x[3]^t[0]; 
-    x[5]=x[0]^t[1]; 
-    x[6]=x[1]^t[2]; 
-    x[7]=x[2]^t[3]; 
+    tmp[0]=x[3]^t[0]; 
+    tmp[1]=x[0]^t[1]; 
+    tmp[2]=x[1]^t[2]; 
+    tmp[3]=x[2]^t[3]; 
     
 	// PARTIE DROITE
     x[0]=tmp[0];
@@ -114,62 +128,61 @@ static const u8 S9[16] = {11, 5, 15, 0, 7, 2, 9, 13, 4, 8, 1, 12, 14, 10, 3, 6};
 {
      int i;
      
-     for(i=0; i<32; i++)
+     for(i=0; i<31; i++)
      {
         OneRound(x, subkey[i]);        
+        Swap(x);
      }
+     OneRound(x, subkey[i]);
 }
 
  void OneRound_Inv(u8 y[8], u8 k[4])
 {
      u8 t[4],tmp[4];
-     
-     tmp[0]=y[0];
-	 tmp[1]=y[1];
-	 tmp[2]=y[2];
-	 tmp[3]=y[3];	
-	 
+
 	 // FAIRE PASSER Y_0, Y_1, Y_2, Y_3 dans F
 	// AJOUT CLE
-    y[0]=y[0]^k[0]; 
-    y[1]=y[1]^k[1]; 
-    y[2]=y[2]^k[2]; 
-    y[3]=y[3]^k[3];  
+    tmp[0]=y[4]^k[0]; 
+    tmp[1]=y[5]^k[1]; 
+    tmp[2]=y[6]^k[2]; 
+    tmp[3]=y[7]^k[3];  
      
  
      // PASSAGE DANS LES BOITES S
-    y[0] = ((S1[((y[0])>>4) & 0x0F])<<4)^S0[(y[0] & 0x0F)];
-    y[1] = ((S3[((y[1])>>4) & 0x0F])<<4)^S2[(y[1] & 0x0F)];
-    y[2] = ((S5[((y[2])>>4) & 0x0F])<<4)^S4[(y[2] & 0x0F)];
-    y[3] = ((S7[((y[3])>>4) & 0x0F])<<4)^S6[(y[3] & 0x0F)];    
+    tmp[0] = ((S1[((tmp[0])>>4) & 0x0F])<<4)^S0[(tmp[0] & 0x0F)];
+    tmp[1] = ((S3[((tmp[1])>>4) & 0x0F])<<4)^S2[(tmp[1] & 0x0F)];
+    tmp[2] = ((S5[((tmp[2])>>4) & 0x0F])<<4)^S4[(tmp[2] & 0x0F)];
+    tmp[3] = ((S7[((tmp[3])>>4) & 0x0F])<<4)^S6[(tmp[3] & 0x0F)];    
  
    // PASSAGE DE LA PERMUTATION P
-	t[0] =((y[0]>>4) & 0x0F)^(y[1] & 0xF0);
-	t[1] = (y[0] & 0x0F) ^ ((y[1]& 0x0F)<<4);
-	t[2] = ((y[2]>>4) & 0x0F)^(y[3] & 0xF0);
-	t[3] = (y[2] & 0x0F) ^ ((y[3]& 0x0F)<<4);
+	t[0] =((tmp[0]>>4) & 0x0F)^(tmp[1] & 0xF0);
+	t[1] = (tmp[0] & 0x0F) ^ ((tmp[1]& 0x0F)<<4);
+	t[2] = ((tmp[2]>>4) & 0x0F)^(tmp[3] & 0xF0);
+	t[3] = (tmp[2] & 0x0F) ^ ((tmp[3]& 0x0F)<<4);
     // FIN DE LA FONCTION F
     
         // PARTIE DROITE AVEC DECALAGE DE 8 SUR LA DROITE
-	y[0]= y[5]^t[1]; 
-    y[1]= y[6]^t[2]; 
-    y[2]= y[7]^t[3]; 
-    y[3]= y[4]^t[0]; 
+	tmp[0]= y[0]^t[0]; 
+    tmp[1]= y[1]^t[1]; 
+    tmp[2]= y[2]^t[2]; 
+    tmp[3]= y[3]^t[3]; 
  
  	// PARTIE GAUCHE
-    y[4]=tmp[0];
-    y[5]=tmp[1];
-    y[6]=tmp[2];
-    y[7]=tmp[3];
+    y[0]=tmp[1];
+    y[1]=tmp[2];
+    y[2]=tmp[3];
+    y[3]=tmp[0];
  
 }
 
  void Decrypt(u8 x[8], u8 subkey[NBROUND][4])
 {
      int i;
-     
-     for(i=31; i>=0; i--)
+
+     OneRound_Inv(x, subkey[31]);
+     for(i=30; i>=0; i--)
      {
+        Swap(x);
         OneRound_Inv(x, subkey[i]);   
      }
 }
@@ -206,7 +219,7 @@ for(i=0;i<8;i++)
 */
 #ifdef PRINT
 printf("----------Clair----------\n\n");
-printf("%X %X %X %X %X %X %X %X",state[7], state[6], state[5], state[4], state[3], state[2], state[1], state[0]);
+printf("%02X %02X %02X %02X %02X %02X %02X %02X",state[7], state[6], state[5], state[4], state[3], state[2], state[1], state[0]);
 printf("\n");
 printf("----------Chiffr\'e----------\n\n");
 #endif		
@@ -217,7 +230,7 @@ printf("----------Chiffr\'e----------\n\n");
  Encrypt(state,rkey);
  
  #ifdef PRINT
- printf("%X %X %X %X %X %X %X %X",state[7], state[6], state[5], state[4], state[3], state[2], state[1], state[0]);
+ printf("%02X %02X %02X %02X %02X %02X %02X %02X",state[7], state[6], state[5], state[4], state[3], state[2], state[1], state[0]);
  printf("\n");
  printf("----------Déchiffr\'e----------\n\n");
  #endif
@@ -226,7 +239,7 @@ printf("----------Chiffr\'e----------\n\n");
  Decrypt(state,rkey);
 
  #ifdef PRINT
- printf("%X %X %X %X %X %X %X %X",state[7], state[6], state[5], state[4], state[3], state[2], state[1], state[0]);
+ printf("%02X %02X %02X %02X %02X %02X %02X %02X",state[7], state[6], state[5], state[4], state[3], state[2], state[1], state[0]);
  printf("\n");
  printf("----------Déchiffr\'e----------\n\n");
  #endif
